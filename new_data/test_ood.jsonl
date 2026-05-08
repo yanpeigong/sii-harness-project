@@ -1,0 +1,600 @@
+{"text": "indifferently implausible popcorn programmer of a movie .", "label": "sentiment_negative"}
+{"text": "when was my last visit to the car shop", "label": "last_maintenance"}
+{"text": "IBM announces Lenovo deal IBM Corp. is selling its personal computer business to China #39;s largest PC maker in a \\$1.25 billion deal that marks the end of an era for the company that made  quot;PC quot; a household word.", "label": "news_business"}
+{"text": "is it alright to switch applesauce for oil", "label": "ingredient_substitution"}
+{"text": "i need to know what's good for chinese around here", "label": "meal_suggestion"}
+{"text": "Tyncastle sale gets official go ahead Of the votes received by proxy and from shareholders in the room at a stormy extraordinary general meeting last night, 62.5 were in favour of the resolution.", "label": "news_sports"}
+{"text": "unlike the speedy wham-bam effect of most hollywood offerings , character development -- and more importantly , character empathy -- is at the heart of italian for beginners .", "label": "sentiment_positive"}
+{"text": "is flight dl123 going to arrive on time", "label": "flight_status"}
+{"text": "if i get a visa can i travel to japan", "label": "international_visa"}
+{"text": "How far is it from Phoenix to Blythe ?", "label": "question_numeric"}
+{"text": "What is Mikhail Gorbachev 's middle initial ?", "label": "question_abbreviation"}
+{"text": "can you tell me what the traffic is usually like at 7:00 pm from philadelphia to ocean city, new jersey", "label": "traffic"}
+{"text": "What U.S. state borders Illinois to the north ?", "label": "question_location"}
+{"text": "Plans for new Beagle trip to Mars The team behind Beagle 2, the failed mission to land on Mars and search for life, have unveiled plans for a successor. Professor Colin Pillinger, lead", "label": "news_sci_tech"}
+{"text": "What web sites are linked to the Report on Genesis Eldercare ?", "label": "question_location"}
+{"text": "can you tell me about the meaning of life", "label": "meaning_of_life"}
+{"text": "What does e.g. stand for ?", "label": "question_abbreviation"}
+{"text": "Ya #39;alon: IDF is in advanced stages of preparation for Gaza pullout The army is in a very advanced stage of preparations for a withdrawal from the Gaza Strip and four small West Bank settlements in 2005, Israel Defense Forces Chief of Staff, Lieutenant", "label": "news_world"}
+{"text": "when was my car last in the shop", "label": "last_maintenance"}
+{"text": "i'm looking for a meal that's from the asian cuisine", "label": "meal_suggestion"}
+{"text": "i need to make an appointment for an oil change, please", "label": "schedule_maintenance"}
+{"text": "how much have i spent on my debit card this month", "label": "transactions"}
+{"text": "can you call the help desk line for my credit card company", "label": "replacement_card_duration"}
+{"text": "has flight dl123 left", "label": "flight_status"}
+{"text": "i need an uber for 5 people to go to the statue of liberty", "label": "uber"}
+{"text": "not only are the special effects and narrative flow much improved , and daniel radcliffe more emotionally assertive this time around as harry , but the film conjures the magic of author j.k. rowling 's books .", "label": "sentiment_positive"}
+{"text": "Iraqis Plead With U.S. to Return to City (AP) AP - U.S. troops barred anguished crowds from returning to their homes in the besieged city of Tal Afar on Monday as residents described corpses scattered across orchards and the collapse of essential services such as water and electricity.", "label": "news_world"}
+{"text": "which gas would be best", "label": "gas_type"}
+{"text": "michael gerbosi 's script is economically packed with telling scenes .", "label": "sentiment_positive"}
+{"text": "i need interesting baseball trivia from the nineteen eighties", "label": "fun_fact"}
+{"text": "Trump defends Martha Stewart New York real estate mogul Donald Trump defended his friend Martha Stewart as the woman who turned home economics into a media empire began her prison term.", "label": "news_business"}
+{"text": "less dizzying than just dizzy , the jaunt is practically over before it begins .", "label": "sentiment_negative"}
+{"text": "What states do not have state income tax ?", "label": "question_location"}
+{"text": "inform me how many pounds are in 10 kilos", "label": "measurement_conversion"}
+{"text": "should have been someone else -", "label": "sentiment_negative"}
+{"text": "What was Mao , the Chinese leader 's , full name ?", "label": "question_human"}
+{"text": "Shareholders Approve Aether Changeover Shareholders approved Aether Systems Inc.'s sale of one of its two remaining operating divisions Wednesday, a deal that will take the Owings Mills company out of the wireless business and nearly complete its transformation into a mortgage investment fund.&lt;BR&gt;\\&lt;FONT face=\"verdana,MS Sans Serif,arial,helvetica\" size=\"-2\"\\ color=\"#666666\"&gt;&lt;B&gt;-The Washington Post&lt;/B&gt;&lt;/FONT&gt;", "label": "news_sci_tech"}
+{"text": "what are the rules for traveling with toothpaste", "label": "carry_on"}
+{"text": "What is the most common eye color ?", "label": "question_entity"}
+{"text": "Martha Stewart Is Allowed to Start Prison Term Early A federal judge ordered Martha Stewart today to surrender for prison by Oct. 8, granting the Ms. Stewart's request to begin serving her sentence for lying about a stock sale.", "label": "news_business"}
+{"text": "when will the bus get me to vermont", "label": "distance"}
+{"text": "What does NASA stand for ?", "label": "question_abbreviation"}
+{"text": "vera 's technical prowess ends up selling his film short ; he smoothes over hard truths even as he uncovers them .", "label": "sentiment_negative"}
+{"text": "is my card's apr a decent rate", "label": "apr"}
+{"text": "instead of hiding pinocchio from critics , miramax should have hidden it from everyone .", "label": "sentiment_negative"}
+{"text": "Titan reveals its purple patches LONDON: Unprecedented pictures of the purple atmospheric haze on Titan have been captured by the Cassini spacecraft during its closest approach yet to Saturn #39;s largest moon.", "label": "news_sci_tech"}
+{"text": "please confirm that i have a reservation for 2/20 at 6:00 pm", "label": "confirm_reservation"}
+{"text": "i need to give my location to macy and george", "label": "share_location"}
+{"text": "i believe that my car battery has died, what do i do next", "label": "jump_start"}
+{"text": "Robo-servants set to sweep into homes Millions of new robots will be installed in households over the next few years, a UN report predicts.", "label": "news_sci_tech"}
+{"text": "can i swap chili for sloppy joe mix in the recipe", "label": "ingredient_substitution"}
+{"text": "find my reservation for steve at crucere's and confirm it, please", "label": "confirm_reservation"}
+{"text": "i want to know the meaning of life", "label": "meaning_of_life"}
+{"text": "Injury brings Brown down Troy Brown didn't play any defense against Carolina in Saturday night's exhibition game. Thing is, he didn't play much offense or special teams, either.", "label": "news_sports"}
+{"text": "How do you ask questions ?", "label": "question_description"}
+{"text": "What is the statue of liberty made of ?", "label": "question_entity"}
+{"text": "Stelco Loses Contract to Supply GM Steel (Reuters) Reuters - Stelco Inc. (STEa.TO) has lost a\\contract to supply steel to its biggest customer General Motors\\Corp. , the company said on Monday, after the insolvent\\Canadian steelmaker failed to strike a deal with its workers.", "label": "news_business"}
+{"text": "What does the abbreviation cwt. ?", "label": "question_abbreviation"}
+{"text": "Bovina ends two-year wait Seventh-seeded Russian Elena Bovina won her first title in two years by beating France #39;s Nathalie Dechy 6-2 2-6 7-5 in the final of the Pilot Pen tournament.", "label": "news_sports"}
+{"text": "are you able to find my recent transactions for me", "label": "transactions"}
+{"text": "tell me whether or not i have a reservation at gramercy tavern for tad", "label": "confirm_reservation"}
+{"text": "whether you like rap music or loathe it , you ca n't deny either the tragic loss of two young men in the prime of their talent or the power of this movie .", "label": "sentiment_positive"}
+{"text": "Tropical Storm Kills at Least 90 in Haiti GONAIVES, Haiti - Tropical Storm Jeanne brought raging floodwaters to Haiti, killing at least 90 people and leaving dozens of families huddled on rooftops as the storm pushed further out into the open seas on Sunday, officials said.    Floods tore through the northwestern coastal town of Gonaives and surrounding areas, covering crops and turning roads into rivers...", "label": "news_world"}
+{"text": "give me some ideas of how to avoid my credit score lowering", "label": "improve_credit_score"}
+{"text": "Netflix stock plummets on buzz about Amazon.com competition LOS GATOS, Calf. Shares of mail-order DVD rental company Netflix plunged today amid buzz that Amazon-dot-com is getting into the movie rental business.", "label": "news_business"}
+{"text": "i need an uber to madison square garden", "label": "uber"}
+{"text": "How many e-commerce companies are started every day ?", "label": "question_numeric"}
+{"text": "News: Report card day looms for federal agencies Cyber security audits find improvement in some agencies, but viruses and worms still plague the halls of government.\\", "label": "news_sci_tech"}
+{"text": "What common livestock have the greatest variety of breeds ?", "label": "question_entity"}
+{"text": "the movie fails to live up to the sum of its parts .", "label": "sentiment_negative"}
+{"text": "friday 5pm schedule a room for meeting", "label": "schedule_meeting"}
+{"text": "What book opens : `` At a certain village in La Mancha , which I shall not name.. . '' ?", "label": "question_entity"}
+{"text": "What country was General Douglas McArthur in when he was recalled by President Truman ?", "label": "question_location"}
+{"text": "what gas does this car use", "label": "gas_type"}
+{"text": "the weight of the piece , the unerring professionalism of the chilly production , and the fascination embedded in the lurid topic prove recommendation enough .", "label": "sentiment_positive"}
+{"text": "Who wrote ` Dubliners ' ?", "label": "question_human"}
+{"text": "will only having five late payments really make my credit bad", "label": "improve_credit_score"}
+{"text": "it does n't believe in itself , it has no sense of humor ... it 's just plain bored .", "label": "sentiment_negative"}
+{"text": "whaley 's determination to immerse you in sheer , unrelenting wretchedness is exhausting .", "label": "sentiment_negative"}
+{"text": "what time is boarding scheduled", "label": "flight_status"}
+{"text": "Who said `` the only thing we have to fear is fear itself '' ?", "label": "question_human"}
+{"text": "Who was the Russian ambassador to Hungary during the 1956 uprising ?", "label": "question_human"}
+{"text": "i would like to know my credit score", "label": "credit_score"}
+{"text": "suffers from the lack of a compelling or comprehensible narrative .", "label": "sentiment_negative"}
+{"text": "i want to hear your best joke", "label": "tell_joke"}
+{"text": "a compelling spanish film about the withering effects of jealousy in the life of a young monarch whose sexual passion for her husband becomes an obsession .", "label": "sentiment_positive"}
+{"text": "can people safely travel to cambodia", "label": "travel_alert"}
+{"text": "GE pledges to meet rules of disclosure in SEC pact General Electric Co. yesterday agreed to a settlement with the Securities and Exchange Commission, which accused the company of failing to provide shareholders", "label": "news_business"}
+{"text": "it 's difficult to imagine the process that produced such a script , but here 's guessing that spray cheese and underarm noises played a crucial role .", "label": "sentiment_negative"}
+{"text": "are there travel alerts for the us", "label": "travel_alert"}
+{"text": "do you have any recommendations for korean", "label": "meal_suggestion"}
+{"text": "What currency is used in Australia ?", "label": "question_entity"}
+{"text": "overall the film feels like a low-budget tv pilot that could not find a buyer to play it on the tube .", "label": "sentiment_negative"}
+{"text": "how can i raise my credit score", "label": "improve_credit_score"}
+{"text": "What can I use to remove the stubborn gummed labels from some diskettes ?", "label": "question_entity"}
+{"text": "Halo 2 scores record sales of \\$125 million in first 24 hours Halo 2 broke entertainment retail records in its first 24 hours. Microsoft Game Studios said that the video game sold through 2.4 million stores in the US and Canada raking in \\$125 million in sales.", "label": "news_business"}
+{"text": "let me know how many pounds are in 10 kilos", "label": "measurement_conversion"}
+{"text": "Oil Price Spike Had Chilling Effect -Fed The recent spike in oil prices has had some negative impact on the US economy, but the futures markets suggest that this will be a temporary phenomenon, a top Fed official said on Sunday.", "label": "news_business"}
+{"text": "Kidnap fears for lost tsunami boy Police in tsunami-hit Thailand search for a Swedish boy feared kidnapped by child sex traffickers.", "label": "news_world"}
+{"text": "what kind of gas does your car use", "label": "gas_type"}
+{"text": "what do i do to set up a vacation", "label": "pto_request"}
+{"text": "10-4", "label": "yes"}
+{"text": "byler reveals his characters in a way that intrigues and even fascinates us , and he never reduces the situation to simple melodrama .", "label": "sentiment_positive"}
+{"text": "at its best , queen is campy fun like the vincent price horror classics of the '60s .", "label": "sentiment_positive"}
+{"text": "how long will i be on the bus if i rid it to seattle", "label": "distance"}
+{"text": "What does pH stand for ?", "label": "question_abbreviation"}
+{"text": "right now, i need to know the meaning of life", "label": "meaning_of_life"}
+{"text": "What Nazi leader killed himself in jail just before he was to be executed as a war criminal ?", "label": "question_human"}
+{"text": "i was wondering what my credit score is", "label": "credit_score"}
+{"text": "What ship did Lloyd M. Bucher command ?", "label": "question_entity"}
+{"text": "IBM Updates WebSphere Application Server The Express version of the new WebSphere server is targeted at the small and midsized business market.  quot;The SMB market has become much more pivotal and crucial to everyone, quot; according to Yankee Group analyst Laura DiDio.", "label": "news_sci_tech"}
+{"text": "please tell me if i still have a reservation at acero for susie", "label": "confirm_reservation"}
+{"text": "reserve a meeting room for 5pm on friday", "label": "schedule_meeting"}
+{"text": "on the whole , the movie lacks wit , feeling and believability to compensate for its incessant coarseness and banality .", "label": "sentiment_negative"}
+{"text": "i'd like to know the last time my car got looked at", "label": "last_maintenance"}
+{"text": "show my my most recent visa card transaction", "label": "transactions"}
+{"text": "but the power of these ( subjects ) is obscured by the majority of the film that shows a stationary camera on a subject that could be mistaken for giving a public oration , rather than contributing to a film 's narrative .", "label": "sentiment_negative"}
+{"text": "what day will i earn my payment from work", "label": "payday"}
+{"text": "when's pay day for me", "label": "payday"}
+{"text": "C #39;s open with dang: Squander 18-point lead in loss to Sixers This is getting monotonous. For the second straight night, a candidate from Boston was looking good after some exit polling, but when the last points/votes were counted, the opponent had the plurality.", "label": "news_sports"}
+{"text": "How fast is alcohol absorbed ?", "label": "question_numeric"}
+{"text": "is the time really ripe for a warmed-over james bond adventure , with a village idiot as the 007 clone ?", "label": "sentiment_negative"}
+{"text": "how many carry ons can i take on a flight with southwestern to tampa", "label": "carry_on"}
+{"text": "are shots required before traveling to china", "label": "vaccines"}
+{"text": "Chavez Visit to Spain Sparks Coup Controversy  MADRID (Reuters) - Venezuelan President Hugo Chavez's  fence-mending visit to Spain sparked political uproar on  Tuesday when Madrid for the first time backed his allegations  that the former Spanish government backed a coup against him.", "label": "news_world"}
+{"text": "Moya Upset in First Round of China Open (AP) AP - Top-seeded Carlos Moya was upset by French qualifier Jo-Wilfried Tsonga 6-3, 6-3, in the first round of the China Open on Wednesday.", "label": "news_sports"}
+{"text": "Longhorn announcements barely a blimp on IT radar While developers are naturally curious over tweaks to the Longhorn road map, many IT administrators barely take notice. Enterprise IT customers typically lag at least", "label": "news_sci_tech"}
+{"text": "Another Major Non-Factor Another major, another disappointment for Tiger Woods, the No. 1 ranked player in the world who has not won a major championship since his triumph at the 2002 U.S. Open.", "label": "news_sports"}
+{"text": "Speak to my right ear, sing to my left Researchers at the University of California find that the right and left human ears process sound differently: The right ear is better at picking up speech-like sounds and the left is more attuned to music.", "label": "news_sci_tech"}
+{"text": "what do i do if my car battery died", "label": "jump_start"}
+{"text": "is there a travel alert in spain", "label": "travel_alert"}
+{"text": "How can I find online spelling ?", "label": "question_description"}
+{"text": "Where did King Francis I hang the `` Mona Lisa '' when he owned it ?", "label": "question_location"}
+{"text": "Philippines not relieved from nature #39;s curse With the death toll mounting to 1,000 after a deadly storm Typhoon Nanmadol that hit the nation three days before, the nature #39;s curse is still haunting Philippines when an earthquake with a preliminary magnitude of 4.2 rocked the northern Philippines on", "label": "news_world"}
+{"text": "Germany deports Turkey militant German police deport an Islamic militant wanted by Turkey, hours after his extradition is approved.", "label": "news_world"}
+{"text": "i need to go downtown with 2 people; can you get me an uber", "label": "uber"}
+{"text": "how do i get stuff with visa points", "label": "redeem_rewards"}
+{"text": "What is a `` USB '' port on a computer ?", "label": "question_abbreviation"}
+{"text": "can you reserve a room for a friday meeting at 5pm", "label": "schedule_meeting"}
+{"text": "the son 's room is a triumph of gentility that earns its moments of pathos .", "label": "sentiment_positive"}
+{"text": "what is my apr rate", "label": "apr"}
+{"text": "writer-director 's mehta 's effort has tons of charm and the whimsy is in the mixture , the intoxicating masala , of cultures and film genres .", "label": "sentiment_positive"}
+{"text": "AU OKs more troops for Darfur; talks resume Sudan #39;s government and Darfur rebels are likely to restart talks Thursday as the African Union said it would increase its forces in the restive region.", "label": "news_world"}
+{"text": "can i use mayo instead of miracle whip", "label": "ingredient_substitution"}
+{"text": "What is the oldest ethnological museum in the world ?", "label": "question_location"}
+{"text": "Developing nations comprise what percentage of the world 's population ?", "label": "question_numeric"}
+{"text": "it 's not the ultimate depression-era gangster movie .", "label": "sentiment_negative"}
+{"text": "instead of a hyperbolic beat-charged urban western , it 's an unpretentious , sociologically pointed slice of life .", "label": "sentiment_positive"}
+{"text": "Zambrano right at home No one has been more dominating against National League hitters at home than Cubs starter Carlos Zambrano. And Zambrano looked as if he would be at his finest Monday night at Wrigley Field.", "label": "news_sports"}
+{"text": "tell ann and scott where i am", "label": "share_location"}
+{"text": "give me a fun fact about komodo dragon", "label": "fun_fact"}
+{"text": "my check engine light is on and i need someone to look at it", "label": "schedule_maintenance"}
+{"text": "Do-or-die for Braves, Astros CBC SPORTS ONLINE - The situation is simple: Win and move on; lose and go home. Tied at two games apiece, the Atlanta Braves and Houston Astros square off in a do-or-die, winner-take-all contest on Monday.", "label": "news_sports"}
+{"text": "What do the letters CE stand for on so many products , particularly electrical , purchased now ?", "label": "question_abbreviation"}
+{"text": "how much are my taxes for my income", "label": "taxes"}
+{"text": "set the tv on", "label": "smart_home"}
+{"text": "i need options or italian tonight", "label": "meal_suggestion"}
+{"text": "convert 20 yen to dollars", "label": "exchange_rate"}
+{"text": "Unprotected PCs Fall To Hacker Bots In Just Four Minutes The lifespan of a poorly protected PC connected to the Internet is a mere four minutes, research released Tuesday claimed. After that, it #39;s owned by a hacker.", "label": "news_sci_tech"}
+{"text": "how do i get to central park by foot", "label": "directions"}
+{"text": "when is the next time i'll receive a paycheck", "label": "payday"}
+{"text": "text laura i'll be late for dinner", "label": "text"}
+{"text": "find me a place to stay in jacksonville near the stadium from january 1st through 3rd", "label": "book_hotel"}
+{"text": "What does INRI stand for when used on Jesus ' cross ?", "label": "question_abbreviation"}
+{"text": "Aftershock hits Japan quake zone Strong aftershocks are still shaking northern Japan after the country #39;s deadliest earthquake in nine years killed at least 24 people.", "label": "news_world"}
+{"text": "Material called linen is made from what plant ?", "label": "question_entity"}
+{"text": "it proves quite compelling as an intense , brooding character study .", "label": "sentiment_positive"}
+{"text": "NFL Game Summary - San Diego At Atlanta Atlanta, GA -- Michael Vick ran for a score and threw a touchdown pass in the fourth quarter, as Atlanta rallied to defeat San Diego, 21-20, at the Georgia Dome.", "label": "news_sports"}
+{"text": "How far away is the moon ?", "label": "question_numeric"}
+{"text": "Who was the 16th President of the United States ?", "label": "question_human"}
+{"text": "could steak be used instead of chicken", "label": "ingredient_substitution"}
+{"text": "generally , clockstoppers will fulfill your wildest fantasies about being a different kind of time traveler , while happily killing 94 minutes .", "label": "sentiment_positive"}
+{"text": "manages to transcend the sex , drugs and show-tunes plot into something far richer .", "label": "sentiment_positive"}
+{"text": "give me some tips on building up my credit score", "label": "improve_credit_score"}
+{"text": "Hurricane Ivan Roars Toward Gulf Coast NEW ORLEANS - Stragglers streamed toward higher ground Wednesday on highways turned into one-way evacuation routes and surf started eroding beaches as Hurricane Ivan roared toward the Gulf Coast with 140 mph wind.    Nearly 200 miles wide, Ivan could cause significant damage no matter where it strikes, as hurricane-force wind extended up to 105 miles out from the center...", "label": "news_world"}
+{"text": "Eisner Says Ovitz Required Oversight Daily Michael D. Eisner appeared for a second day of testimony in the shareholder lawsuit over the lucrative severance package granted to Michael S. Ovitz.", "label": "news_business"}
+{"text": "How can I find a list of celebrities ' real names ?", "label": "question_description"}
+{"text": "name unusual facts about the circus", "label": "fun_fact"}
+{"text": "how old", "label": "how_old_are_you"}
+{"text": "how long does it take to make mashed potatoes", "label": "cook_time"}
+{"text": "SpaceShipOne Rolls Toward Victory MOJAVE, California -- A Southern California aerospace team took a big step toward capturing the \\$10 million Ansari X Prize Wednesday, but not without surviving a scary moment when the pilot found himself in a rapid spin as he roared across the threshold", "label": "news_sci_tech"}
+{"text": "Indiana University suffers during PeopleSoft rollout Problems during the rollout of a PeopleSoft financial aid software module at the Indiana University system caused problems for about 3,000 students just as classes were set to start.", "label": "news_sci_tech"}
+{"text": "can i ask your age", "label": "how_old_are_you"}
+{"text": "Stunt pilots to snag a falling NASA craft NASA #39;s three-year effort to bring some genuine star dust back to Earth is set for a dramatic finale Sept. 8 when Hollywood helicopter pilots will attempt a midair retrieval", "label": "news_sci_tech"}
+{"text": "call an uber to take a group of 4 from this bar to the one on maple st", "label": "uber"}
+{"text": "How can you prevent it ?", "label": "question_description"}
+{"text": "What are the conjugations of wake and woke ?", "label": "question_entity"}
+{"text": "talk to me about the total of my state taxes", "label": "taxes"}
+{"text": "Where is it planned to berth the merchant ship , Lane Victory , which Merchant Marine veterans are converting into a floating museum ?", "label": "question_location"}
+{"text": "U.S. cybersecurity chief resigns Amit Yoran leaves the Department of Homeland Security a little over a year after joining.", "label": "news_sci_tech"}
+{"text": "Techs Hit Asian Shares Lower; Oil Down (Reuters) Reuters - Technology stocks led Asian share\\markets lower Friday after a retreat by their U.S. peers, with\\investors cautious amid record-breaking oil prices and ahead of\\U.S. jobs data later in the day.", "label": "news_business"}
+{"text": "text mark and tell him to leave now", "label": "text"}
+{"text": "yes, ai, that is correct", "label": "yes"}
+{"text": "Dell unveils holiday lineup, including new plasma TVs OCTOBER 15, 2004 (IDG NEWS SERVICE) - Dell Inc. took the wraps off its holiday lineup on Thursday, showing new printers, plasma televisions and music players that will soon be available through its Web site.", "label": "news_sci_tech"}
+{"text": "book me a hotel in jacksonville near the stadium from january 1st to 3rd", "label": "book_hotel"}
+{"text": "i would like to hear something funny", "label": "tell_joke"}
+{"text": "i really need you to find me a hotel with good reviews in phoenix", "label": "book_hotel"}
+{"text": "maud and roland 's search for an unknowable past makes for a haunting literary detective story , but labute pulls off a neater trick in possession : he makes language sexy .", "label": "sentiment_positive"}
+{"text": "a moody , multi-dimensional love story and sci-fi mystery , solaris is a thought-provoking , haunting film that allows the seeds of the imagination to germinate .", "label": "sentiment_positive"}
+{"text": "Cairn Energy sees profits slide British oil and gas firm Cairn Energy has seen profits drop 40, but reports strong reserves in its Indian oil fields.", "label": "news_business"}
+{"text": "i want to know if your a bot", "label": "are_you_a_bot"}
+{"text": "a tender , heartfelt family drama .", "label": "sentiment_positive"}
+{"text": "Israel's Sharon Survives Two No-Confidence Votes (Reuters) Reuters - Prime Minister Ariel Sharon survived\\two no-confidence votes in Israel's parliament on Monday,\\clinging to power as he seeks to push through a disputed plan\\for withdrawal from some occupied territory.", "label": "news_world"}
+{"text": "Envoy fears Darfur talks failure KEY talks between the government of Sudan and rebels in the troubled Darfur region tomorrow could fail because of a new surge of violence, the UN #39;s envoy to the country said.", "label": "news_world"}
+{"text": "no aspirations to social import inform the movie version .", "label": "sentiment_negative"}
+{"text": "far more imaginative and ambitious than the trivial , cash-in features nickelodeon has made from its other animated tv series .", "label": "sentiment_positive"}
+{"text": "Where is one 's corpus callosum found ?", "label": "question_location"}
+{"text": "is this a bot", "label": "are_you_a_bot"}
+{"text": "verify my reservation for smith and wollensky at 6:45", "label": "confirm_reservation"}
+{"text": "What is the elevation of St. Louis , MO ?", "label": "question_numeric"}
+{"text": "would most people say you are a computer or a human", "label": "are_you_a_bot"}
+{"text": "help me convert kilos to pounds", "label": "measurement_conversion"}
+{"text": "tell me a joke about the topic of mice", "label": "tell_joke"}
+{"text": "Boeing chief rules out compromise The chief executive of the US plane maker Boeing warned yesterday that America would not compromise over its demand for an end to subsidies for Airbus, in remarks that raised", "label": "news_business"}
+{"text": "Music sharing continues to thrive A steady growth in legal music downloads continues while illegal file sharing networks also flourish, analysts say.", "label": "news_sci_tech"}
+{"text": "Stocks Open Flat, Waiting for Fed  NEW YORK (Reuters) - U.S. stocks opened flat on Tuesday as  investors took another pause after last week's big rally, with  the Fed expected to raise interest rates a quarter point on  Wednesday.", "label": "news_business"}
+{"text": "What 's the official language of Algeria ?", "label": "question_entity"}
+{"text": "alerts for travel in colombia", "label": "travel_alert"}
+{"text": "send david my location", "label": "share_location"}
+{"text": "if i travel here, do i need vaccinations", "label": "vaccines"}
+{"text": "i need some directions to phoenix", "label": "directions"}
+{"text": "what is the price of my state taxes that i owe", "label": "taxes"}
+{"text": "what day did i last have the oil in my car changed", "label": "last_maintenance"}
+{"text": "Tenth-Ranked Ga. Gets Past Ark. 20-14 (AP) AP - David Greene threw for a career-high 382 yards and two touchdowns, Thomas Brown rushed for 107 yards and No. 10 Georgia held off Arkansas 20-14.", "label": "news_sports"}
+{"text": "know any dad jokes", "label": "tell_joke"}
+{"text": "whens your birthday", "label": "how_old_are_you"}
+{"text": "i need to know the carry-on rules for southwest", "label": "carry_on"}
+{"text": "can someone look at my check engine light that's on", "label": "schedule_maintenance"}
+{"text": "do you know what is for dinner", "label": "meal_suggestion"}
+{"text": "give me a fun fact about koala", "label": "fun_fact"}
+{"text": "what should i do to get my car jump started", "label": "jump_start"}
+{"text": "for all its technical virtuosity , the film is so mired in juvenile and near-xenophobic pedagogy that it 's enough to make one pine for the day when godard can no longer handle the rigors of filmmaking .", "label": "sentiment_negative"}
+{"text": "What does U.S.S.R. stand for ?", "label": "question_abbreviation"}
+{"text": "What do a diamond and lump of coal have in common ?", "label": "question_description"}
+{"text": "could you be human", "label": "are_you_a_bot"}
+{"text": "what are the steps to get my rewards for my visa card", "label": "redeem_rewards"}
+{"text": "No. 6 Syracuse Crushes N. Colo. 104-54 Syracuse #39;s Hakim Warrick dunks against Northern Colorado during the first half in Syracuse, NY, Thursday, Nov. 11, 2004. (AP Photo/Kevin Rivoli).", "label": "news_sports"}
+{"text": "French Take Gold, Bronze in Single Kayak ATHENS, Greece - Winning on whitewater runs in the family for Frenchman Benoit Peschier, though an Olympic gold is something new. Peschier paddled his one-man kayak aggressively but penalty free in both his semifinal and final runs on the manmade Olympic ...", "label": "news_sports"}
+{"text": "will this recipe still be good if i use milk instead of eggs", "label": "ingredient_substitution"}
+{"text": "the film may appear naked in its narrative form ... but it goes deeper than that , to fundamental choices that include the complexity of the catholic doctrine", "label": "sentiment_positive"}
+{"text": "what's the mileage to get the the taj mahal in atlantic city", "label": "distance"}
+{"text": "What does the `` blue ribbon '' stand for ?", "label": "question_abbreviation"}
+{"text": "can you please convert $30 usd to canadian dollars", "label": "exchange_rate"}
+{"text": "how long does it take to cook steaks", "label": "cook_time"}
+{"text": "just as moving , uplifting and funny as ever .", "label": "sentiment_positive"}
+{"text": "Twists give Game 3 added weight NEW YORK -- The nature of this American League Championship Series fundamentally changed when it turned out that the supposed ankle tendinitis suffered by Curt Schilling was actually a displaced ankle tendon.", "label": "news_sports"}
+{"text": "tell me how much longer i will have to drive to reach the destination", "label": "distance"}
+{"text": "lasagna takes how long to cook", "label": "cook_time"}
+{"text": "going to work, will there be traffic", "label": "traffic"}
+{"text": "check meeting rooms available between one and three pm", "label": "schedule_meeting"}
+{"text": "What South Vietnamese president was assassinated by his generals in 1963 ?", "label": "question_human"}
+{"text": "sure", "label": "yes"}
+{"text": "i need a hotel in phoenix near chase field from january 4th to the 8th", "label": "book_hotel"}
+{"text": "will peas work instead of carrots", "label": "ingredient_substitution"}
+{"text": "What are the languages spoken by the natives in Afghanistan ?", "label": "question_entity"}
+{"text": "unfortunately , it 's not silly fun unless you enjoy really bad movies .", "label": "sentiment_negative"}
+{"text": "where is the closest bathroom to the statue of liberty", "label": "directions"}
+{"text": "how do i jump start my car", "label": "jump_start"}
+{"text": "i do n't mind having my heartstrings pulled , but do n't treat me like a fool .", "label": "sentiment_negative"}
+{"text": "What year did Oklahoma become a state ?", "label": "question_numeric"}
+{"text": "is there traffic on my work route", "label": "traffic"}
+{"text": "do i have any items on my calendar for march 21st", "label": "calendar"}
+{"text": "samira makhmalbaf 's new film blackboards is much like the ethos of a stream of consciousness , although , it 's unfortunate for the viewer that the thoughts and reflections coming through are torpid and banal", "label": "sentiment_negative"}
+{"text": "Cassini Space Probe Spots Two New Saturn Moons (Reuters) Reuters - Two new moons were spotted around\\Saturn by the Cassini space probe, raising the total to 33\\moons for the ringed planet, NASA said on Monday.", "label": "news_sci_tech"}
+{"text": "that checks out", "label": "yes"}
+{"text": "Bank of England Says Dollar Decline Increases Risk to Banks The possibility of a further slide in the dollar and a decline in demand for US assets has become one of the potential risks to financial stability, the Bank of England said in its semi-annual Financial Stability Review.", "label": "news_business"}
+{"text": "i need to know traffic patterns heading to the george washington bridge from manhattan", "label": "traffic"}
+{"text": "How many people die from snakebite poisoning in the U.S. per year ?", "label": "question_numeric"}
+{"text": "thanks to haynes ' absolute control of the film 's mood , and buoyed by three terrific performances , far from heaven actually pulls off this stylistic juggling act .", "label": "sentiment_positive"}
+{"text": "is it safe to go to serbia", "label": "travel_alert"}
+{"text": "Nortel to file restated results next year Nortel Networks said today that after months of trying to untangle faulty financial results, it won't file its 2003 and first-half 2004 results until early next year.", "label": "news_sci_tech"}
+{"text": "if the first men in black was money , the second is small change .", "label": "sentiment_negative"}
+{"text": "What is the distinction of Erle Stanley Gardner 's The Case of the Terrified Typist ?", "label": "question_description"}
+{"text": "how do i go about getting cash for my card points accumulated", "label": "redeem_rewards"}
+{"text": "What animals do you find in the stock market ?", "label": "question_entity"}
+{"text": "look up how much my state taxes are", "label": "taxes"}
+{"text": "i'm going to need an uber for 4 people to go to patty's bar", "label": "uber"}
+{"text": "what is my current location", "label": "share_location"}
+{"text": "Spike Lee Wins Cybersquatting Case Against Porn Site Movie director Spike Lee has won his\\cybersquatting case against a Philippines-based operator who\\misused the domain name to redirect surfers to a pornographic\\Web Site, arbitrators ruled Friday.", "label": "news_sci_tech"}
+{"text": "( a ) n utterly charming and hilarious film that reminded me of the best of the disney comedies from the 60s .", "label": "sentiment_positive"}
+{"text": "Where did Bill Gates go to college ?", "label": "question_location"}
+{"text": "how many carry ons can i take on a flight with american airlines to japan", "label": "carry_on"}
+{"text": "tell me how to get my points from credit card use cashed in", "label": "redeem_rewards"}
+{"text": "what your numerical digit to display as your age", "label": "how_old_are_you"}
+{"text": "can you text walt and tell him to meet me at the car wash", "label": "text"}
+{"text": "European Tour hopes still high in Canada Hopes of another European Tour victory on the US PGA Tour remained high as Jesper Parnevik and Vijay Singh enjoyed a share of second place after the third round of the Bell Canadian Open at the Glen Abbey course in Ontario.", "label": "news_sports"}
+{"text": "where is the nearest marijuana dispensary to kentucky fried chicken", "label": "directions"}
+{"text": "has a lot of the virtues of eastwood at his best .", "label": "sentiment_positive"}
+{"text": "GULLIT TO TAKE ACTION AFTER DEFEAT Feyenoord boss Ruud Gullit has launched a stinging attack on his players after watching them crash to their third defeat of the season against FC Groningen.", "label": "news_sports"}
+{"text": "would you need more shots to go to mexico", "label": "vaccines"}
+{"text": "Palm Shows New SmartPhone OS Rev PalmSource #39;s latest iteration of the Palm OS operating system, code named Cobalt, is expected to be available in consumer mobile phone devices in the first half of 2005.", "label": "news_sci_tech"}
+{"text": "help me set up a meeting please", "label": "schedule_meeting"}
+{"text": "What does Ms. , Miss , and Mrs. stand for ?", "label": "question_abbreviation"}
+{"text": "What is Dudley Do-Right 's horse 's name ?", "label": "question_entity"}
+{"text": "can i just use oil instead of vinegar", "label": "ingredient_substitution"}
+{"text": "What is the name of Neil Armstrong 's wife ?", "label": "question_human"}
+{"text": "show my transactions", "label": "transactions"}
+{"text": "so unassuming and pure of heart , you ca n't help but warmly extend your arms and yell ` safe ! '", "label": "sentiment_positive"}
+{"text": "what travel alerts are in effect for the us", "label": "travel_alert"}
+{"text": "you wo n't like roger , but you will quickly recognize him .", "label": "sentiment_negative"}
+{"text": "CNN is an acronym for what ?", "label": "question_abbreviation"}
+{"text": "i need to bring my car in because the check engine light is staying lit", "label": "schedule_maintenance"}
+{"text": "Who followed up his first two underwater thrillers with The Girl of the Sea of Cortez ?", "label": "question_human"}
+{"text": "what will traffic be like nearest the george washington bridge, new york", "label": "traffic"}
+{"text": "i wanna know the carry-on rules for the flight i have", "label": "carry_on"}
+{"text": "Where can I get cotton textiles importer details ?", "label": "question_location"}
+{"text": "and if you 're not nearly moved to tears by a couple of scenes , you 've got ice water in your veins .", "label": "sentiment_positive"}
+{"text": "what is some trivia question about coffee", "label": "fun_fact"}
+{"text": "What is the medical term for cancer of the blood ?", "label": "question_entity"}
+{"text": "What is DEET ?", "label": "question_abbreviation"}
+{"text": "Milosevic #39;s Lawyers to Appeal Own Appointment THE HAGUE, Netherlands -- The two lawyers representing Slobodan Milosevic filed papers Thursday (9 September), asking for permission to appeal their appointment by the UN tribunal.", "label": "news_world"}
+{"text": "What botanical marvel did Nebuchadnezzar build ?", "label": "question_location"}
+{"text": "i need a good meal idea from italy", "label": "meal_suggestion"}
+{"text": "Where is McCarren Airport located ?", "label": "question_location"}
+{"text": "the film tries too hard to be funny and tries too hard to be hip .", "label": "sentiment_negative"}
+{"text": "what taxes will i owe from my income", "label": "taxes"}
+{"text": "How much energy is released when oxygen and hydrogen mix ?", "label": "question_numeric"}
+{"text": "how long does it take to get a new credit card", "label": "replacement_card_duration"}
+{"text": "verbinski implements every hack-artist trick to give us the ooky-spookies .", "label": "sentiment_negative"}
+{"text": "absolutely", "label": "yes"}
+{"text": "will you make sure ann and scott know my location", "label": "share_location"}
+{"text": "How does blood clot ?", "label": "question_description"}
+{"text": "are you a person that's real", "label": "are_you_a_bot"}
+{"text": "How often does Old Faithful erupt at Yellowstone National Park ?", "label": "question_numeric"}
+{"text": "when is my flight scheduled to board", "label": "flight_status"}
+{"text": "is bowling on my calendar", "label": "calendar"}
+{"text": "show me my ten most recent transactions on account xyz", "label": "transactions"}
+{"text": "an unclassifiably awful study in self - and audience-abuse .", "label": "sentiment_negative"}
+{"text": "as surreal as a dream and as detailed as a photograph , as visually dexterous as it is at times imaginatively overwhelming .", "label": "sentiment_positive"}
+{"text": "what's the status of by delta flight", "label": "flight_status"}
+{"text": "how many dollars is 20 yen worth", "label": "exchange_rate"}
+{"text": "do i have my nephew's birthday marked for november 10th", "label": "calendar"}
+{"text": "\"which is the best way to improve the credit score", "label": "improve_credit_score"}
+{"text": "how many ounces are in 4 pounds", "label": "measurement_conversion"}
+{"text": "as a rumor of angels reveals itself to be a sudsy tub of supernatural hokum , not even ms. redgrave 's noblest efforts can redeem it from hopeless sentimentality .", "label": "sentiment_negative"}
+{"text": "In My Antonia , how is Mr. Shimerda out of place on the farm ?", "label": "question_description"}
+{"text": "Security company warning of vulnerabilities in Windows XP SP2 A US security company is warning that it has found ten  #39;serious #39; vulnerabilities in Windows XP systems with SP2 installed.", "label": "news_sci_tech"}
+{"text": "UN 'must ignore cloning ban call' The UK's Royal Society urges the UN to ignore a call by President Bush to ban all forms of human cloning.", "label": "news_sci_tech"}
+{"text": "i need a aaa service place to make an appointment for my tires to be assessed", "label": "schedule_maintenance"}
+{"text": "how long until i get my replacement card", "label": "replacement_card_duration"}
+{"text": "what's your age right now", "label": "how_old_are_you"}
+{"text": "how long does it take to prepare a lasagna", "label": "cook_time"}
+{"text": "Australia turns down plea for more troops to protect UN staff in Iraq (AFP) AFP - Australia has turned down a diplomatic plea for a contribution to a military force to protect United Nations (UN) personnel in Iraq.", "label": "news_world"}
+{"text": "in canadian dollars, what is $30", "label": "exchange_rate"}
+{"text": "How do you measure the heat of the sun ?", "label": "question_description"}
+{"text": "What number of American soldiers remain unaccounted from the Vietnam war ?", "label": "question_numeric"}
+{"text": "should i get a travel visa if i want to go to guyana", "label": "international_visa"}
+{"text": "a gripping movie , played with performances that are all understated and touching .", "label": "sentiment_positive"}
+{"text": "lovely and poignant .", "label": "sentiment_positive"}
+{"text": "Israel kills 5 in strike at Hamas activist Islamic group #39;s armed wing, the Izz el-Deen al-Qassam Brigades. Doctors said he suffered leg wounds.", "label": "news_world"}
+{"text": "i need a thai food suggestion", "label": "meal_suggestion"}
+{"text": "please tell me your age", "label": "how_old_are_you"}
+{"text": "Who is the Prime Minister of Canada ?", "label": "question_human"}
+{"text": "tell david my location", "label": "share_location"}
+{"text": "What problems contributed to the high failure rate of Plains farmers in the 1800s ?", "label": "question_description"}
+{"text": "is it possible to take an uber to burger king", "label": "uber"}
+{"text": "are there reservation for joe and will", "label": "confirm_reservation"}
+{"text": "What is the difference between love and infatuation ?", "label": "question_description"}
+{"text": "... is an arthritic attempt at directing by callie khouri .", "label": "sentiment_negative"}
+{"text": "What manufacturers are there in Texas ?", "label": "question_human"}
+{"text": "Testaverde accepts Parcells #39; nomination Who would have thought that the Dallas Cowboys #39; offense would be the least of coach Bill Parcells problems? After cutting their starting quarterback in training camp, signing a controversial", "label": "news_sports"}
+{"text": "China succeeds in cooling economy, but 2005 likely to prove just as tough (AFP) AFP - China can claim some success in the battle to cool its roaring economy in 2004 with a series of macro policies helping prevent another boom-bust cycle, but much remains to be done if Beijing is to avoid increasing wrangles with trade partners.", "label": "news_business"}
+{"text": "if you believe any of this , i can make you a real deal on leftover enron stock that will double in value a week from friday .", "label": "sentiment_negative"}
+{"text": "what fuel do i put in this car", "label": "gas_type"}
+{"text": "China, ASEAN Agree to End Tariffs (AP) AP - China has reached agreement with the Association of Southeast Asian Nations, or ASEAN, on completely removing tariffs on merchandise goods by 2010 as part of a proposed free trade agreement, the Chinese Ministry of Commerce says.", "label": "news_world"}
+{"text": "When does the Bible say the seasons started ?", "label": "question_numeric"}
+{"text": "turn on the tv on channel 6", "label": "smart_home"}
+{"text": "what is some trivia about the weather", "label": "fun_fact"}
+{"text": "that 's a cheat .", "label": "sentiment_negative"}
+{"text": "What Asian country once thrilled to the sport of cricket fighting ?", "label": "question_location"}
+{"text": "to 350, set the oven", "label": "smart_home"}
+{"text": "West Japan on Guard for Aftershocks After Quakes  TOKYO (Reuters) - Residents of western Japan were warned of  possible aftershocks on Monday after two strong earthquakes the  previous day but authorities said the tremors were not directly  linked to a cycle of major seismic activity that hits the  region every century or so.", "label": "news_world"}
+{"text": "How much calcium should an adult female have daily ?", "label": "question_numeric"}
+{"text": "what is the reason humans even exist", "label": "meaning_of_life"}
+{"text": "Indonesia May Prosecute Newmont Mining (AP) AP - Indonesia is proceeding with plans to prosecute U.S.-based Newmont Mining for allegedly polluting a bay in central Indonesia, accusing the company Wednesday of giving investigators incomplete information about its waste disposal method.", "label": "news_world"}
+{"text": "i'd like to go to malaysia so do i need a visa", "label": "international_visa"}
+{"text": "What will the California gas tax be in the year 2000 ?", "label": "question_numeric"}
+{"text": "i would like you to reserve a conference room for noon tomorrow", "label": "schedule_meeting"}
+{"text": "SEC chief lashes out at reform opponents WASHINGTON -- Too many business interests are clinging to a failed status quo and resisting necessary governance reforms, the government #39;s top securities regulator said Thursday.", "label": "news_business"}
+{"text": "the director knows how to apply textural gloss , but his portrait of sex-as-war is strictly sitcom .", "label": "sentiment_negative"}
+{"text": "find out when my next upcoming payday will be", "label": "payday"}
+{"text": "what is the process of making a vacation request", "label": "pto_request"}
+{"text": "have an uber sent to take me to the courthouse", "label": "uber"}
+{"text": "can i redeem my points by transferring them to someone as a gift", "label": "redeem_rewards"}
+{"text": "Orange Crush Bears Sixth-ranked Syracuse scores the first 24 points of the game and cruises to a 104-54 victory over Northern Colorado on Thursday night in the first round of the Coaches vs. Cancer Classic.", "label": "news_sports"}
+{"text": "England seek first one-day title against surprise package Windies LONDON: England have never won a major international limited-overs title while West Indies World Cup glory days date back to 1975 and 1979.", "label": "news_sports"}
+{"text": "What does the channel ESPN stand for ?", "label": "question_abbreviation"}
+{"text": "AMD readies powerful desktop chips AMD is expected to unveil its most powerful desktop processors to date this week, a few days after rival Intel disclosed changes to its desktop processor road map.", "label": "news_sci_tech"}
+{"text": "give me my credit score please", "label": "credit_score"}
+{"text": "Where did the term fireplug come from ?", "label": "question_description"}
+{"text": "Vampire: The Masquerade - Bloodlines Review November 17, 2004 - Most of us who #39;ve been gamers for a while are familiar with the history behind Troika, which was formed from key members of the Black Isle group that made the Fallout, among other talented individuals.", "label": "news_sci_tech"}
+{"text": "Why were the American soldiers in WWI called `` Doughboys ''", "label": "question_description"}
+{"text": "it 's fun lite .", "label": "sentiment_positive"}
+{"text": "your a bot aren't you", "label": "are_you_a_bot"}
+{"text": "How many different kinds of ice cream are there ?", "label": "question_numeric"}
+{"text": "what is the present exchange rate between usd and british pound", "label": "exchange_rate"}
+{"text": "Spain hunts for fans who racially abused England players The Spanish government responded to diplomatic pressure from Britain yesterday by starting a search for fans who racially abused England players during a  quot;friendly quot; football match with Spain.", "label": "news_sports"}
+{"text": "have i added my doctor's appointment to my calendar", "label": "calendar"}
+{"text": "do you know if meeting rooms are open to use 1-2", "label": "schedule_meeting"}
+{"text": "How long is Camptown Racetrack ?", "label": "question_numeric"}
+{"text": "Hard Drive: SP Your XP, RSN Don #39;t have Windows XP? Listen up anyway, because there #39;s a lesson to learn, not to mention sly put downs you can use to annoy your Windows-XP-using-friends so they #39;ll finally break down and admit", "label": "news_sci_tech"}
+{"text": "Microsoft Ends Decade of Antitrust Suits  SEATTLE/NEW YORK (Reuters) - Microsoft Corp. &lt;A HREF=\"http://www.investor.reuters.com/FullQuote.aspx?ticker=MSFT.O target=/stocks/quickinfo/fullquote\"&gt;MSFT.O&lt;/A&gt; said  on Monday it had agreed to settle antitrust lawsuits with  Novell Inc. &lt;A HREF=\"http://www.investor.reuters.com/FullQuote.aspx?ticker=NOVL.O target=/stocks/quickinfo/fullquote\"&gt;NOVL.O&lt;/A&gt; and an industry trade group, marking the  end of a decade-long antitrust battle.", "label": "news_business"}
+{"text": "PalmOne Treo 650 Arrives The PalmOne Treo 650 Smartphone with high-resolution screen, Bluetooth, swappable battery and extended multimedia capabilities was officially announced today.", "label": "news_sci_tech"}
+{"text": "the film 's few ideas are stretched to the point of evaporation ; the whole central section is one big chase that seems to have no goal and no urgency .", "label": "sentiment_negative"}
+{"text": "Cahill Could Be in the Clear Tim Cahill could escape suspension for his controversial celebration of Evertons winner at Manchester City when he was sent off for pulling his shirt over his head.", "label": "news_sports"}
+{"text": "please let lisa and chris know my location information", "label": "share_location"}
+{"text": "can i put in a pto request for january 4th to january 9th", "label": "pto_request"}
+{"text": "Nobel honours sub-atomic world  US scientists David Gross, David Politzer and Frank Wilczeck win the Nobel physics prize for their insights into the deep structure of matter.", "label": "news_sci_tech"}
+{"text": "Why do the chickenpoxs last so long ?", "label": "question_description"}
+{"text": "What is the full name of the PLO ?", "label": "question_abbreviation"}
+{"text": "how long before my new card is mailed to me", "label": "replacement_card_duration"}
+{"text": "give me my credit rating", "label": "credit_score"}
+{"text": "can you find me a reputable hotel in honolulu", "label": "book_hotel"}
+{"text": "will having my shots updated be a good idea, before i travel to south america", "label": "vaccines"}
+{"text": "What building built in 18 contains 327 miles of book shelves ?", "label": "question_location"}
+{"text": "is my apr rate better than most", "label": "apr"}
+{"text": "Which large U.S. city had the highest murder rate for 1988 ?", "label": "question_location"}
+{"text": "can you give me instructions on how to jump start my car, please", "label": "jump_start"}
+{"text": "i cannot remember when i last took my car to the shop", "label": "last_maintenance"}
+{"text": "heard any good jokes", "label": "tell_joke"}
+{"text": "tell me fun science facts", "label": "fun_fact"}
+{"text": "i gotta know the the carry-on restrictions for american airlines", "label": "carry_on"}
+{"text": "it 's too bad that the helping hand he uses to stir his ingredients is also a heavy one .", "label": "sentiment_negative"}
+{"text": "how long will it takes to get a new credit card", "label": "replacement_card_duration"}
+{"text": "i want to shop using credit card points", "label": "redeem_rewards"}
+{"text": "turn the oven to 350", "label": "smart_home"}
+{"text": "are there travel alerts in mexico", "label": "travel_alert"}
+{"text": "i need to request a vacation", "label": "pto_request"}
+{"text": "Motorola to Cut 1,000 Jobs, Take Charge  NEW YORK (Reuters) - Telecommunications equipment maker  Motorola Inc. &lt;A HREF=\"http://www.investor.reuters.com/FullQuote.aspx?ticker=MOT.N target=/stocks/quickinfo/fullquote\"&gt;MOT.N&lt;/A&gt; said on Tuesday that it would cut 1,000  jobs and take charges of about \\$50 million for severance  benefits as it tries to increase productivity.", "label": "news_business"}
+{"text": "what is the current exchange rate between mxn and eur", "label": "exchange_rate"}
+{"text": "please set the oven to 350 f", "label": "smart_home"}
+{"text": "can we please", "label": "yes"}
+{"text": "how is the traffic at 9:00 on the way to detroit", "label": "traffic"}
+{"text": "Jags #39; Leftwich likely to start on Sunday Jacksonville, FL (Sports Network) - Jacksonville Jaguars quarterback Byron Leftwich participated in practice Wednesday and is expected to start this week against the Minnesota Vikings.", "label": "news_sports"}
+{"text": "what day is payday", "label": "payday"}
+{"text": "Oil Prices Sink to a Four-Month Low  LONDON (Reuters) - Oil prices sank to a four-month low  below \\$41 for U.S. crude on Wednesday after leading OPEC  producer Saudi Arabia questioned the need for the cartel to  curb supplies.", "label": "news_business"}
+{"text": "What is the melting point of gold ?", "label": "question_numeric"}
+{"text": "is it ok if i use some of my pto on may 24th to may 29th", "label": "pto_request"}
+{"text": "What is the fear of cockroaches called ?", "label": "question_entity"}
+{"text": "it 's one heck of a character study -- not of hearst or davies but of the unique relationship between them .", "label": "sentiment_positive"}
+{"text": "Israel OKs More West Bank Settlement Homes JERUSALEM Aug. 23, 2004 - Israel announced plans Monday to build hundreds of new housing units in the West Bank, following an apparent US policy shift on settlements that the Palestinians warned  quot;will destroy the peace process.", "label": "news_world"}
+{"text": "i must know the closest gas station to glendale", "label": "directions"}
+{"text": "should i apply for a visa if i am traveling to mexico", "label": "international_visa"}
+{"text": "tell me how long it will take to prepare a lasagna", "label": "cook_time"}
+{"text": "can i put in a pto request for december 3rd to december 10th", "label": "pto_request"}
+{"text": "how many liters are in 1 gallon", "label": "measurement_conversion"}
+{"text": "What 's the state motto of California ?", "label": "question_description"}
+{"text": "i would love to know the closest gas station to glendale", "label": "directions"}
+{"text": "ac temperature is at what", "label": "smart_home"}
+{"text": "tell me what the point of life is", "label": "meaning_of_life"}
+{"text": "What Morris West novel deals with Russian bishop who becomes Pope ?", "label": "question_entity"}
+{"text": "What are all the southern states of the U.S. ?", "label": "question_location"}
+{"text": "Name the Islamic counterpart to the Red Cross .", "label": "question_entity"}
+{"text": "Rate hikes by Fed dull ARMs #39; luster 30-year fixed home loans remain appealing, but variable rates have been on the move up. By Sandra Block. If you #39;re hoping an adjustable-rate mortgage will help you afford your dream house, you may want to rethink those granite countertops.", "label": "news_business"}
+{"text": "Iraq Blames US-Led Forces for Army Massacre  BAGHDAD (Reuters) - Iraq's U.S.-backed government said on  Tuesday that \"major neglect\" by its American-led allies led to  a massacre of 49 army recruits at the weekend.", "label": "news_world"}
+{"text": "Index: RP institutions among cellar dwellers The countrys public institutions were ranked the sixth least effective in the world in the latest survey of the World Economic Forum (WER), which measured the capacity for growth of 104 economies this year.", "label": "news_business"}
+{"text": "Arsenal #39;s winning ways a joy Legendary Nottingham Forest manager Brian Clough said last week that losing Forest #39;s 42-game unbeaten record to Arsenal stuck in the craw  quot;because nobody likes them quot;, but surely that is not true.", "label": "news_sports"}
+{"text": "Who is Archie Bunker 's son-in-law ?", "label": "question_human"}
+{"text": "send jack a text saying hi", "label": "text"}
+{"text": "Scientists: Volcano Monitoring Funds Low (AP) AP - For lack of funds, more than a third of the nation's \"truly dangerous\" volcanos lack even a seismometer for detecting signs of an impending eruption, scientists say.", "label": "news_sci_tech"}
+{"text": "tell me my chase credit card's apr", "label": "apr"}
+{"text": "IBM Claims Computing Crown (The Motley Fool) The Motley Fool - IBM (NYSE: IBM - News) has new bragging rights. Press reports indicate that the technology giant has created the world's fastest supercomputer two years after a Japanese computer claimed that title.", "label": "news_sci_tech"}
+{"text": "Jude Law was in what movie ?", "label": "question_entity"}
+{"text": "i want to hear a joke about elephants", "label": "tell_joke"}
+{"text": "please try to confirm my reservation for jim at barney's", "label": "confirm_reservation"}
+{"text": "What does MSG stand for ?", "label": "question_abbreviation"}
+{"text": "Spanish flyer: Markko Martin steers his Ford Focus during the &lt;b&gt;...&lt;/b&gt; MARKKO MARTIN won his second event in succession as he held off a late charge from Marcus Gronholm to come out on top in the Rally of Catalunya.", "label": "news_sports"}
+{"text": "do i need a visa if i'm going to san jose", "label": "international_visa"}
+{"text": "i want a hotel with good review in honolulu, can you find one", "label": "book_hotel"}
+{"text": "What does the technical term ISDN mean ?", "label": "question_abbreviation"}
+{"text": "UN council arrives in Nairobi UN Security Council members have arrived in Nairobi for a two-day meeting devoted to the conflicts engulfing Sudan, including the western Darfur region.", "label": "news_world"}
+{"text": "i really need to jump start my car", "label": "jump_start"}
+{"text": "the performances take the movie to a higher level .", "label": "sentiment_positive"}
+{"text": "do i need a us visa for cuba", "label": "international_visa"}
+{"text": "is my apr rate above average", "label": "apr"}
+{"text": "do i need vaccinations if i go this country", "label": "vaccines"}
+{"text": "which type of gas does my car use", "label": "gas_type"}
+{"text": "are there any required shots to travel to astana", "label": "vaccines"}
+{"text": "Ohio State #39;s big plays kill Wolverines Football coaches, especially those at Michigan, continually stress the importance of preventing the big play. A lot of players didn #39;t get the message on Saturday.", "label": "news_sports"}
+{"text": "it is damaging to my credit score if i miss one credit card payment", "label": "improve_credit_score"}
+{"text": "What card company sells Christmas ornaments ?", "label": "question_human"}
+{"text": "the script is n't very good ; not even someone as gifted as hoffman ( the actor ) can make it work .", "label": "sentiment_negative"}
+{"text": "how much farther is orlando from my location", "label": "distance"}
+{"text": "\"which could be improve the credit score", "label": "improve_credit_score"}
+{"text": "in all , this is a watchable movie that 's not quite the memorable experience it might have been .", "label": "sentiment_negative"}
+{"text": "what can i use to convert from centimeters to inches", "label": "measurement_conversion"}
+{"text": "For openers, a great weekend Chances are the state of Massachusetts will never crown a high school football state champion. But for those who might covet such an idea, the 2004 season kicks off tonight with about as close as you'll ever get to such a matchup when two of the top squads in Central Mass. meet two of the top-ranked squads in Eastern Mass.", "label": "news_sports"}
+{"text": "what's the estimated travel time to get to dc via bus", "label": "distance"}
+{"text": "What country contains Africa 's northernmost point ?", "label": "question_location"}
+{"text": "what is the shipping wait for my card", "label": "replacement_card_duration"}
+{"text": "Witnesses to Confront Cali Cartel Kingpin Thirteen years into their probe, U.S. investigators have assembled a team of smugglers, accountants and associates to testify against Colombian cartel kingpin Gilberto Rodriguez Orejuela.", "label": "news_world"}
+{"text": "this is n't even madonna 's swept away .", "label": "sentiment_negative"}
+{"text": "where is the nearest papa john's", "label": "directions"}
+{"text": "i need to know the gas type for this vehicle", "label": "gas_type"}
+{"text": "the story and structure are well-honed .", "label": "sentiment_positive"}
+{"text": "Bush Confronts New Challenge on Issue of Iran While assembling a new national security team, President Bush is confronting what could become the biggest challenge of his second term: how to contain Iran #39;s", "label": "news_world"}
+{"text": "how long ago did i take my car to the shop", "label": "last_maintenance"}
+{"text": "What is Linux ?", "label": "question_description"}
+{"text": "what do i have planned for 3/5", "label": "calendar"}
+{"text": "Coal Mine Blast in China Kills 33 (AP) AP - A coal mine explosion in northern China killed 33 people in the latest disaster to strike the country's accident-prone mining industry, the official Xinhua News Agency reported Friday.", "label": "news_world"}
+{"text": "nervous breakdowns are not entertaining .", "label": "sentiment_negative"}
+{"text": "is a travel visa needed for thailand", "label": "international_visa"}
+{"text": "how long does pizza take", "label": "cook_time"}
+{"text": "Source: Dolphins, Bears on Verge of Deal (AP) AP - The Chicago Bears agreed Saturday to trade receiver Marty Booker to the Miami Dolphins for unsigned Adewale Ogunleye  #151; if the Bears can reach a contract agreement with the Pro Bowl defensive end, a source close to the negotiations said.", "label": "news_sports"}
+{"text": "Sudan govt unleashes offensive in South Darfur: SLA rebels CAIRO, Dec 17 (AFP) -- One of the two main rebel groups in Sudan #39;s war-torn Darfur region said that the government had launched an offensive on rebel-held towns in southern Darfur, denouncing it as a truce violation.", "label": "news_world"}
+{"text": "can you verify my recent visa card transaction", "label": "transactions"}
+{"text": "Cendant to Buy Orbitz for \\$1.25 Billion  CHICAGO (Reuters) - Travel and real estate heavyweight  Cendant Corp. on Wednesday said it will buy travel Web site  Orbitz Inc. for about \\$1.25 billion, making it the  second-largest competitor in the online travel industry.", "label": "news_business"}
+{"text": "how long does it take to get downtown by bus", "label": "distance"}
+{"text": "it it possible to take pto from the 8th to the 11th", "label": "pto_request"}
+{"text": "how much is my state taxes", "label": "taxes"}
+{"text": "Blockbuster revamps its policy for late returns NEW YORK -- Faced with growing competition in the home video market, Blockbuster addressed its No. 1 consumer complaint Tuesday, saying it will end late fees on rented videos and games in January.", "label": "news_business"}
+{"text": "what's the status of my virgin airlines flight", "label": "flight_status"}
+{"text": "can i get someone to check my check engine light", "label": "schedule_maintenance"}
+{"text": "WORLD RALLY NEWS Subaru: Solberg has a  #39;relatively #39; good lead. Subaru World Rally team driver Petter Solberg took the lead on the all-new Rally Italia Sardinia on SS1 this morning Friday and held onto that advantage all day to end the leg more than thirty seconds ahead of second placed Marcus Gronholm.", "label": "news_sports"}
+{"text": "whats the total of taxes from my income", "label": "taxes"}
+{"text": "is my replacement card due to arrive in the mail today", "label": "replacement_card_duration"}
+{"text": "How often are quadruplets born ?", "label": "question_numeric"}
+{"text": "Russell moving on, away from Lakers Bryon Russell doesn #39;t plan to read Phil Jackson #39;s book on the Lakers #39; tumultuous 2003-04 season. Russell doesn #39;t need to; he saw it all himself, as part of the not-quite Team of the Century.", "label": "news_sports"}
+{"text": "when can i expect to be paid", "label": "payday"}
+{"text": "What is the text of the Fifth Amendment ?", "label": "question_description"}
+{"text": "i need to know what traffic looks like nearest the smithsonian institute in washington, dc for the next hour", "label": "traffic"}
+{"text": "that's true", "label": "yes"}
+{"text": "i'd like to send a text to jack, say \"hi", "label": "text"}
+{"text": "a swashbuckling tale of love , betrayal , revenge and above all , faith .", "label": "sentiment_positive"}
+{"text": "How many rings are there on a five-zone archery target ?", "label": "question_numeric"}
+{"text": "Who won World War II ?", "label": "question_human"}
+{"text": "Is this the end of IT as we know it? Halsey Minor, CEO of hosted integration provider grand central Communications, has a powerful message for IT: In four years, ... basically the whole notion of enterprise application software is going to be dead. He believes application functionality will instead be available as hosted, pay-per-use services delivered by companies such as Salesforce.com. Putting his money where his mouth is, Minor has recently launched a \\$50 million venture capital fund with his own money to fuel on-demand startups. For its part, Grand Central will handle data and process integration between enterprises and multiple on-demand services.", "label": "news_business"}
+{"text": "on the tv, turn on", "label": "smart_home"}
+{"text": "Stocks Dip on Consumer Income Report News (AP) AP - An unsettling report on consumer incomes set off a spate of profit-taking on Wall Street Monday as investors worried that a tepid economy would erode companies' third-quarter earnings. Another drop in oil prices failed to shake the gloom from the market.", "label": "news_business"}
+{"text": "Cowboys Defeat Redskins 21-18 LANDOVER, Md. - Bill Parcells celebrated the touchdown with a big smile and his fist thrust high in the air...", "label": "news_world"}
+{"text": "US Airways to Alter Flights US Airways said it will change its flight schedules in February to increase departures at its Charlotte and Philadelphia hubs and create a mini-hub in Fort Lauderdale, Fla.", "label": "news_business"}
+{"text": "What does R.E.M. stand for , as in the rock group R.E.M. ?", "label": "question_abbreviation"}
+{"text": "What do the letters ZIP stand for in the phrase `` ZIP code '' ?", "label": "question_abbreviation"}
+{"text": "Barca wins again Barcelona has moved 12 points clear at the top of Spain #39;s Primera Liga thanks to a 2-1 win at Albacete. Andres Iniesta put Barca ahead after just two minutes, but when Mark Gonzalez made it 1-1 with 17 minutes", "label": "news_sports"}
+{"text": "EasyGroup close to launching low-cost mobile phone service (AFP) AFP - EasyGroup, the holding company of no-frills British airline easyJet, is close to striking a deal to launch a low-cost mobile telephone service in Britain, the Financial Times reported.", "label": "news_world"}
+{"text": "Bipartisan Panel Seeks Greenhouse Gas Limits A bipartisan commission that includes energy industry executives, environmentalists and academics will issue a report Wednesday that calls on the nation to adopt mandatory limits on greenhouse gas emissions linked to global warming, set stricter fuel economy standards and promote nuclear power, renewable energy and oil exploration.", "label": "news_business"}
+{"text": "even in its most tedious scenes , russian ark is mesmerizing .", "label": "sentiment_positive"}
+{"text": "where is flight dl123", "label": "flight_status"}
+{"text": "it 's a stunning lyrical work of considerable force and truth .", "label": "sentiment_positive"}
+{"text": "a literate presentation that wonderfully weaves a murderous event in 1873 with murderous rage in 2002 .", "label": "sentiment_positive"}
+{"text": "what can i get with my mastercard points", "label": "redeem_rewards"}
+{"text": "can someone tell me why my check engine light is on", "label": "schedule_maintenance"}
+{"text": "on tuesday you are supposed to have a meeting", "label": "calendar"}
+{"text": "can you check my credit score", "label": "credit_score"}
+{"text": "tell me something funny about horses", "label": "tell_joke"}
+{"text": "Pakistan not for open-ended arms race: spokesman A Pakistani Foreign Office spokesman Sunday said Islamabad does not favor an open-ended arms race in South Asia, according to the official Associated Press of Pakistan (APP).", "label": "news_world"}
+{"text": "how much is my credit score", "label": "credit_score"}
+{"text": "How can you define time ?", "label": "question_description"}
+{"text": "jones ... does offer a brutal form of charisma .", "label": "sentiment_positive"}
+{"text": "a movie that successfully crushes a best selling novel into a timeframe that mandates that you avoid the godzilla sized soda .", "label": "sentiment_positive"}
+{"text": "how many millimeters are in 21 centimeters", "label": "measurement_conversion"}
+{"text": "What President was assassinated by Charles J. Guiteau ?", "label": "question_human"}
+{"text": "Where is the Danube ?", "label": "question_location"}
+{"text": "how long do i boil eggs", "label": "cook_time"}
+{"text": "unflinchingly bleak and desperate", "label": "sentiment_negative"}
+{"text": "does cuba require vaccines", "label": "vaccines"}
+{"text": "the quality of the art combined with the humor and intelligence of the script allow the filmmakers to present the biblical message of forgiveness without it ever becoming preachy or syrupy .", "label": "sentiment_positive"}
+{"text": "i gotta jump start my car", "label": "jump_start"}
+{"text": "what is my credit rating", "label": "credit_score"}
+{"text": "Who has more DNA - a man or a woman ?", "label": "question_human"}
+{"text": "What city 's newspaper is called `` The Enquirer '' ?", "label": "question_location"}
+{"text": "could you share my credit card's apr", "label": "apr"}
+{"text": "OPM Delving Deeper Into Employees #39; Backgrounds which sets hiring and employment standards for the government -- is reviewing its employees to ensure that they are suitable for jobs involving the  quot;public trust.", "label": "news_sci_tech"}
+{"text": "can you tell me what kind of gas your car uses", "label": "gas_type"}
+{"text": "i need to know when i get paid next", "label": "payday"}
+{"text": "are there restrictions for carrying lighters in my backpack on a plane", "label": "carry_on"}
+{"text": "What chess outcome results when a player has no legal move ?", "label": "question_entity"}
+{"text": "what information can you give me on the meaning of life", "label": "meaning_of_life"}
+{"text": "how much is 5 us dollars worth in canadian dollars", "label": "exchange_rate"}
+{"text": "National Foods to look for protector 29/10/2004 National Foods will hunt for a  quot;white knight quot; to protect it from Fonterras \\$A1.62 billion (\\$NZ1.76 billion) bid, raising the risk New Zealand dairy farmers will get dragged into an expensive bidding war.", "label": "news_business"}
+{"text": "do i have any calendars set for may 12th", "label": "calendar"}
+{"text": "can you tell me my apr on my credit card", "label": "apr"}
+{"text": "What mountains lie between the Arkansas and Missouri rivers ?", "label": "question_location"}
+{"text": "i wanna book a place to stay in phoenix from the 5th to the 9th of march", "label": "book_hotel"}
+{"text": "is it true your a real person", "label": "are_you_a_bot"}
+{"text": "What heavyweight boxer was known as The Wild Bull of the Pampas ?", "label": "question_human"}
+{"text": "tell jim i'm coming home soon", "label": "text"}
+{"text": "what do you know about the meaning of life", "label": "meaning_of_life"}
+{"text": "UN calls emergency meeting over Israeli onslaught The UN Security Council called an emergency meeting Monday at the request of Arab nations to consider a resolution demanding an immediate halt to a major Israeli offensive in the northern Gaza Strip.", "label": "news_world"}
+{"text": "Groups Offers Beer for Blood Donations (AP) AP - Some in Michigan who roll up their sleeves to donate blood will get a racetrack T-shirt, hat and pin. Sponsors in San Diego have given away whale-watching trips. On Wednesday, the Cleveland Regional Transit Authority handed out vouchers for a pint of any beverage, including beer, in exchange for a pint of blood.", "label": "news_sci_tech"}
+{"text": "how many transactions do i have on flower shops from last wednesday between 2pm and 7pm", "label": "transactions"}
+{"text": "What National League baseball team employed 72 third baseemen in its first 2 seasons ?", "label": "question_human"}
+{"text": "Russian oil giant tries US court MOSCOW - Embattled Russian oil giant Yukos filed for bankruptcy protection in a US court in a last-ditch bid to avert auction of its core production unit.", "label": "news_business"}
+{"text": "Pakistan province focuses on prayers, curbing vice (Reuters) Reuters - Cinemas are barred from hoisting movie bill-boards and shopkeepers are afraid to display posters featuring women in the historic northern Pakistani city of Peshawar.", "label": "news_world"}
+{"text": "What happened in the Long March ?", "label": "question_description"}
+{"text": "text jeff and tell him to pay the bill", "label": "text"}
+{"text": "director uwe boll and the actors provide scant reason to care in this crude '70s throwback .", "label": "sentiment_negative"}
+{"text": "how many weeks ago was my car in the shop", "label": "last_maintenance"}
+{"text": "What does SIDS stand for ?", "label": "question_abbreviation"}
+{"text": "Nikkei Seen Flat; Earnings, Data Awaited  TOKYO (Reuters) - Japanese stocks are expected to change  little from the previous day's closing levels on Thursday as  investors await key domestic economic data and earnings reports  from companies such as Tokyo Electron Ltd.  September machinery  orders data is due on Thursday afternoon, ahead of Friday's  gross domestic product (GDP) figures for the July-September  quarter.", "label": "news_business"}
+{"text": "Who invented the fountain ?", "label": "question_human"}
+{"text": "the subtle strength of `` elling '' is that it never loses touch with the reality of the grim situation .", "label": "sentiment_positive"}
+{"text": "Olympics: Hansen still strong enough to take bronze Every ounce of his energy was expended, leaving an empty fuel tank. But, even in a depleted state, Brendan Hansen found a way to bolster his ever-growing swimming legacy.", "label": "news_sports"}
+{"text": "how many years have you been alive", "label": "how_old_are_you"}
+{"text": "the reality of the new live-action pinocchio he directed , cowrote and starred in borders on the grotesque .", "label": "sentiment_negative"}
+{"text": "Who played Maria in the film West Side Story ?", "label": "question_human"}
+{"text": "What are some of Australia 's native flora ?", "label": "question_entity"}
+{"text": "manages to be both repulsively sadistic and mundane .", "label": "sentiment_negative"}
+{"text": "Why did David Koresh ask the FBI for a word processor ?", "label": "question_description"}
+{"text": "What fraction of a beaver 's life is spent swimming ?", "label": "question_numeric"}

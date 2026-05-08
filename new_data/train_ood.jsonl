@@ -1,0 +1,186 @@
+{"text": "i need diy info about jump starting my dead car battery", "label": "jump_start"}
+{"text": "book me a hotel in seattle near the space needle from march 3rd to 5th", "label": "book_hotel"}
+{"text": "How many people did Randy Steven Craft murder ?", "label": "question_numeric"}
+{"text": "i'd like for their to be a pto request for me made for the dates june 4th to june 8th", "label": "pto_request"}
+{"text": "floundering", "label": "sentiment_negative"}
+{"text": "what are the carry-on restrictions for southwest airlines", "label": "carry_on"}
+{"text": "What African animals are known as The Big Five ?", "label": "question_entity"}
+{"text": "please tell me if there are meeting rooms available between 9:00 am and 11:00 am", "label": "schedule_meeting"}
+{"text": "When does the average teenager first have intercourse ?", "label": "question_numeric"}
+{"text": "are there any travel warnings for london", "label": "travel_alert"}
+{"text": "please give me the expected arrival date for my next paycheck", "label": "payday"}
+{"text": "What causes tuberculosis ?", "label": "question_description"}
+{"text": "can you update me with the status of flight dl123", "label": "flight_status"}
+{"text": "what is life's meaning", "label": "meaning_of_life"}
+{"text": "Saturn #39;s Titan about to surrender shrouded secrets For the first time in the history of astronomy, scientists are about to glimpse the mysterious surface of Titan, Saturn #39;s haze-shrouded moon.", "label": "news_sci_tech"}
+{"text": "and completely ridiculous", "label": "sentiment_negative"}
+{"text": "give me an idea of traffic on the way to the doctors office at 6", "label": "traffic"}
+{"text": "exploitative for the art houses and", "label": "sentiment_negative"}
+{"text": "what's the point of life, anyways", "label": "meaning_of_life"}
+{"text": "what is your age, ai", "label": "how_old_are_you"}
+{"text": "would i need to get a visa to go to ireland", "label": "international_visa"}
+{"text": "how safe is it to travel to mongolia (how safe is mongolia)", "label": "travel_alert"}
+{"text": "cash in rewards for my visa card", "label": "redeem_rewards"}
+{"text": "please book me an uber ride to the stadium", "label": "uber"}
+{"text": "book an oil change please", "label": "schedule_maintenance"}
+{"text": "What does the abbreviation IOC stand for ?", "label": "question_abbreviation"}
+{"text": "from a flight from muscat to qatar, how many carry ons can i take", "label": "carry_on"}
+{"text": "i need to get to a church immediately, please take me to one!", "label": "directions"}
+{"text": "What are the four elements ?", "label": "question_entity"}
+{"text": "should i get any vaccines before going over to the uk", "label": "vaccines"}
+{"text": "what do i need to do in order to redeem my credit card points", "label": "redeem_rewards"}
+{"text": "before i pay my walmart credit card did i make any purchases using it recently", "label": "transactions"}
+{"text": "what do i pay currently in income taxes", "label": "taxes"}
+{"text": "above the rest", "label": "sentiment_positive"}
+{"text": "where is the closest starbucks", "label": "directions"}
+{"text": "can you book me a place to stay in pittsburgh from monday to friday", "label": "book_hotel"}
+{"text": "tell me what kind of gas this car uses", "label": "gas_type"}
+{"text": "worse stunt editing or cheaper action movie production values than in extreme ops", "label": "sentiment_negative"}
+{"text": "uber, i have 3 people who are going to union station", "label": "uber"}
+{"text": "please tell me how to go about asking for a vacation", "label": "pto_request"}
+{"text": "tell me the apr on my mastercard", "label": "apr"}
+{"text": "help me figure out the meaning of life", "label": "meaning_of_life"}
+{"text": "Copernic Updates Desktop Search Tool Copernic Updates Desktop Search Tool\\\\Copernic continues to challenge both Microsoft and Google in the battle for desktop search supremacy today by announcing the immediate availability of Copernic Desktop Search (CDS) 1.1, a new and improved version of its critically-acclaimed desktop search product. CDS enables users to instantly search their personal ...", "label": "news_sci_tech"}
+{"text": "is off-putting , to say the least , not to mention inappropriate and wildly undeserved .", "label": "sentiment_negative"}
+{"text": "does delta have any restrictions for what i can carry on", "label": "carry_on"}
+{"text": "SEC Gives the Thumbs Up to Google #39;s IPO Earlier Wednesday, Google cut the range of its IPO price to \\$85-\\$95 per share from \\$108-\\$135 per share and the number of shares that will be sold from 25.7 million to 19.6 million. The cuts mean Google could raise about \\$1.8 billion in ...", "label": "news_business"}
+{"text": "Which infectious disease kills the most people worldwide ?", "label": "question_entity"}
+{"text": "can you book me a room in new york city from april 2 through april 8", "label": "book_hotel"}
+{"text": "will a loan lower my credit score", "label": "improve_credit_score"}
+{"text": "of kiddie entertainment , sophisticated wit and symbolic graphic design", "label": "sentiment_positive"}
+{"text": "Quattrone Asks Appeals Court To Seal Some Support Letters NEW YORK (Dow Jones)--Former star technology banker Frank Quattrone has asked a federal appeals court to seal some letters written in his support in order to protect his family #39;s privacy.", "label": "news_business"}
+{"text": "what is al's age", "label": "how_old_are_you"}
+{"text": "Sudan Security Foils New Sabotage Plot -- Agency Sudanese authorities said Friday they foiled another plot by an opposition Islamist party to kidnap and kill senior government officials and blow up sites in the capital", "label": "news_world"}
+{"text": "can you tell me about the traffic typically at noon on the route the hospital", "label": "traffic"}
+{"text": "New boss for Martha Susan Lyne, once a hot-shot magazine editor and later president of ABC Entertainment, was tapped yesterday to head troubled Martha Stewart Living Omnimedia.", "label": "news_business"}
+{"text": "indeed", "label": "yes"}
+{"text": "if you ever wanted to be an astronaut , this is the ultimate movie experience", "label": "sentiment_positive"}
+{"text": "a stab at soccer hooliganism", "label": "sentiment_negative"}
+{"text": "How do you do a bibliography page ?", "label": "question_description"}
+{"text": "noodles need to cook for how long", "label": "cook_time"}
+{"text": "do i need vaccinations to travel there", "label": "vaccines"}
+{"text": "how can i find my credit rating", "label": "credit_score"}
+{"text": "Where in a tree does photosynthesis occur ?", "label": "question_location"}
+{"text": "go ahead and confirm my reservation for kevin at red robin", "label": "confirm_reservation"}
+{"text": "When was the first stained glass window made ?", "label": "question_numeric"}
+{"text": "Read all about it, Rebels tough When a newspaper dubbed Walpole little more than a speed bump for Oliver Ames in the Division 2 state tournament last season, there was no one giddier to read that than Walpole coach Stacy Bilodeau.", "label": "news_sports"}
+{"text": "can you send a text to my mother irene and tell her i love her", "label": "text"}
+{"text": "What does snafu stand for ?", "label": "question_abbreviation"}
+{"text": "add a new meeting with tom for 6pm", "label": "schedule_meeting"}
+{"text": "what kind of gas should i put into this car", "label": "gas_type"}
+{"text": "can i use strawberries instead of pineapples for this", "label": "ingredient_substitution"}
+{"text": "my credit card's apr, please", "label": "apr"}
+{"text": "fun facts about tigers", "label": "fun_fact"}
+{"text": "tell me now if you are a bot", "label": "are_you_a_bot"}
+{"text": "what meal from italy do you suggest", "label": "meal_suggestion"}
+{"text": "what's 32 degrees fahrenheit in celsisus", "label": "measurement_conversion"}
+{"text": "what do i do to request a vacation", "label": "pto_request"}
+{"text": "when did i last have my car fixed", "label": "last_maintenance"}
+{"text": "Olympian women escape the age barrier (AFP) AFP - The older the violin, the sweeter the music. And the Athens Olympics is proving the lyrics right as Martina Navratilova, Merlene Ottey and company are demonstrating the endurance of women with middle-aged ladies defying perceptions about age and competition in nearly every sport.", "label": "news_world"}
+{"text": "begin to long for the end credits as the desert does for rain .", "label": "sentiment_negative"}
+{"text": "what's my credit rating", "label": "credit_score"}
+{"text": "are you ai or a real person please", "label": "are_you_a_bot"}
+{"text": "What does NAFTA stand for ?", "label": "question_abbreviation"}
+{"text": "ca n't compare friday after next to them", "label": "sentiment_positive"}
+{"text": "How do I write to my Congressman ?", "label": "question_description"}
+{"text": "Wildfire Sweeps by Old Calif. Mining Town REDDING, Calif. - A wind-fueled wildfire roared through an old mining town near Redding on Sunday, destroying 20 homes and forcing nearly 125 residents to flee, officials said...", "label": "news_world"}
+{"text": "what amount of miles are in a hundred kilometers", "label": "measurement_conversion"}
+{"text": "show me my recent transactoin", "label": "transactions"}
+{"text": "can i use baking powder instead of baking soda", "label": "ingredient_substitution"}
+{"text": "when will you send me a replacement card", "label": "replacement_card_duration"}
+{"text": "what is the exchange rate between usd and the euro", "label": "exchange_rate"}
+{"text": "Oracle-PeopleSoft a done deal? Investors bet that now that PeopleSoft has fired Conway, the way is paved for a friendly deal. That was how most Wall Street analysts summed up Oracle #39;s chances of finally acquiring rival software maker PeopleSoft", "label": "news_business"}
+{"text": "find a mechanic to look at my check engine light", "label": "schedule_maintenance"}
+{"text": "what do i do to stop my credit score from going lower", "label": "improve_credit_score"}
+{"text": "tell me a joke about cows", "label": "tell_joke"}
+{"text": "Who is the fastest swimmer in the world ?", "label": "question_human"}
+{"text": "which shots do i need to get before i go to africa next week", "label": "vaccines"}
+{"text": "how do you do a jump start", "label": "jump_start"}
+{"text": "CNN is the abbreviation for what ?", "label": "question_abbreviation"}
+{"text": "How many visitors go to the Vatican each year ?", "label": "question_numeric"}
+{"text": "i would like an uber please", "label": "uber"}
+{"text": "What is proposition 98 about ?", "label": "question_description"}
+{"text": "What is Boston Kreme ?", "label": "question_description"}
+{"text": "send text message to", "label": "text"}
+{"text": "can you suggest meals from italy to me", "label": "meal_suggestion"}
+{"text": "can i use mayonnaise instead of miracle whip", "label": "ingredient_substitution"}
+{"text": "What state does Martha Stewart live in ?", "label": "question_location"}
+{"text": "i wanna know my credit rating now", "label": "credit_score"}
+{"text": "when was my car last worked on", "label": "last_maintenance"}
+{"text": "i want a pic of how to jump start", "label": "jump_start"}
+{"text": "Kaneria spins through Lankans Pakistani spinner Danish Kaneria has ripped through the Sri Lankan order taking five wickets on the fourth day of the second Test in Karachi.", "label": "news_sports"}
+{"text": "EU warns of sanctions on US The European Union threatens to impose sanctions on some US imports unless Washington repeals its anti-dumping law.", "label": "news_business"}
+{"text": "how long have you been alive for", "label": "how_old_are_you"}
+{"text": "Tennis: France Takes 1-0 Lead in Davis Cup France has taken a 1-0 lead over Spain in the Davis Cup tennis semifinals in Alicante, Spain, thanks to Paul-Henri Matthieu #39;s surprise win over former French Open champion Carlos Moya.", "label": "news_sports"}
+{"text": "what's on my agenda for tomorrow", "label": "calendar"}
+{"text": "What city boasts Penn 's Landing , on the banks of the Delaware river ?", "label": "question_location"}
+{"text": "i would like to try and confirm that i have a reservation at the seven dwarves for peter", "label": "confirm_reservation"}
+{"text": "Call for curbs on discarded fish Newcastle scientists urge the EU to ban fishermen catching fish which are later thrown back into the sea.", "label": "news_sci_tech"}
+{"text": "what are my state taxes looking like", "label": "taxes"}
+{"text": "Chirac postpones his visit to Russia over hostage crisis A threat by a militant Islamic group in Iraq to kill two French men unless a law banning Muslim headscarves in schools is abandoned was being treated as a national crisis by the French government last night.", "label": "news_world"}
+{"text": "Group: Robotic Rescue Mission Uncertain (AP) AP - Trying to save the famed Hubble Space Telescope with a robot would cost  #36;2 billion with just a 50-50 chance of success, an aerospace research group is advising NASA in the coming days.", "label": "news_sci_tech"}
+{"text": "how long does it take until i reach the sky harbor airport", "label": "distance"}
+{"text": "help me learn something intriguing about turtles", "label": "fun_fact"}
+{"text": "China mine death toll increases More than 100 men are trapped and feared dead after a gas explosion at a coal mine in central China on Sunday. Dangerous carbon monoxide levels are hampering rescue efforts, but one official said it was impossible for anyone to have survived.", "label": "news_world"}
+{"text": "What country imposed the Berlin Blockade in 1948 ?", "label": "question_location"}
+{"text": "please tell steve my location", "label": "share_location"}
+{"text": "turn the lights down", "label": "smart_home"}
+{"text": "that is affirmative", "label": "yes"}
+{"text": "i must schedule somewhere get my tires checked out", "label": "schedule_maintenance"}
+{"text": "i would like you to confirm my reservation for next saturday at 11 am", "label": "confirm_reservation"}
+{"text": "please lock every door", "label": "smart_home"}
+{"text": "i want to know if i can redeem my credit card points now", "label": "redeem_rewards"}
+{"text": "what's on my schedule for may 3", "label": "calendar"}
+{"text": "how many miles until i get to the beach", "label": "distance"}
+{"text": "day that i get paid", "label": "payday"}
+{"text": "What is the best distance education university or college ?", "label": "question_human"}
+{"text": "do i need a visa to scotland", "label": "international_visa"}
+{"text": "will you notify me when my new card is on the way", "label": "replacement_card_duration"}
+{"text": "Who holds the career record for the most major league home runs ?", "label": "question_human"}
+{"text": "give me the time left before i get to the hotel", "label": "distance"}
+{"text": "please find out if rooms are free from 1 to 2", "label": "schedule_meeting"}
+{"text": "what's the direction for foot traffic to get to the eiffel tower", "label": "directions"}
+{"text": "What does the E stand for in the equation E=mc2 ?", "label": "question_abbreviation"}
+{"text": "are you an ai or a real person", "label": "are_you_a_bot"}
+{"text": "do i need a visa to travel to mexico", "label": "international_visa"}
+{"text": "can you find the date of my last oil change", "label": "last_maintenance"}
+{"text": "what kind of gas does my vehicle take", "label": "gas_type"}
+{"text": "What star-faring race brought about the Inhumans on Marvel 's Earth ?", "label": "question_entity"}
+{"text": "can you tell me if germany issued any travel warnings", "label": "travel_alert"}
+{"text": "startling story", "label": "sentiment_positive"}
+{"text": "U.S. Spy Agency Turns Eye on America (AP) AP - In the name of homeland security, America's spy imagery agency is keeping a close eye, close to home. It's watching America. Since the Sept. 11 attacks, about 100 employees of a little-known branch of the Defense Department called the National Geospatial-Intelligence Agency  #151; and some of the country's most sophisticated aerial imaging equipment  #151; have focused on observing what's going on in the United States.", "label": "news_sci_tech"}
+{"text": "What American won the world Grand Prix driving championship in 1978 ?", "label": "question_human"}
+{"text": "do you have any jokes to tell me", "label": "tell_joke"}
+{"text": "please show me how to share my location with noel", "label": "share_location"}
+{"text": "how long should i cook the steak for", "label": "cook_time"}
+{"text": "give me the status of flight dl123", "label": "flight_status"}
+{"text": "review of my card apr", "label": "apr"}
+{"text": "is such a blip on the year 's radar screen", "label": "sentiment_negative"}
+{"text": "my credit card got stolen and i need to know how long it will be before a new on arrives", "label": "replacement_card_duration"}
+{"text": "how many pesos can i get for one dollar", "label": "exchange_rate"}
+{"text": "can you tell me some dog jokes", "label": "tell_joke"}
+{"text": "yes you are", "label": "yes"}
+{"text": "was reading the minds of the audience", "label": "sentiment_positive"}
+{"text": "what time is my flight supposed to be landing", "label": "flight_status"}
+{"text": "i gotta know what is currently on my calendar for friday the 1st", "label": "calendar"}
+{"text": "what is the yen worth in terms of the peso", "label": "exchange_rate"}
+{"text": "how's highway traffic today", "label": "traffic"}
+{"text": "when is my paycheck coming", "label": "payday"}
+{"text": "how long is the chicken gonna take", "label": "cook_time"}
+{"text": "What famed clown appeared on an early Howdy Doody Show and insisted that Clarabell be made up as a real clown ?", "label": "question_human"}
+{"text": "how many feet are in 50 yards", "label": "measurement_conversion"}
+{"text": "please set the temperature to 80", "label": "smart_home"}
+{"text": "are there any new harmful things that could affect my credit score", "label": "improve_credit_score"}
+{"text": "whats my recent transactions on my card", "label": "transactions"}
+{"text": "yes , but also intriguing and honorable ,", "label": "sentiment_positive"}
+{"text": "just as endearing and easy to watch", "label": "sentiment_positive"}
+{"text": "i need you to text someone for me", "label": "text"}
+{"text": "What was the longest war in U.S. history ?", "label": "question_entity"}
+{"text": "UPDATE 4-Kumble puts India in sight of victory Leg spinner Anil Kumble completed his sixth 10-wicket test haul on Saturday to give India a wonderful opportunity to square their four-match series against Australia.", "label": "news_sports"}
+{"text": "How many people watch network television ?", "label": "question_numeric"}
+{"text": "Sharapova Wins Hansol Korea Open Wimbledon champion Maria Sharapova won the first-ever Korea Open on Sunday. The top-seeded 17-year old Russian beat Poland #39;s Marta Domachowska in straight sets -- 6-1, 6-1 -- in less than an hour.", "label": "news_sports"}
+{"text": "share my location with brad and terry", "label": "share_location"}
+{"text": "let me pick your brain what do you think we should do for dinner tonight", "label": "meal_suggestion"}
+{"text": "tell me something neat about slinkies", "label": "fun_fact"}
+{"text": "What four U.S. states have active volcanoes ?", "label": "question_location"}
+{"text": "what's my bill going to be for my taxes for tennessee", "label": "taxes"}
