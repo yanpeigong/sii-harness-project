@@ -24,7 +24,7 @@ import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from llm_client import call_llm as _raw_call_llm, count_tokens, count_messages_tokens, truncate_to_tokens
-from test import MyHarness
+from solution import MyHarness
 
 
 def make_controlled_llm(max_prompt_tokens: int, tracker: dict, lock: threading.Lock):
@@ -65,7 +65,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--train",             default="data/train_dev.jsonl")
     parser.add_argument("--dev",               default="data/test_dev.jsonl")
-    parser.add_argument("--workers",     type=int, default=20)
+    parser.add_argument("--workers",     type=int, default=25)
     parser.add_argument("--max-prompt-tokens", type=int, default=2048)
     parser.add_argument("--runs",        type=int, default=1)
     args = parser.parse_args()

@@ -1,0 +1,30 @@
+{"text": "Can I enroll in Data Systems without taking Discrete Math first?", "label": "course_prerequisite"}
+{"text": "这门课的先修要求是什么？", "label": "course_prerequisite"}
+{"text": "The registration portal says I lack a prerequisite.", "label": "course_prerequisite"}
+{"text": "My badge does not open the robotics lab after 7 pm.", "label": "lab_access"}
+{"text": "实验室门禁权限还没有开通。", "label": "lab_access"}
+{"text": "Please add me to the chemistry lab access list.", "label": "lab_access"}
+{"text": "When will the merit scholarship decision be posted?", "label": "scholarship_status"}
+{"text": "奖学金审核进度在哪里看？", "label": "scholarship_status"}
+{"text": "I submitted financial aid documents but have no scholarship update.", "label": "scholarship_status"}
+{"text": "The heater in my dorm room stopped working.", "label": "dorm_repair"}
+{"text": "宿舍水龙头漏水，需要报修。", "label": "dorm_repair"}
+{"text": "Please send maintenance because the room light is broken.", "label": "dorm_repair"}
+{"text": "I want to reserve a book that is currently checked out.", "label": "library_hold"}
+{"text": "图书馆预约的书什么时候可以取？", "label": "library_hold"}
+{"text": "Can you place a hold on this journal volume?", "label": "library_hold"}
+{"text": "Two final exams are scheduled at the same time.", "label": "exam_conflict"}
+{"text": "我的考试时间冲突了，应该联系谁？", "label": "exam_conflict"}
+{"text": "I need an alternate exam slot due to overlapping courses.", "label": "exam_conflict"}
+{"text": "Our student club needs reimbursement for event snacks.", "label": "club_budget"}
+{"text": "社团活动经费申请表在哪里？", "label": "club_budget"}
+{"text": "Please review the budget request for the debate society.", "label": "club_budget"}
+{"text": "Send an official transcript to my internship program.", "label": "transcript_request"}
+{"text": "成绩单英文版怎么申请？", "label": "transcript_request"}
+{"text": "I need a sealed transcript for graduate school.", "label": "transcript_request"}
+{"text": "I want to book a campus clinic appointment.", "label": "health_appointment"}
+{"text": "校医院今天能不能预约看诊？", "label": "health_appointment"}
+{"text": "Please schedule a nurse visit for a sore throat.", "label": "health_appointment"}
+{"text": "Can I switch from the weekly meal plan to the block plan?", "label": "meal_plan_change"}
+{"text": "饭卡套餐想改成低额度的。", "label": "meal_plan_change"}
+{"text": "Please change my dining plan for next semester.", "label": "meal_plan_change"}

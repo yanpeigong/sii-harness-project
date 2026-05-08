@@ -18,7 +18,7 @@ Compatibility notes
 - Prompt-injection resistance comes from treating input text as data.
 - The final answer is always validated against the label whitelist.
 
-This file intentionally uses only the standard library, numpy, and harness_base.
+This file intentionally uses only the standard library and harness_base.
 Keep behavior changes separate from comment-only cleanup.
 
 
@@ -32,7 +32,6 @@ import collections
 import threading
 import sys
 import time
-import numpy as np
 
 
 # ============================================================================

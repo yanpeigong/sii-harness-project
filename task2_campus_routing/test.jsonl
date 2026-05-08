@@ -1,0 +1,60 @@
+{"text": "The system blocks me because an earlier course is missing.", "label": "course_prerequisite"}
+{"text": "选课提示缺少前置课程。", "label": "course_prerequisite"}
+{"text": "Does Linear Algebra satisfy the prerequisite for Machine Learning?", "label": "course_prerequisite"}
+{"text": "I need prerequisite approval from the instructor.", "label": "course_prerequisite"}
+{"text": "Registration says I have not completed the required foundation class.", "label": "course_prerequisite"}
+{"text": "这门高级课必须先修哪几门？", "label": "course_prerequisite"}
+{"text": "My ID card still cannot unlock the media lab door.", "label": "lab_access"}
+{"text": "晚上进不了实验室，门禁显示无权限。", "label": "lab_access"}
+{"text": "Please activate my lab badge for the clean room.", "label": "lab_access"}
+{"text": "The access reader rejected me outside the physics lab.", "label": "lab_access"}
+{"text": "研究助理需要进入实验室的权限。", "label": "lab_access"}
+{"text": "我的门禁没有加入实验楼白名单。", "label": "lab_access"}
+{"text": "I want to know whether my scholarship application was approved.", "label": "scholarship_status"}
+{"text": "助学金结果还没出来吗？", "label": "scholarship_status"}
+{"text": "Has the scholarship committee reviewed my file?", "label": "scholarship_status"}
+{"text": "The portal still shows pending for the award decision.", "label": "scholarship_status"}
+{"text": "Where can I see my financial aid award status?", "label": "scholarship_status"}
+{"text": "奖学金材料提交后没有反馈。", "label": "scholarship_status"}
+{"text": "The dorm window will not close and cold air comes in.", "label": "dorm_repair"}
+{"text": "宿舍空调坏了，请安排维修。", "label": "dorm_repair"}
+{"text": "There is water dripping from the ceiling in my room.", "label": "dorm_repair"}
+{"text": "My desk lamp in residence hall is broken.", "label": "dorm_repair"}
+{"text": "The bathroom drain in the dorm is clogged.", "label": "dorm_repair"}
+{"text": "寝室门锁松了，需要维修。", "label": "dorm_repair"}
+{"text": "Reserve the economics textbook when it is returned.", "label": "library_hold"}
+{"text": "帮我预约这本已经借出的书。", "label": "library_hold"}
+{"text": "I want to queue for an unavailable library item.", "label": "library_hold"}
+{"text": "Please notify me when the book on hold is ready.", "label": "library_hold"}
+{"text": "Can I place a hold on a DVD in the library catalog?", "label": "library_hold"}
+{"text": "图书预约到馆后会通知吗？", "label": "library_hold"}
+{"text": "My chemistry and history finals overlap.", "label": "exam_conflict"}
+{"text": "两门期末考试同一时间怎么办？", "label": "exam_conflict"}
+{"text": "Please help arrange a makeup exam because of a schedule conflict.", "label": "exam_conflict"}
+{"text": "I have three exams in one day and two at the same hour.", "label": "exam_conflict"}
+{"text": "The exam timetable creates an official conflict.", "label": "exam_conflict"}
+{"text": "考试冲突申请在哪里提交？", "label": "exam_conflict"}
+{"text": "The photography club needs approval for venue rental funds.", "label": "club_budget"}
+{"text": "社团报销发票应该交给谁？", "label": "club_budget"}
+{"text": "Please process the student organization budget form.", "label": "club_budget"}
+{"text": "Our club needs money for competition travel.", "label": "club_budget"}
+{"text": "How do we request funding for a campus event?", "label": "club_budget"}
+{"text": "学生组织经费审批流程是什么？", "label": "club_budget"}
+{"text": "I need my official grades sent to another university.", "label": "transcript_request"}
+{"text": "申请纸质密封成绩单。", "label": "transcript_request"}
+{"text": "Can the registrar email my transcript to an employer?", "label": "transcript_request"}
+{"text": "Please issue a transcript with degree information.", "label": "transcript_request"}
+{"text": "How long does official transcript processing take?", "label": "transcript_request"}
+{"text": "成绩单寄送到国外学校需要多久？", "label": "transcript_request"}
+{"text": "Book me a clinic visit for a fever.", "label": "health_appointment"}
+{"text": "我想预约校医院医生。", "label": "health_appointment"}
+{"text": "Can I see a nurse at the student health center tomorrow?", "label": "health_appointment"}
+{"text": "Please schedule a vaccination appointment.", "label": "health_appointment"}
+{"text": "I need medical advice from campus health services.", "label": "health_appointment"}
+{"text": "嗓子疼，想在校医院挂号。", "label": "health_appointment"}
+{"text": "Switch my dining package to fewer meals per week.", "label": "meal_plan_change"}
+{"text": "下学期饭卡套餐想升级。", "label": "meal_plan_change"}
+{"text": "Can I cancel the unlimited meal plan?", "label": "meal_plan_change"}
+{"text": "Please adjust my cafeteria plan before billing.", "label": "meal_plan_change"}
+{"text": "I want to change the dining option linked to my student account.", "label": "meal_plan_change"}
+{"text": "校园餐饮套餐修改在哪里办？", "label": "meal_plan_change"}

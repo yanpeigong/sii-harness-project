@@ -1,0 +1,36 @@
+{"text": "My parcel was supposed to arrive yesterday, but tracking has not moved.", "label": "package_delay"}
+{"text": "包裹显示还在仓库，已经超过预计送达时间了。", "label": "package_delay"}
+{"text": "The courier keeps delaying my delivery date. Please check the shipment.", "label": "package_delay"}
+{"text": "I need to change the delivery address before the order ships.", "label": "address_update"}
+{"text": "收货地址填错了，可以改成我办公室地址吗？", "label": "address_update"}
+{"text": "Please update my shipping address for the new purchase.", "label": "address_update"}
+{"text": "Could you send me a VAT invoice for last month's purchase?", "label": "invoice_copy"}
+{"text": "我需要这笔订单的电子发票副本。", "label": "invoice_copy"}
+{"text": "Please email me a copy of the invoice for accounting.", "label": "invoice_copy"}
+{"text": "The blender stopped working after two weeks. I want to use the warranty.", "label": "warranty_claim"}
+{"text": "耳机还在保修期内，但是右耳没有声音了。", "label": "warranty_claim"}
+{"text": "How do I file a warranty claim for a defective monitor?", "label": "warranty_claim"}
+{"text": "Cancel my monthly plan before the next billing cycle.", "label": "subscription_cancel"}
+{"text": "我想停止自动续费，不要再扣款了。", "label": "subscription_cancel"}
+{"text": "Please end my subscription after this month.", "label": "subscription_cancel"}
+{"text": "I received a login alert from a city I have never visited.", "label": "account_security"}
+{"text": "有人好像登录了我的账号，请帮我检查安全问题。", "label": "account_security"}
+{"text": "Please lock my account because I suspect unauthorized access.", "label": "account_security"}
+{"text": "Can I move my store pickup appointment to Friday afternoon?", "label": "pickup_reschedule"}
+{"text": "自提时间能不能改到明天晚上？", "label": "pickup_reschedule"}
+{"text": "I missed my pickup window and need a new time slot.", "label": "pickup_reschedule"}
+{"text": "My reward points from the last order did not appear.", "label": "loyalty_points"}
+{"text": "会员积分为什么没有到账？", "label": "loyalty_points"}
+{"text": "Please check whether my loyalty points were applied.", "label": "loyalty_points"}
+{"text": "How much money is left on my gift card?", "label": "gift_card_balance"}
+{"text": "帮我查一下购物卡余额。", "label": "gift_card_balance"}
+{"text": "The gift card code works, but I need to know the remaining balance.", "label": "gift_card_balance"}
+{"text": "I want a quote for ordering 200 office chairs.", "label": "bulk_quote"}
+{"text": "公司采购五十台显示器，有没有批量报价？", "label": "bulk_quote"}
+{"text": "Please prepare a bulk price for our team purchase.", "label": "bulk_quote"}
+{"text": "Is my order still eligible for a return?", "label": "return_window"}
+{"text": "这个商品过了七天还能退吗？", "label": "return_window"}
+{"text": "Please tell me the return deadline for this purchase.", "label": "return_window"}
+{"text": "The package arrived crushed and the glass bowl was broken.", "label": "damaged_item"}
+{"text": "收到的商品外壳裂了，包装也有破损。", "label": "damaged_item"}
+{"text": "My item was damaged during shipping and needs replacement.", "label": "damaged_item"}

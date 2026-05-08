@@ -1,0 +1,249 @@
+{"text": "母亲节当天营业时间有调整吗？几点开始迎客？", "label": "询问营业时间"}
+{"text": "They lost my takeout order (paid in full), then blamed the delivery app. No refund, no re-cook — just ‘sorry, try again’.", "label": "投诉服务"}
+{"text": "In category theory, a monad is a triple (T, η, μ) satisfying coherence laws — unrelated to monads in functional programming syntax.", "label": "OOD"}
+{"text": "Are vouchers from the May promotion still redeemable after June 1st?", "label": "优惠活动"}
+{"text": "Rust’s borrow checker enforces 'one mutable XOR many immutable references' at compile time — no runtime GC needed.", "label": "OOD"}
+{"text": "学生凭校园卡能享几折？暑期实习证可以吗？", "label": "优惠活动"}
+{"text": "小区封控期间，你们还接外卖单吗？能送到东门保安亭吗？", "label": "外卖配送"}
+{"text": "菜单上的‘川香口水鸡’辣度是微辣、中辣还是特辣？能备注少辣吗？", "label": "查询菜单"}
+{"text": "早上八点有早午餐服务吗？餐厅几点开始营业？", "label": "询问营业时间"}
+{"text": "你们的套餐A具体包含哪几道菜？名字有点模糊", "label": "查询菜单"}
+{"text": "刚看天气预报台风要来，明晚的聚会取消，预订也一并取消哈～", "label": "取消预订"}
+{"text": "孩子学校旁的订单，希望骑手别按喇叭，校门口禁鸣，谢谢理解！", "label": "外卖配送"}
+{"text": "菜单上的‘松露和牛粒’是前菜还是主菜？分量大概多大？", "label": "查询菜单"}
+{"text": "请问酒吧区和餐厅区的营业时间是一样的吗？", "label": "询问营业时间"}
+{"text": "Do you offer vegan tasting menu? If yes, what’s on it this week?", "label": "查询菜单"}
+{"text": "我想订今晚7点的四人位，有包间吗？", "label": "预订餐位"}
+{"text": "Cancel reservation — double-booked with another venue. Sorry for inconvenience.", "label": "取消预订"}
+{"text": "外卖订单号#E882091，备注要加辣，但收到没放辣椒，能补送一份蘸料包吗？", "label": "外卖配送"}
+{"text": "你好，我昨天订的今晚7点的包间，现在要取消，麻烦帮忙处理一下。", "label": "取消预订"}
+{"text": "刚收到外卖，汤洒了大半，打包盒好像没盖紧…下次能用防漏密封盒吗？", "label": "外卖配送"}
+{"text": "Why was my online booking confirmation ignored? Staff claimed 'no reservation' despite showing them the SMS & email.", "label": "投诉服务"}
+{"text": "爸妈从老家来，第一次来上海，想订个有服务又不吵的位子，明晚六点行吗？", "label": "预订餐位"}
+{"text": "I’d like to pre-check allergen info — especially for dishes with ‘wok hei’ seasoning.", "label": "查询菜单"}
+{"text": "请问甜品单是单独一页吗？上次来没找到提拉米苏", "label": "查询菜单"}
+{"text": "我订的下午茶（3份三明治+果汁），骑手说写字楼不让进，能麻烦他送到B1快递柜吗？密码我短信发你", "label": "外卖配送"}
+{"text": "Cyclone Freddy maintained tropical cyclone status for 36 days (19 Feb–14 Mar 2023), breaking the prior record set by Hurricane John (1994).", "label": "OOD"}
+{"text": "今天除夕夜，餐厅几点关门？还接待客人吗？", "label": "询问营业时间"}
+{"text": "请问你们能提供无麸质的意大利面吗？我有乳糜泻。", "label": "特殊饮食需求"}
+{"text": "高考结束那周有‘金榜题名宴’特价套餐吗？附赠纪念相框那种", "label": "优惠活动"}
+{"text": "想订下周二晚市的寿司吧台位，两人，要能看师傅操作的那种。", "label": "预订餐位"}
+{"text": "The James Webb Space Telescope detected CO₂ in WASP-39b’s atmosphere at 26σ confidence — first exoplanet with definitive carbon dioxide detection.", "label": "OOD"}
+{"text": "P = NP would imply that every problem verifiable in polynomial time is also solvable in polynomial time — no known algorithm achieves this for SAT.", "label": "OOD"}
+{"text": "Do you close for staff lunch break? If yes, when?", "label": "询问营业时间"}
+{"text": "你们餐厅上次预订的包间根本没准备好，等了40分钟才给安排，服务太差了！", "label": "投诉服务"}
+{"text": "带老人吃饭，需要无障碍通道和低矮桌，今天下午五点能安排吗？", "label": "预订餐位"}
+{"text": "我提前3天预约了生日宴，结果当天被告知‘系统没记录’，现场临时换到角落小桌——连蛋糕都没地方摆！", "label": "投诉服务"}
+{"text": "外籍顾客持护照就餐，能参与‘国际美食周’8折活动吗？需要预约说明吗？", "label": "优惠活动"}
+{"text": "刚在抖音团购买了券，核销后怎么安排配送？需要再下单还是系统自动触发？", "label": "外卖配送"}
+{"text": "听说周三女士免费喝气泡水，是真的吗？包含在哪个套餐里？", "label": "优惠活动"}
+{"text": "Turing completeness ≠ practical usability: Brainfuck is TC but cannot implement SHA-256 in <10⁶ steps.", "label": "OOD"}
+{"text": "晚上十一点还能点单吗？厨房几点收工？", "label": "询问营业时间"}
+{"text": "不好意思，家里临时有事，今天晚上的订位能不能帮我取消？订单号是20240511-8892", "label": "取消预订"}
+{"text": "We’re booking for a diabetic friend—can sides be served without added sugar, and sauces on the side?", "label": "特殊饮食需求"}
+{"text": "Summer hours vs. winter hours — do they change seasonally?", "label": "询问营业时间"}
+{"text": "带宠物可以吗？想订明天傍晚带狗坐户外区的位子。", "label": "预订餐位"}
+{"text": "Do you allow same-day booking via WeChat? Looking for a table at 19:30 tonight.", "label": "预订餐位"}
+{"text": "菜单上有没有素食选项？我看下有没有适合我朋友的", "label": "查询菜单"}
+{"text": "请问微信上订的明早11:30两人位，现在还能退吗？", "label": "取消预订"}
+{"text": "Do you deliver to Pudong Airport Terminal 2? My flight’s delayed — can you hold until 23:10?", "label": "外卖配送"}
+{"text": "Is it possible to reserve just the bar counter seat for one person at 8 PM?", "label": "预订餐位"}
+{"text": "你们的植物肉汉堡是否含酵母提取物？我有慢性偏头痛，需规避天然味精类成分。", "label": "特殊饮食需求"}
+{"text": "The Square Kilometre Array’s Phase 1 mid-frequency array (SKA-Mid) achieved first light in Jan 2024, detecting neutral hydrogen at z=0.57.", "label": "OOD"}
+{"text": "I reserved a table for 6 at 7pm but they seated us at 7:52pm with no apology. Unacceptable.", "label": "投诉服务"}
+{"text": "菜单里有无 gluten-free 的菜品？想提前确认下", "label": "查询菜单"}
+{"text": "请问贵餐厅的儿童餐包含哪些菜品？", "label": "查询菜单"}
+{"text": "The WTO Appellate Body remains inoperative since Dec 2019; 27 members now use the Multi-Party Interim Appeal Arbitration Arrangement (MPIA).", "label": "OOD"}
+{"text": "Do you take walk-in bookings or must everything be reserved online?", "label": "预订餐位"}
+{"text": "Quantum decoherence time in superconducting qubits now exceeds 500 μs (IBM Heron, 2024), enabling 100+ gate circuits before collapse.", "label": "OOD"}
+{"text": "请问中午11:30能进店用餐吗？还是得等12点才开始营业？", "label": "询问营业时间"}
+{"text": "I need to cancel my reservation for 6 p.m. today at Garden Bistro — table for 4.", "label": "取消预订"}
+{"text": "预订时承诺提供婴儿椅，结果等了15分钟才拿来一个缺腿晃动的，孩子坐不安稳还吓哭了。", "label": "投诉服务"}
+{"text": "Hi, could you share the wine pairing suggestions from tonight’s menu?", "label": "查询菜单"}
+{"text": "能否将这道鱼汤换成无奶制品版本？我 lactose intolerant，但很喜欢你们的汤底。", "label": "特殊饮食需求"}
+{"text": "The rice bowl I ordered came cold. Was it delayed in transit? Can I get a refund or redo?", "label": "外卖配送"}
+{"text": "菜单里写的‘时令蔬菜’具体是哪几种？最近爱吃什么心里有数", "label": "查询菜单"}
+{"text": "Does the ‘miso soup’ contain bonito dashi? If yes, can it be made with kombu-only stock for pescatarian guests?", "label": "特殊饮食需求"}
+{"text": "The 2023 WHO Global Air Quality Guidelines lowered PM2.5 annual mean recommendation to 5 μg/m³ — down from 10 μg/m³ in 2005.", "label": "OOD"}
+{"text": "We booked via Meituan and got a ¥30 voucher — can it be stacked with weekday discount?", "label": "优惠活动"}
+{"text": "Can we pre-book the terrace table for 4 on Sunday at 5 PM? Rain contingency?", "label": "预订餐位"}
+{"text": "能告诉我‘黑椒龙虾意面’的配料表吗？家里小朋友对坚果过敏", "label": "查询菜单"}
+{"text": "Is last seating at 9:30 or do you accept orders until 10pm?", "label": "询问营业时间"}
+{"text": "After complaining about cold food, the manager brought a new plate — same temperature, same delay, no explanation.", "label": "投诉服务"}
+{"text": "I accidentally booked two slots — please cancel the earlier one: 18:00 on May 14.", "label": "取消预订"}
+{"text": "孩子生日聚餐，想订周五晚六点的儿童友好包间，有吗？", "label": "预订餐位"}
+{"text": "上错三道主菜，撤回后重新做，等了1小时才上齐——结账时还按原单全价收费？！", "label": "投诉服务"}
+{"text": "我带老人用餐，预约了无障碍通道，结果门口台阶没坡道，轮椅卡住，服务员只看了眼就去忙别的了。", "label": "投诉服务"}
+{"text": "菜单里标‘★’的菜品是不是当日限量？想优先点", "label": "查询菜单"}
+{"text": "Can I use my UnionPay credit card for the 15% cashback offer this quarter?", "label": "优惠活动"}
+{"text": "刚在饿了么下单了双人套餐，骑手多久能送到？", "label": "外卖配送"}
+{"text": "The ‘private dining room’ was just a curtain-divided corner next to the noisy kitchen pass — zero privacy, zero value.", "label": "投诉服务"}
+{"text": "Menu says 'sous-vide duck breast' — is that served with cherry reduction or orange glaze?", "label": "查询菜单"}
+{"text": "My husband is on a low-FODMAP diet—can your chef adapt the dumpling filling accordingly?", "label": "特殊饮食需求"}
+{"text": "CRISPR-Cas12f (CasMINI) weighs only 529 aa — small enough for dual-AAV delivery in vivo retinal editing trials.", "label": "OOD"}
+{"text": "NASA’s Europa Clipper launched aboard Falcon Heavy on Oct 14, 2024; arrival at Jupiter scheduled for April 2030.", "label": "OOD"}
+{"text": "Cancel my booking under Li Wei, 8 p.m. tomorrow — can’t make it due to flight delay.", "label": "取消预订"}
+{"text": "外卖小哥说找不到我家楼栋，导航显示是‘阳光花园二期’，实际门牌是‘阳光苑·东区’，能更新下后台地址库吗？", "label": "外卖配送"}
+{"text": "Mount Erebus’ persistent lava lake emits SO₂ at ~150 t/day — monitored via UV spectrometers on autonomous Antarctic drones.", "label": "OOD"}
+{"text": "订单里选了‘餐具另放’，但筷子和勺子全塞饭盒里了，下次注意分开包装哈～", "label": "外卖配送"}
+{"text": "刚收到通知要加班到晚上8点，之前订的7点半那桌请直接取消吧，谢谢！", "label": "取消预订"}
+{"text": "点的儿童餐送成了成人份，孩子吃不完，要求退一份却说‘已出品不退’？这合理吗？", "label": "投诉服务"}
+{"text": "Bitcoin’s Taproot upgrade (Nov 2021) enabled Schnorr signatures and MAST, improving privacy and reducing multisig transaction sizes by ~75%.", "label": "OOD"}
+{"text": "Do you serve dinner after 9pm? Just checking hours.", "label": "询问营业时间"}
+{"text": "请问预留座位最长等多久？我约了朋友，可能迟到15分钟。", "label": "预订餐位"}
+{"text": "请问最近有什么满减活动吗？比如满200减50之类的", "label": "优惠活动"}
+{"text": "儿童节当天带娃就餐，有没有亲子套餐立减88的活动？", "label": "优惠活动"}
+{"text": "Hi, need to book a table for 8 people this Saturday evening — is private dining available?", "label": "预订餐位"}
+{"text": "请问清真认证的菜品在菜单哪个位置标了？", "label": "查询菜单"}
+{"text": "Pls void booking ID BKK2024-7731 (May 15, 7 p.m., 6 guests) — urgent cancellation.", "label": "取消预订"}
+{"text": "NIST selected CRYSTALS-Kyber for general encryption and CRYSTALS-Dilithium for digital signatures in its 2024 post-quantum cryptography standardization.", "label": "OOD"}
+{"text": "Does the 'Happy Hour' (5–7pm) include 30% off appetizers and cocktails?", "label": "优惠活动"}
+{"text": "明晚七点，六人圆桌，最好在二楼安静区，谢谢！", "label": "预订餐位"}
+{"text": "端午节粽子礼盒+正餐组合有团购价吗？大概多少？", "label": "优惠活动"}
+{"text": "Ukraine’s 2024 Digital ID law mandates biometric verification via NFC-enabled ID cards for all e-government services, including tax filing and land registry.", "label": "OOD"}
+{"text": "Hey, what time do you open for lunch on weekends?", "label": "询问营业时间"}
+{"text": "我们带宝宝来吃饭，他18个月，对坚果、大豆、小麦都过敏——能推荐三道绝对安全的辅食级菜品吗？", "label": "特殊饮食需求"}
+{"text": "Shor’s algorithm factors N in O((log N)³) time on fault-tolerant quantum hardware — but requires millions of physical qubits for RSA-2048.", "label": "OOD"}
+{"text": "The 2025 IAU General Assembly will be held in Cape Town — first time on African soil since 1997 (Buenos Aires was last Southern Hemisphere host).", "label": "OOD"}
+{"text": "Need to cancel my 7 PM reservation for four — can I rebook for same time tomorrow?", "label": "预订餐位"}
+{"text": "I need to cancel — no-show fee waiver request if applicable. Booking: Chen Tao, May 13, 19:45.", "label": "取消预订"}
+{"text": "The Collatz conjecture states that iterating f(n) = n/2 if even, 3n+1 if odd, always reaches 1 — verified for all n < 2⁶⁸ (2023 distributed computation).", "label": "OOD"}
+{"text": "We ordered two large pizzas via Meituan — estimated delivery is 45 mins, but it’s been 72. Any update?", "label": "外卖配送"}
+{"text": "您好，我朋友代订的今晚六点大堂桌，现在统一取消，麻烦确认下。", "label": "取消预订"}
+{"text": "我们预订包间，其中一位是犹太教徒，请问当晚所有食材（包括调味料、酱汁）是否已通过Kosher认证？", "label": "特殊饮食需求"}
+{"text": "我在大众点评订的酸菜鱼，显示‘已接单’，但地图上没看到骑手定位，能帮忙查下吗？", "label": "外卖配送"}
+{"text": "Your app shows ‘Delivered’ but I never got it. Checked with guard — no package. Please investigate.", "label": "外卖配送"}
+{"text": "They served my vegan meal with cheese and honey — after I repeated dietary restrictions THREE times. Zero accountability.", "label": "投诉服务"}
+{"text": "Navier-Stokes existence and smoothness remains a Clay Millennium Prize problem — no proof or counterexample accepted as of 2024.", "label": "OOD"}
+{"text": "周末晚上六点半，要个靠窗的位置，能安排吗？", "label": "预订餐位"}
+{"text": "I reserved a table for lunch on Friday — just realized I’ll be out of town. Please cancel.", "label": "取消预订"}
+{"text": "Antarctic Bottom Water formation declined 20–30% since 1970s per Argo float data — accelerating global thermohaline slowdown.", "label": "OOD"}
+{"text": "RISC-V ISA extension 'Zicsr' provides atomic CSR read-modify-write instructions for supervisor-mode contexts.", "label": "OOD"}
+{"text": "The restroom was locked all evening with no signage or staff assistance. Guests had to go to a nearby café.", "label": "投诉服务"}
+{"text": "这道麻婆豆腐里的豆瓣酱含不含麸质？我正在执行严格的无麸质饮食计划。", "label": "特殊饮食需求"}
+{"text": "Delivery guy rang but I didn’t hear — is there an option to SMS instead of calling?", "label": "外卖配送"}
+{"text": "Could you tell me your opening and closing times on Fridays?", "label": "询问营业时间"}
+{"text": "Brazil won the 2024 Copa América final against Colombia with a 1–0 extra-time goal by Endrick at Hard Rock Stadium.", "label": "OOD"}
+{"text": "The ICC issued arrest warrants for Netanyahu and Gallant on May 20, 2024, citing reasonable grounds for war crimes in Gaza.", "label": "OOD"}
+{"text": "Staff mocked my Mandarin accent when I asked to repeat the specials. Felt humiliated. This isn’t service — it’s discrimination.", "label": "投诉服务"}
+{"text": "Can the delivery person leave the food at my gate? I’m working from home and can’t come downstairs.", "label": "外卖配送"}
+{"text": "I’m recovering from gastric surgery and need soft, low-residue, low-fat meals—can your chef prepare something customized?", "label": "特殊饮食需求"}
+{"text": "服务员把我的过敏信息写错了，上来的菜里有花生，差点出事！这哪是餐饮服务，是拿顾客生命开玩笑！", "label": "投诉服务"}
+{"text": "The 2024 EU AI Act classifies biometric emotion recognition in workplaces as ‘unacceptable risk’, banning its deployment under Art. 5(1)(d).", "label": "OOD"}
+{"text": "The AC broke down during our dinner, temp hit 32°C, and management refused to offer discount or beverage compensation.", "label": "投诉服务"}
+{"text": "Tesla’s Dojo D1 chip delivers 22.6 TFLOPS/W at fp16 — optimized for video transformer training on autonomous driving datasets.", "label": "OOD"}
+{"text": "贵店的‘椒盐虾’裹粉中是否含蛋液？如含，可否改用玉米淀粉干炸？", "label": "特殊饮食需求"}
+{"text": "你们家今天的特色菜有哪些？", "label": "查询菜单"}
+{"text": "Is there a gluten-free version of your signature baozi? We need it for a celiac guest.", "label": "特殊饮食需求"}
+{"text": "Euler’s identity e^(iπ) + 1 = 0 unifies five fundamental constants — but it’s a special case of e^(iθ) = cos θ + i sin θ.", "label": "OOD"}
+{"text": "Do you have any ongoing discount for birthday bookings this month?", "label": "优惠活动"}
+{"text": "The Riemann Hypothesis remains unproven, though the first 10¹³ nontrivial zeros have been verified to lie on Re(s)=½ (Gourdon, 2004).", "label": "OOD"}
+{"text": "I’d like to cancel my dine-in booking for May 12th at 6:45 p.m. (reference #RES-9021).", "label": "取消预订"}
+{"text": "节假日和平时的营业时间一样吗？比如清明节那天？", "label": "询问营业时间"}
+{"text": "Do you have a PDF version of your seasonal menu?", "label": "查询菜单"}
+{"text": "老板说今晚团建改去别家，我们这边三桌预订都取消吧，谢谢配合！", "label": "取消预订"}
+{"text": "公司团建20人以上有专属折扣吗？含酒水和包间费吗？", "label": "优惠活动"}
+{"text": "Chile’s Constitutional Court upheld the 2023 water code reform, declaring aquifer rights must prioritize ecological flows over extraction licenses.", "label": "OOD"}
+{"text": "Weekdays vs. weekends — any difference in opening hours?", "label": "询问营业时间"}
+{"text": "请问外卖服务的时间段和堂食一致吗？比如晚上10:30还能下单吗？", "label": "询问营业时间"}
+{"text": "服务员当着所有客人面说我‘点太少还挑三拣四’，态度恶劣到离谱，投诉必须有反馈！", "label": "投诉服务"}
+{"text": "微信里点的‘深夜烤串套餐’，备注不要香菜，结果全撒了，能重做一份不加的吗？", "label": "外卖配送"}
+{"text": "A 2024 Nature paper demonstrated topological insulator Bi₂Se₃ sustaining quantum anomalous Hall effect above 1.5 K — a record for stoichiometric materials.", "label": "OOD"}
+{"text": "临时决定今晚请客户吃饭，八点能加急订个安静雅座吗？", "label": "预订餐位"}
+{"text": "What are your operating hours on public holidays?", "label": "询问营业时间"}
+{"text": "K-means clustering requires pre-specifying k, but DBSCAN determines cluster count autonomously using ε and minPts.", "label": "OOD"}
+{"text": "IEEE 802.3ck defines 100 Gb/s per lane PAM4 signaling over twin-axial copper for AI cluster interconnects ≤3m.", "label": "OOD"}
+{"text": "请问包间需要提前多久预约？另外，餐厅每天几点开始接待？", "label": "询问营业时间"}
+{"text": "I’d like to secure a table for lunch tomorrow at noon, for three people.", "label": "预订餐位"}
+{"text": "I'm allergic to peanuts—can you confirm no cross-contamination in the kitchen?", "label": "特殊饮食需求"}
+{"text": "双11期间餐厅有专属套餐折扣吗？想提前订位", "label": "优惠活动"}
+{"text": "Is there a minimum order amount for free delivery in Xuhui District?", "label": "外卖配送"}
+{"text": "We’re celebrating graduation — need a decorated table for 12 at 7 PM Saturday.", "label": "预订餐位"}
+{"text": "系统显示我订了明早10点的 brunch，但我没操作过——是不是误订？请取消并查下原因。", "label": "取消预订"}
+{"text": "Valentine’s set menu includes free champagne — is that part of the limited-time promo?", "label": "优惠活动"}
+{"text": "抖音上抢的99元代金券，绑定手机号后怎么核销？", "label": "优惠活动"}
+{"text": "They substituted premium ingredients without consent (e.g., frozen scallops for fresh) and still charged menu price. Fraudulent.", "label": "投诉服务"}
+{"text": "用支付宝付款能再减10块？我看首页弹窗写着‘支付立减’", "label": "优惠活动"}
+{"text": "今天主厨推荐什么？菜单上有标注吗？", "label": "查询菜单"}
+{"text": "The waiter spilled hot soup on my laptop and just said 'sorry' then walked away. No compensation, no follow-up.", "label": "投诉服务"}
+{"text": "My 80-year-old mom slipped on the wet floor near the restrooms. No warning sign, no apology, no incident report offered.", "label": "投诉服务"}
+{"text": "美团上订的，订单号MEITUAN-2024-668821，现在申请取消，状态还是‘待确认’，能直接作废吗？", "label": "取消预订"}
+{"text": "I paid via WeChat Pay but received no receipt. When I asked, cashier said 'we don’t give receipts for mobile payments'. Illegal.", "label": "投诉服务"}
+{"text": "请问工作日的早餐供应到几点？", "label": "询问营业时间"}
+{"text": "请问葱油饼里是否含动物油？我家老人信佛，需全程素食（不含蛋奶、五辛）。", "label": "特殊饮食需求"}
+{"text": "Hello, please hold a window-side table for two, 19:00, 2024-04-12.", "label": "预订餐位"}
+{"text": "Polish notation eliminates parentheses: (+ (* 3 4) (/ 10 2)) becomes '+ * 3 4 / 10 2' — used in Lisp and some calculator firmwares.", "label": "OOD"}
+{"text": "今天台风停业吗？如果营业，几点关门？", "label": "询问营业时间"}
+{"text": "请问你们的豆腐是用石膏点的还是卤水点的？家人有肾结石病史，需避免高钙凝固剂。", "label": "特殊饮食需求"}
+{"text": "The 1972 ABM Treaty banned nationwide missile defense, but the U.S. withdrew in 2002; New START limits deployed strategic warheads to 1550.", "label": "OOD"}
+{"text": "DeepMind’s AlphaFold 3 (2024) predicts RNA-small molecule binding with pLDDT >85 for 73% of test complexes — outperforming RoseTTAFold RNA.", "label": "OOD"}
+{"text": "Is the ‘Refer a Friend’ bonus (¥50 credit each) still active? How do I share?", "label": "优惠活动"}
+{"text": "我在大众点评预约成功，到店却被拒之门外，理由是‘平台未同步’？平台显示‘已确认’啊！", "label": "投诉服务"}
+{"text": "Delivery failed twice — says ‘recipient not found’ but I was waiting at the door. Can you reassign or call first next time?", "label": "外卖配送"}
+{"text": "请问情人节当天还能订到双人烛光位吗？", "label": "预订餐位"}
+{"text": "Hi, is the restaurant open on Mondays? If yes, from when to when?", "label": "询问营业时间"}
+{"text": "会员日（每月8号）全场菜品85折，包间费也打折吗？", "label": "优惠活动"}
+{"text": "Hello, could you please cancel the 5:30 p.m. reservation for 3 guests? We won’t be coming.", "label": "取消预订"}
+{"text": "Can the salad dressing be substituted with lemon-tahini (nut-free, dairy-free, soy-free)?", "label": "特殊饮食需求"}
+{"text": "请问你们餐厅今天几点开门营业？", "label": "询问营业时间"}
+{"text": "Can overseas visitors use the ‘Scan & Save’ QR code discount at the door?", "label": "优惠活动"}
+{"text": "抱歉打扰，想取消今天下午茶时段（15:00）的预约，已付款，是否可退？", "label": "取消预订"}
+{"text": "China’s Chang’e-6 mission returned 1.937 kg of far-side lunar regolith from Apollo Basin — first sample from the Moon’s hidden hemisphere.", "label": "OOD"}
+{"text": "你们的菜单会按季度更新吗？现在这份是春季版还是夏季版？", "label": "查询菜单"}
+{"text": "你们的早鸟套餐菜单，6:30前点单的，三道式具体是哪三道？", "label": "查询菜单"}
+{"text": "小程序订的周末晚餐，改期太麻烦，直接取消吧，不用扣费吧？", "label": "取消预订"}
+{"text": "f(x) = ∫₀^x e^(-t²) dt has no elementary antiderivative — it's the error function scaled by √π/2.", "label": "OOD"}
+{"text": "请问红烧肉这道菜里是否含味精或鸡精？家人有偏头痛，需严格规避MSG。", "label": "特殊饮食需求"}
+{"text": "Reservation needed for anniversary dinner tonight — VIP corner seat preferred.", "label": "预订餐位"}
+{"text": "中秋前两周预订团圆宴，送定制月饼一盒，这个算不算活动福利？", "label": "优惠活动"}
+{"text": "Can I reserve a table for two at 6:30 PM tomorrow?", "label": "预订餐位"}
+{"text": "Do you offer vegan desserts without refined sugar or coconut oil?", "label": "特殊饮食需求"}
+{"text": "CUDA Graphs reduce kernel launch overhead by up to 85% on A100 GPUs when static task dependency graphs exist.", "label": "OOD"}
+{"text": "We’re hosting a small team meeting — can you deliver 8 boxed lunches to Jing’an Kerry Centre, Level 18, by 11:30 AM?", "label": "外卖配送"}
+{"text": "Table for one at 7:15 PM tonight — solo diner, no special requests.", "label": "预订餐位"}
+{"text": "The 2024 Tokyo gubernatorial election saw 37 candidates — highest ever — yet turnout fell to 42.1%, lowest since 1947.", "label": "OOD"}
+{"text": "菜单上‘古法烧鸡’用的是哪种酱料腌制的？好奇做法", "label": "查询菜单"}
+{"text": "Booking request: vegan couple, non-smoking section, 18:45 Thursday.", "label": "预订餐位"}
+{"text": "The 1967 Outer Space Treaty prohibits national appropriation of celestial bodies — but does not explicitly ban private mining, creating legal gray zones.", "label": "OOD"}
+{"text": "请问你们支持美团外卖下单吗？", "label": "外卖配送"}
+{"text": "Germany’s Bundesverfassungsgericht ruled in July 2024 that the 2030 coal exit deadline violates intergenerational equity principles under Art. 20a GG.", "label": "OOD"}
+{"text": "Do you offer contactless delivery for dinner orders?", "label": "外卖配送"}
+{"text": "周末早鸟预订（提前3天）送甜品，这个活动还持续吗？", "label": "优惠活动"}
+{"text": "孩子对鸡蛋严重过敏，菜单里有没有完全不含蛋的主食选项？", "label": "特殊饮食需求"}
+{"text": "Lithium-ion cathode degradation accelerates above 4.2 V vs Li/Li⁺ due to oxygen loss in NMC811 lattices.", "label": "OOD"}
+{"text": "孩子发烧了，今晚的家庭聚餐不去了，麻烦把19:00四人位取消掉～", "label": "取消预订"}
+{"text": "My reservation for 2 people at 7:15 p.m. this Saturday — please cancel ASAP. Thanks!", "label": "取消预订"}
+{"text": "Hey, our order #D7765 just got dispatched — could you share the rider’s phone number? Thanks!", "label": "外卖配送"}
+{"text": "周末 brunch 菜单跟平日一样吗？想看看有没有班尼迪克蛋", "label": "查询菜单"}
+{"text": "In modal logic S5, □p → □□p holds, but this fails in K or T systems — reflexivity + symmetry + transitivity required.", "label": "OOD"}
+{"text": "Sorry to bother — just wanna confirm: are you open every day from 11am–10pm?", "label": "询问营业时间"}
+{"text": "老会员积分能当钱花吗？1000分抵多少？现在能兑吗？", "label": "优惠活动"}
+{"text": "They charged me double for the same dish — once on the QR code order, once on the paper bill. Took 20 mins to get it corrected.", "label": "投诉服务"}
+{"text": "周末的晚餐时段是几点到几点啊？", "label": "询问营业时间"}
+{"text": "小程序下单的椰子鸡，地址填的是公司前台，但前台今天没人，能改送到隔壁咖啡馆吗？", "label": "外卖配送"}
+{"text": "请问‘腊味煲仔饭’中的腊肠是否含亚硝酸盐？家人有遗传性高铁血红蛋白血症，需零添加防腐剂。", "label": "特殊饮食需求"}
+{"text": "凌晨两点还在营业吗？我看网上说你们是深夜食堂…", "label": "询问营业时间"}
+{"text": "Hubble measured GN-z11’s redshift at z=11.09 ± 0.08 in 2023 reanalysis — making it the most distant spectroscopically confirmed galaxy until JWST JADES-GS-z14-0.", "label": "OOD"}
+{"text": "The Higgs boson mass is approximately 125.25 GeV/c², as confirmed by ATLAS and CMS in 2023 high-luminosity runs.", "label": "OOD"}
+{"text": "Sorry, visa issue — can’t enter China this week. Kindly cancel all my pending reservations.", "label": "取消预订"}
+{"text": "Is the à la carte menu available online? Need to check dessert options.", "label": "查询菜单"}
+{"text": "预订时明确说了要无烟区，结果安排在吸烟区隔壁，二手烟直往包厢里灌，咳嗽半小时！", "label": "投诉服务"}
+{"text": "My reservation was canceled by the restaurant ‘due to staff shortage’—with zero notice. I drove 1 hour for nothing.", "label": "投诉服务"}
+{"text": "I need lunch delivered to 123 Zhongshan Rd by 12:45 — can you handle that?", "label": "外卖配送"}
+{"text": "我们预订了今晚六点的位子，其中一位客人需纯素（vegan），且避免所有加工添加剂，能否提前备注？", "label": "特殊饮食需求"}
+{"text": "Is there a 20% off promo for first-time diners via WeChat mini-program?", "label": "优惠活动"}
+{"text": "电话订的，姓王，18:30两人的位子，现在要取消，能马上处理吗？", "label": "取消预订"}
+{"text": "Can you void the reservation made via Dianping for tonight? Name: Zhang Lan, phone 138****5678.", "label": "取消预订"}
+{"text": "Can I see the lunch menu for today?", "label": "查询菜单"}
+{"text": "FIFA lifted the ban on Russian teams from youth competitions in March 2024, pending individual athlete vetting by FIFA DRC.", "label": "OOD"}
+{"text": "餐厅有无清真认证？我们希望确保所有肉类和调料均符合Halal标准。", "label": "特殊饮食需求"}
+{"text": "我们一行十人，想订下周三中午的团餐+座位，请问怎么操作？", "label": "预订餐位"}
+{"text": "能发我一份今晚的晚餐菜单照片吗？手机上看更清楚", "label": "查询菜单"}
+{"text": "Can you omit alliums (onion/garlic/chives) from my dish? I follow Ayurvedic dietary guidelines post-surgery.", "label": "特殊饮食需求"}
+{"text": "Article 12 of the UN Convention on the Rights of Persons with Disabilities mandates accessibility in digital public services.", "label": "OOD"}
+{"text": "Are you open on Christmas Day? And if so, what are the hours?", "label": "询问营业时间"}
+{"text": "请问‘扬州炒饭’中的火腿丁是否可用素火腿替代？我们一行全是蛋奶素者。", "label": "特殊饮食需求"}
+{"text": "TensorRT-LLM v0.12 introduces FP8 KV cache quantization, cutting LLaMA-3-70B inference memory by 38% on H100 SXM5.", "label": "OOD"}
+{"text": "孩子确诊为苯丙酮尿症（PKU），需要极低苯丙氨酸餐食——贵餐厅能否提供营养师审核过的单人定制菜单？", "label": "特殊饮食需求"}
+{"text": "The 2024 Paris Olympics introduced breaking (breakdancing) as a medal sport; B-Boys/B-Girls compete in 1v1 cyphers judged on technique, variety, and musicality.", "label": "OOD"}
+{"text": "We saw the ‘Buy 1 Get 1 Free’ lunch deal on Dianping — is it still valid this week?", "label": "优惠活动"}

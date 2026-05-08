@@ -1,0 +1,140 @@
+{"text": "用iPadOS 17.5打开内部ERP系统的SAP Fiori Launchpad，表格控件全乱码，Safari调试显示Webkit引擎渲染异常，跟iOS 17.4比差异明显。", "label": "兼容性问题"}
+{"text": "Can’t filter tickets by custom date range in the dashboard — only preset options like 'Last 7 days'. Need full calendar picker.", "label": "功能缺失"}
+{"text": "客户用Chrome 127访问我们老系统，所有AJAX请求都返回406 Not Acceptable，降级到125就OK，是不是MIME type协商机制变了？", "label": "兼容性问题"}
+{"text": "App一打开就闪退，iOS 17.5上必现，崩溃日志里有EXC_BAD_ACCESS (SIGSEGV)，求解！", "label": "崩溃闪退"}
+{"text": "我的MacBook Pro装了最新版Adobe Premiere，但导入MOV文件时总报错'Codec not supported'，是不是系统版本太新导致的？", "label": "兼容性问题"}
+{"text": "网页端编辑大文档（>50页）时，输入文字响应延迟严重，光标跳动，浏览器卡顿明显", "label": "性能卡顿"}
+{"text": "客户系统误点了「格式化硬盘」，500GB的NAS共享盘里原始录音文件全部消失，有恢复可能吗？", "label": "数据丢失"}
+{"text": "刚重装系统，软件连不上授权服务器，防火墙已关闭，hosts也没改过，ping api.xxx.com 是通的但https请求失败", "label": "网络连接异常"}
+{"text": "软件一打开就卡住，鼠标都点不动，是不是我电脑配置太低了？", "label": "性能卡顿"}
+{"text": "微信小程序版本连截图标注工具都没有，连竞品1年前的功能都还没跟上…", "label": "功能缺失"}
+{"text": "数据库查询没加索引？我查一个客户记录要等8秒，explain显示全表扫描...", "label": "性能卡顿"}
+{"text": "每次批量导入Excel，界面就假死30秒以上，进度条也不动，但任务实际在后台跑", "label": "性能卡顿"}
+{"text": "My goldfish Gerald has started ‘playing dead’ every Tuesday at 3:15 PM — vet says it’s stress-free, just his version of ‘tea break’. 🐟⏱️", "label": "OOD"}
+{"text": "公司内网能打开页面，但点登录就转圈5秒后弹‘请求超时’，是服务器挂了吗？", "label": "无法登录"}
+{"text": "iOS 18 beta update bricked my Notes app — all handwritten memos gone, not in iCloud or backups.", "label": "数据丢失"}
+{"text": "Win10 22H2升级后，旧版金蝶K3财务软件启动就闪退，Event Viewer显示'APPCRASH with module KERNELBASE.dll'，求解！", "label": "兼容性问题"}
+{"text": "公司内网环境安装客户端，下载完离线包后运行msi，提示‘Error 1722. There is a problem with this Windows Installer package.’", "label": "安装失败"}
+{"text": "换了新手机号没同步到账户，现在收不到短信验证码，重置密码也进不去……急！", "label": "无法登录"}
+{"text": "Linux deb包用apt upgrade失败，报错：'The following packages have unmet dependencies: softtech-core : Depends: libssl1.1 but it is not installable' — 系统已升级到Ubuntu 24.04", "label": "更新失败"}
+{"text": "在Docker Desktop for Mac (v4.30)里运行Ubuntu 20.04容器，挂载宿主机NTFS分区后ls命令卡死，查了是ntfs-3g和kernel 6.6.x的兼容bug？", "label": "兼容性问题"}
+{"text": "每次点「立即更新」都弹出‘网络连接异常’，但我的WiFi明明满格，网页也能正常刷", "label": "更新失败"}
+{"text": "Two-factor auth sent SMS, but message never arrived. Tried resending 4x — no luck. No fallback option shown.", "label": "无法登录"}
+{"text": "Update stuck at 'Verifying package' for 20+ mins — installer just shows spinning wheel, no error msg.", "label": "更新失败"}
+{"text": "双击setup.exe没反应，任务管理器里也看不到进程，Windows 11系统，是不是兼容性问题？", "label": "安装失败"}
+{"text": "安装向导走到‘正在配置服务’这步就停止响应，鼠标可动但进度条冻结超10分钟，强制结束也没生成任何log。", "label": "安装失败"}
+{"text": "每次导出PDF报告时进度条走到87%就crash，MacBook Air M2，Activity Monitor显示Process exited with status 11", "label": "崩溃闪退"}
+{"text": "用钉钉扫码登录跳转后直接白屏，控制台报错：'Failed to fetch /api/v2/auth/verify'。", "label": "无法登录"}
+{"text": "领导让我审核合同，但我在审批流里找不到待办任务，系统提示‘You don’t have permission to view this workflow’", "label": "权限问题"}
+{"text": "Cannot assign multiple tags to a single knowledge base article — only one tag allowed. Seriously?", "label": "功能缺失"}
+{"text": "Mozart wrote his first symphony at age 8. His father Leopold? Probably just trying to get him to stop rearranging the silverware into orchestral sections.", "label": "OOD"}
+{"text": "安装时弹出‘无法访问注册表项 HKEY_LOCAL_MACHINE\\SOFTWARE\\MyApp’，管理员权限已开启还是失败。", "label": "安装失败"}
+{"text": "The dashboard loads slowly on Chrome (v124), but works fine on Edge — any known rendering issue?", "label": "性能卡顿"}
+{"text": "小米14（HyperOS 2.0）用微信扫描某企业OA小程序二维码，页面空白且控制台报'device.platform undefined'，iOS同事说正常……", "label": "兼容性问题"}
+{"text": "Beethoven’s Symphony No.7 in A major, Op.92 – the Allegretto movement was so moving at tonight’s Berlin Philharmonic concert that three people stood up mid-movement (not clapping, just… overwhelmed).", "label": "OOD"}
+{"text": "Error 10061: No connection could be made because the target machine actively refused it. 这个错在局域网部署环境下频繁出现", "label": "网络连接异常"}
+{"text": "我家布偶猫Leo最近迷上了窗台晒太阳，每天固定14:23准时趴着，连手机闹钟都省了… #CatTimeLord", "label": "OOD"}
+{"text": "小程序版在微信内打开首页3秒后白屏闪退，vivo X100 Pro，微信8.0.48，抓包发现崩溃前有大量JS heap allocation", "label": "崩溃闪退"}
+{"text": "Linux Ubuntu 22.04下执行sudo ./install.sh 报错：Permission denied (publickey)，密钥已配置但无效。", "label": "安装失败"}
+{"text": "客户现场的离线终端更新包校验失败，提示‘SHA256 mismatch’，但md5sum和官网发布页一致，是不是你们上传错了？", "label": "更新失败"}
+{"text": "深蹲时膝盖不应超过脚尖？错！最新运动生物力学研究（JSCR 2023）指出：适度前移可提升股四头肌激活度，关键在髋膝踝协同控制。", "label": "OOD"}
+{"text": "我的Word文档突然打不开了，里面上周做的项目报告全没了，是不是数据丢失了？", "label": "数据丢失"}
+{"text": "Bali, Indonesia: Rice terraces in Tegallalang are best visited at sunrise. Bring insect repellent and wear comfortable hiking shoes.", "label": "OOD"}
+{"text": "瑜伽不是把腿盘到耳朵边，而是学会在战士二式中感受胫骨前肌的微颤，并与自己的呼吸节奏同步。Namaste.", "label": "OOD"}
+{"text": "刚升级到MacBook M3芯片，启动客户端就弹窗报错然后自动退出，错误码：0xc0000005", "label": "崩溃闪退"}
+{"text": "Photos app在优化图库时闪退，重启后‘最近项目’相册空了，iCloud Photos显示‘同步已完成’但实际缺失200+张原图", "label": "数据丢失"}
+{"text": "v4.0.0-beta启动后内存涨到2.1GB，风扇狂转，操作延迟超500ms，疑似内存泄漏", "label": "性能卡顿"}
+{"text": "Docker volume被误删：docker volume rm prod-db-data，PostgreSQL容器启动后提示relation 'users' does not exist", "label": "数据丢失"}
+{"text": "No keyboard shortcut for ‘Insert Code Block’ in the Markdown editor (e.g., Ctrl+Shift+C). Feels outdated.", "label": "功能缺失"}
+{"text": "Why isn't there a 'Save as Draft' option in the web editor? I lose work every time I accidentally close the tab.", "label": "功能缺失"}
+{"text": "后台服务CPU占用常年95%+，top命令看是yourapp.exe在狂刷，啥情况？", "label": "性能卡顿"}
+{"text": "AD域账号同步到OA后，角色组对上了，但页面还是显示‘无此功能入口’，权限策略生效有延迟吗？", "label": "权限问题"}
+{"text": "Android app v5.7.0升级到v5.8.0时闪退，后台日志显示INSTALL_FAILED_CONFLICTING_PROVIDER", "label": "更新失败"}
+{"text": "Login page shows 'Account locked after 5 failed attempts' — but I never tried 5 times! Can you unlock it?", "label": "无法登录"}
+{"text": "冬至包饺子讲究‘捏住福气’，我妈坚持馅料必须含韭菜（久财）、鸡蛋（圆满）、虾仁（笑），擀皮要中间厚边缘薄——技术含量堪比航天密封圈。", "label": "OOD"}
+{"text": "公司用的用友U8+ V16.5，最近把数据库从SQL Server 2016升级到2022，登录界面直接白屏，日志里全是'ProviderIncompatibleException'……", "label": "兼容性问题"}
+{"text": "In flamenco, ‘duende’ isn’t a bug in the system — it’s the mysterious, emotional force that makes a guitarist’s fingers bleed rhythm and a dancer’s heels ignite concrete. Not debuggable. Just felt.", "label": "OOD"}
+{"text": "Chrome 正常，Edge 一输密码就自动刷新页面，F12 看 network 里 login 请求根本没发出去。", "label": "无法登录"}
+{"text": "刚入职的实习生登录系统后看不到财务报表菜单，是不是没给她开权限？", "label": "权限问题"}
+{"text": "安卓端点开‘我的项目’页面必崩，华为Mate 60，系统EMUI 14.2，logcat显示FATAL EXCEPTION: main", "label": "崩溃闪退"}
+{"text": "移动端App里找不到‘批量删除聊天记录’的功能，iOS和安卓都缺，什么时候能加上？", "label": "功能缺失"}
+{"text": "微信聊天记录迁移到新手机时中断，旧手机已恢复出厂设置，现在两边都看不到2023年10月后的所有图片和文件", "label": "数据丢失"}
+{"text": "账号密码都对，但一直提示'登录失败，请检查网络'，试了三次都不行。", "label": "无法登录"}
+{"text": "Chrome扩展商店添加插件时反复显示‘Failed to install extension’，浏览器已是最新版（v125.0.6422.142）。", "label": "安装失败"}
+{"text": "GitLab私有仓库里，我fork后的项目点CI/CD设置就跳404，提示‘You don’t have permission to change pipeline settings’", "label": "权限问题"}
+{"text": "Git commit --amend accidentally overwrote the last 3 commits, and 'git reflog' shows no trace — source code history vanished", "label": "数据丢失"}
+{"text": "用Wine跑Windows版工具，刚加载插件DLL就报access violation，wine debug log显示backtrace terminated", "label": "崩溃闪退"}
+{"text": "今日份的抹茶千层蛋糕配方：12个蛋黄+300g细砂糖+600ml牛奶+80g低筋面粉+30g抹茶粉，记得冷藏4小时再切片哦～", "label": "OOD"}
+{"text": "单位升级了下一代防火墙，之后软件无法连接云平台，策略已放行域名和443端口，但TLS握手阶段就中断", "label": "网络连接异常"}
+{"text": "我明明是部门管理员，却无法编辑项目文档，右键菜单里‘修改权限’是灰色的", "label": "权限问题"}
+{"text": "家里宽带没问题（测速300Mbps），但软件始终提示‘Network timeout — please check your internet connection’，连重装都无效", "label": "网络连接异常"}
+{"text": "阿里云ECS（CentOS 7.9）用pip install myapp==4.8.0报错：subprocess.CalledProcessError: command 'gcc' failed with exit status 1", "label": "安装失败"}
+{"text": "软件右下角小图标一直灰色，鼠标悬停显示‘Offline’，可我明明开着5G热点，也确认了没开飞行模式", "label": "网络连接异常"}
+{"text": "为什么搜索框不支持正则表达式？开发人员明明说底层是Elasticsearch，结果UI层阉割了！", "label": "功能缺失"}
+{"text": "客户管理模块里没法按‘最后跟进时间’倒序排列，筛选效率太低了，这算基本排序吧？", "label": "功能缺失"}
+{"text": "数据库自动备份脚本出错，连续7天没生成.bak文件，今天执行DBCC CHECKDB发现2张核心表数据为空", "label": "数据丢失"}
+{"text": "导出PDF时不能选择页边距，这个基础功能都还没做吗？", "label": "功能缺失"}
+{"text": "Error code: AUTH-403-INVALID_TOKEN — what does this mean? I just clicked 'Remember me' yesterday.", "label": "无法登录"}
+{"text": "导出100条订单数据要等快2分钟，以前10秒就完事，最近更新后变这样了", "label": "性能卡顿"}
+{"text": "iPadOS 17.6上双击编辑表格单元格→app瞬间关闭，无提示，重启后重试仍复现，已录屏", "label": "崩溃闪退"}
+{"text": "登录后点击右上角头像下拉菜单——立刻闪退！Ubuntu 24.04 LTS，终端输出：Segmentation fault (core dumped)", "label": "崩溃闪退"}
+{"text": "Dog training tip: If your beagle ignores ‘come’ but sprints for ‘treat?’ → reframe command as ‘treat-adjacent verb’. Science? Nah. Works? Absolutely.", "label": "OOD"}
+{"text": "Mac App Store显示‘Update Available’，但点击后一直转圈，force quit重开也不行，连Apple ID都登着呢", "label": "更新失败"}
+{"text": "The Inca Trail to Machu Picchu requires a permit booked 6 months in advance — but the Salkantay Trek? Zero permits, wild llamas, and zero Wi-Fi. Pure magic.", "label": "OOD"}
+{"text": "数据库用户account_readonly突然能执行UPDATE了！是不是权限被误配置了？需要紧急核查", "label": "权限问题"}
+{"text": "每次同步数据到云端就断连，日志里写着‘SocketException: Connection reset by peer’，是SSL握手失败吗？", "label": "网络连接异常"}
+{"text": "国产麒麟V10系统安装国产化适配版，提示‘缺少libcrypto.so.1.1’，但ldconfig -p里明明有这个库。", "label": "安装失败"}
+{"text": "App crashed during sync — all local notes vanished. No backup on iCloud. Is this data loss?", "label": "数据丢失"}
+{"text": "APP更新后，iOS端点击‘导出Excel’直接报错：Permission denied — 是不是新版本限制了导出权限？", "label": "权限问题"}
+{"text": "用Disk Drill扫描硬盘只找回部分碎片文件，关键的财务PDF（含电子签名）无法预览且大小为0KB，算彻底丢失了吗？", "label": "数据丢失"}
+{"text": "管理员说我的账号已激活，但输入邮箱+密码后总返回‘用户不存在’，确认邮箱没错（xxx@company.com）", "label": "无法登录"}
+{"text": "每次导入Excel文件后软件直接crash，Windows 11 Pro 22H2，v3.4.1版本，附截图见附件", "label": "崩溃闪退"}
+{"text": "Docker image pull latest tag fails with 'failed to register layer: failed to extract layer: failed to unmount /var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/xxx: device or resource busy'", "label": "更新失败"}
+{"text": "安装包解压后双击launcher.bat，黑窗口闪退，日志里只有‘JVM terminated. Exit code=1’，Java版本是17.0.2。", "label": "安装失败"}
+{"text": "Linux服务器后台服务（systemd）运行2小时后莫名core dump，/var/log/syslog里只有‘Aborted (core dumped)’一行", "label": "崩溃闪退"}
+{"text": "微信小程序里上传图片总失败，控制台报错：‘uploadFile:fail permission denied’，是小程序权限没申请吗？", "label": "权限问题"}
+{"text": "Tchaikovsky’s Piano Concerto No.1 was rejected by Nikolai Rubinstein as ‘worthless, unplayable’ — then premiered in Boston, not Moscow. Irony level: symphonic.", "label": "OOD"}
+{"text": "安卓平板上APP总在登录页转圈，抓包发现POST /auth/login 返回空响应，Wireshark显示TCP RST，求排查方向", "label": "网络连接异常"}
+{"text": "Pilates reformer classes use springs, straps & carriages — zero code, zero APIs, just your pelvic floor and a very judgmental instructor named Ingrid.", "label": "OOD"}
+{"text": "ERP系统凌晨自动清理临时表，结果把t_invoice_archive这张归档表删了，里面存着2020–2024全部发票扫描件", "label": "数据丢失"}
+{"text": "登录界面输入框全灰了，鼠标点不进去，F12发现 input 标签加了 disabled='true'，谁干的？", "label": "无法登录"}
+{"text": "软件在渲染3D模型时突然黑屏退出，GPU占用飙到100%，Win10专业版+RTX4090，崩溃dump已上传", "label": "崩溃闪退"}
+{"text": "Windows服务版（LTSC）无法安装新版本，错误代码0x80070643，事件查看器里全是MSIInstaller Error 1722", "label": "更新失败"}
+{"text": "Python 3.12环境下pip install tensorflow==2.15报错：'No matching distribution found'，是不是TF还没适配新Python？", "label": "兼容性问题"}
+{"text": "我的App一直显示‘Connection failed’，试了WiFi和4G都不行，是不是服务器挂了？", "label": "网络连接异常"}
+{"text": "暹罗猫Siam昨晚用尾巴卷走了我第三支铅笔，现已被暂停零食配额。Feline UX design remains… unpredictable.", "label": "OOD"}
+{"text": "公司内网环境下手动下载了offline installer，运行后提示“无法写入Program Files目录”，权限已以管理员身份运行", "label": "更新失败"}
+{"text": "Mac上M1芯片跑v3.2.1版本，滚动长列表时明显掉帧，卡顿感很强", "label": "性能卡顿"}
+{"text": "MacBook M1芯片上安装v2.3.1版本一直报错：'Architecture not supported'，咋办？", "label": "安装失败"}
+{"text": "Mac版v2.8.7一连蓝牙设备就闪退，Console里看到Thread 1: EXC_CRASH (Code Signature Invalid)", "label": "崩溃闪退"}
+{"text": "iOS App Store下载到99%突然中断，再点‘获取’变灰了，重启手机也没用，急！", "label": "安装失败"}
+{"text": "在ARM64架构的Windows 11上双击运行x86的AutoCAD LT 2021安装包，弹窗提示‘This app can’t run on your PC’，有兼容层方案吗？", "label": "兼容性问题"}
+{"text": "你们的APP怎么没有夜间模式？我晚上用眼睛很累啊！", "label": "功能缺失"}
+{"text": "升级macOS后，/Users/Shared目录下三个Excel表格彻底找不到了，Finder里也搜不到，怀疑被清空了", "label": "数据丢失"}
+{"text": "I entered correct credentials but got 'Invalid session' error on mobile app. Tried clearing cache — still stuck at login screen.", "label": "无法登录"}
+{"text": "云南普洱茶‘醒茶’不是唤醒茶叶，是让紧压茶饼在陶罐里呼吸3周，等它慢慢舒展筋骨——像极了周一早上的我。🍵", "label": "OOD"}
+{"text": "iOS端App Store更新进度条走到一半就退回图标界面，再点进去又变回‘Update’按钮，没弹任何提示", "label": "更新失败"}
+{"text": "Docker容器里跑的service响应越来越慢，dmesg看到大量page allocation failure警告", "label": "性能卡顿"}
+{"text": "钉钉PC端（6.5.50）在CentOS Stream 9上启动失败，终端输出：'GLIBCXX_3.4.30 not found'，系统自带libstdc++.so.6只有3.4.28……", "label": "兼容性问题"}
+{"text": "Hiking Mount Fuji? Rule #1: Start from Subashiri 5th station at midnight to watch sunrise from the summit — but skip the ‘summit stamp’, it’s just ink on paper; the real stamp is your trembling knees.", "label": "OOD"}
+{"text": "客户反馈：安卓App在红米Note 12上滑动报表页频繁卡顿、偶现白屏，已复现", "label": "性能卡顿"}
+{"text": "Mac 上 Safari 登录按钮点击无反应；换 Firefox 就能进。是不是兼容性bug？", "label": "无法登录"}
+{"text": "运维同事说我的SSH账号被移出了sudoers，现在连systemctl status都执行不了，能帮忙加回来吗？", "label": "权限问题"}
+{"text": "用公司邮箱注册的测试账号，登录后台后所有功能按钮都显示‘暂无操作权限’，怎么配？", "label": "权限问题"}
+{"text": "客户现场反馈所有终端都报错‘网络不可用，请检查网络设置’，但浏览器、微信一切正常，怀疑是软件用了特殊端口？", "label": "网络连接异常"}
+{"text": "软件安装到85%就卡住了，提示Error 0x80070005，重试三次都失败，求解！", "label": "安装失败"}
+{"text": "The Great Wall hike from Jinshanling to Simatai includes 22 beacon towers, one secret Ming-dynasty tavern (cash only), and zero Bluetooth signal — bliss.", "label": "OOD"}
+{"text": "SolidWorks 2023 SP5在NVIDIA RTX 4090 + Driver 535.98下频繁崩溃，官方KB说'only certified drivers supported'，这算硬件兼容性问题吗？", "label": "兼容性问题"}
+{"text": "macOS Sonoma上自动更新失败，日志里报错：Code=422 \"Invalid signature\" — 这是证书过期了吗？", "label": "更新失败"}
+{"text": "Where’s the API endpoint for retrieving user session history? Docs say it exists, but 404 every time.", "label": "功能缺失"}
+{"text": "我的账号为什么不能访问客户管理模块？提示‘Access Denied’", "label": "权限问题"}
+{"text": "Why does the app freeze for 3–5 seconds every time I switch tabs? Feels like CPU spikes.", "label": "性能卡顿"}
+{"text": "软件更新到v2.3.1时卡在95%，点击重试没反应，重启也没用，求解！", "label": "更新失败"}
+{"text": "软件启动后卡在加载界面，F12看Network全是pending状态，请求全超时……求帮看下", "label": "网络连接异常"}
+{"text": "客户反馈：用手机号注册的账号无法进入‘我的工单’页，前端报403，后端日志显示‘Missing required role: USER_TICKET_VIEW’", "label": "权限问题"}
+{"text": "潮汕牛肉火锅的灵魂是‘吊龙伴’——取自牛脊背两侧的长条肉，肥瘦相间如雪花，涮8秒即食，蘸沙茶酱才叫地道。", "label": "OOD"}
+{"text": "Baking sourdough during monsoon season? Lower hydration by 5%, preheat Dutch oven 20 mins longer, and whisper encouragement to the starter — it hears you.", "label": "OOD"}
+{"text": "Mac上打开软件弹窗：‘The network connection was lost.’ 重连3次都一样，重启路由器也没用", "label": "网络连接异常"}
+{"text": "华为MatePad Pro 13.2（HarmonyOS 4.2）上无法安装微信安卓版APK，提示‘此应用与您的设备不兼容’，有办法绕过检测吗？", "label": "兼容性问题"}
+{"text": "The mobile app doesn’t support offline mode — no cached data or sync queue. Is this planned for v3.2?", "label": "功能缺失"}
+{"text": "公司内网环境下登录客户端提示‘无法连接到远程服务器（错误代码 0x80072EFD）’，外网正常，是代理配置问题吗？", "label": "网络连接异常"}
