@@ -73,31 +73,31 @@ Retrieval-Augmented Few-shot Prompting
 
 ```mermaid
 flowchart LR
-    A[Training stream<br/>(text, label)] --> B[External memory]
-    B --> C[Lazy index building]
-    C --> D1[Word TF-IDF]
-    C --> D2[Char 3-5 gram TF-IDF]
-    C --> D3[Label prototypes]
-    C --> D4[Label-name features]
-    C --> D5[Confusable label pairs]
+    A["Training stream<br>text + label"] --> B["External memory"]
+    B --> C["Lazy index building"]
+    C --> D1["Word TF-IDF"]
+    C --> D2["Char 3-5 gram TF-IDF"]
+    C --> D3["Label prototypes"]
+    C --> D4["Label-name features"]
+    C --> D5["Confusable label pairs"]
 
-    Q[Query text] --> R[Sparse retrieval]
+    Q["Query text"] --> R["Sparse retrieval"]
     D1 --> R
     D2 --> R
     D3 --> R
     D4 --> R
 
-    R --> S[Diverse few-shot selection]
-    S --> T[Prompt budget control<br/>max 2048 tokens]
-    D5 --> H[Optional disambiguation hint]
+    R --> S["Diverse few-shot selection"]
+    S --> T["Prompt budget control<br>max 2048 tokens"]
+    D5 --> H["Optional disambiguation hint"]
     H --> T
-    T --> L[Strict prompted LLM]
-    L --> P[Output parser]
-    P --> O[Predicted label]
-    R --> F[Retrieval fallback]
+    T --> L["Strict prompted LLM"]
+    L --> P["Output parser"]
+    P --> O["Predicted label"]
+    R --> F["Retrieval fallback"]
     F --> P
 
-    M[MCQ mode detection] --> L
+    M["MCQ mode detection"] --> L
     M --> P
 ```
 
@@ -328,4 +328,3 @@ macro = 每个任务 accuracy 的平均值
 ```
 
 它让每个任务拥有相同权重，适合衡量跨任务的平均能力。
-
