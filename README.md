@@ -1,108 +1,189 @@
-# Harness Engineering 文本分类方案
+# Harness Engineering Text Classification
 
-本仓库是 Harness Engineering 考核的本地实现与评测记录。任务形式是有限上下文窗口下的少样本文本分类：评测脚本先通过 `update(text, label)` 将带标签训练样本流式交给 Harness，再通过 `predict(text)` 对测试样本输出一个精确匹配的标签字符串。
+> 一个面向 Harness Engineering 考核的少样本文本分类方案。核心思路是用轻量检索、自动 prompt 预算控制和严格输出解析，把固定权重的 LLM 包装成稳定的任务自适应分类器。
 
-根据考核说明，LLM 权重不更新，所有“学习”都发生在 Harness 维护的外部状态中。单次 `call_llm` 的 prompt token 上限为 2048，测试集标签只用于本地评测，正式评测时不可访问。
+[![Python](https://img.shields.io/badge/Python-3.11-2f4050)](#运行方式)
+[![Prompt Budget](https://img.shields.io/badge/Prompt%20Budget-2048%20tokens-a8874a)](#算法设计)
+[![Overall Micro](https://img.shields.io/badge/Micro%20Accuracy-87.17%25-52796f)](#总体结果)
+[![Overall Macro](https://img.shields.io/badge/Macro%20Accuracy-89.08%25-52796f)](#总体结果)
+
+## 项目概览
+
+本仓库实现了一个用于少样本文本分类的 Harness。评测脚本会先将训练样本通过 `update(text, label)` 流式喂给 Harness，再调用 `predict(text)` 对测试样本输出一个精确匹配的标签。
+
+根据考核说明，模型权重始终不更新，所有“学习”都发生在 Harness 的外部状态中。单次 `call_llm` 的 prompt token 上限为 2048，测试集标签只用于本地评测。
+
+**关键结果**
+
+| 指标 | 数值 |
+| --- | ---: |
+| 评测任务数 | 17 |
+| 总样本数，按 2 runs 计 | 11278 |
+| Overall Micro Accuracy | 87.17% |
+| Overall Macro Task Accuracy | 89.08% |
+| 评测设置 | `workers=25`, `runs=2`, `max_prompt_tokens=2048` |
+
+## 目录
+
+- [项目概览](#项目概览)
+- [文件结构](#文件结构)
+- [数据集来源](#数据集来源)
+- [算法设计](#算法设计)
+- [运行方式](#运行方式)
+- [评测结果](#评测结果)
+- [指标说明](#指标说明)
 
 ## 文件结构
 
 | 路径 | 说明 |
 | --- | --- |
-| `solution.py` | 主要提交文件，包含 `MyHarness` 的完整实现 |
-| `harness_base.py` | Harness 基类，定义 `update()` / `predict()` 接口 |
+| `solution.py` | 核心实现文件，包含 `MyHarness` |
+| `harness_base.py` | Harness 基类，定义 `update()` 和 `predict()` 接口 |
 | `llm_client.py` | OpenAI-compatible LLM 客户端与 tokenizer 计数逻辑 |
-| `run.py` | 官方本地单任务评测脚本 |
-| `eval_all_benches.py` | 本仓库新增的全量评测脚本，遍历 `data` 与 `bench1`-`bench4` |
+| `run.py` | 官方单任务本地评测脚本 |
+| `eval_all_benches.py` | 全量评测脚本，遍历 `data` 与 `bench1` 到 `bench4` |
 | `data/` | 官方 DEV 数据集 |
-| `bench1/`-`bench4/` | 开源或补充 benchmark 数据集 |
+| `bench1/` 到 `bench4/` | 开源或补充 benchmark 数据集 |
 | `results/` | 全量评测输出，包含 JSON 与 CSV 明细 |
 
 ## 数据集来源
 
-- `data/`：官方提供的本地 DEV 数据集。
-- `bench1/`：开源数据集，来源见 `bench1/source.txt`：<https://github.com/edgerunneres/2026-chuangzhi-academy-summer-camp-harness-engineering-mock-dataset>
-- `bench2/`：开源数据集，来源见 `bench2/source.txt`：<https://github.com/leoguohr/open-harness-synthetic-benchmark/tree/main/open-harness-synthetic-benchmark>
-- `bench3/`：补充数据集，仓库内未提供 GitHub 开源链接。
-- `bench4/`：开源数据集，来源见 `bench4/source.txt`：<https://github.com/CoisiniStar/Harness_Dataset_SII2026Summer-Camp>
+| 数据集 | 来源说明 |
+| --- | --- |
+| `data/` | 官方提供的本地 DEV 数据集 |
+| `bench1/` | 开源数据集：[2026-chuangzhi-academy-summer-camp-harness-engineering-mock-dataset](https://github.com/edgerunneres/2026-chuangzhi-academy-summer-camp-harness-engineering-mock-dataset) |
+| `bench2/` | 开源数据集：[open-harness-synthetic-benchmark](https://github.com/leoguohr/open-harness-synthetic-benchmark/tree/main/open-harness-synthetic-benchmark) |
+| `bench3/` | 开源数据集，由创智交流群群友提供 |
+| `bench4/` | 开源数据集：[Harness_Dataset_SII2026Summer-Camp](https://github.com/CoisiniStar/Harness_Dataset_SII2026Summer-Camp) |
 
 ## 算法设计
 
-`solution.py` 中的 `MyHarness` 是一个“检索增强 few-shot + 严格输出约束 + 确定性 fallback”的 Harness。核心目标是在 2048 prompt token 限制下，为每条测试样本挑选最有帮助的训练样例，并把 LLM 输出稳定映射回合法标签。
+`solution.py` 中的 `MyHarness` 可以概括为：
+
+```text
+Retrieval-Augmented Few-shot Prompting
++ Prompt Budget Control
++ Strict Label Parsing
++ Deterministic Retrieval Fallback
+```
+
+它不是训练一个新的分类器，而是在每个任务的训练样本到达后，构建轻量索引，并为每条测试样本动态组织上下文，让 LLM 在有限 token 预算内看到最有用的 few-shot 示例。
+
+### 整体流程
+
+```mermaid
+flowchart LR
+    A[Training stream<br/>(text, label)] --> B[External memory]
+    B --> C[Lazy index building]
+    C --> D1[Word TF-IDF]
+    C --> D2[Char 3-5 gram TF-IDF]
+    C --> D3[Label prototypes]
+    C --> D4[Label-name features]
+    C --> D5[Confusable label pairs]
+
+    Q[Query text] --> R[Sparse retrieval]
+    D1 --> R
+    D2 --> R
+    D3 --> R
+    D4 --> R
+
+    R --> S[Diverse few-shot selection]
+    S --> T[Prompt budget control<br/>max 2048 tokens]
+    D5 --> H[Optional disambiguation hint]
+    H --> T
+    T --> L[Strict prompted LLM]
+    L --> P[Output parser]
+    P --> O[Predicted label]
+    R --> F[Retrieval fallback]
+    F --> P
+
+    M[MCQ mode detection] --> L
+    M --> P
+```
 
 ### 1. 外部记忆与延迟建索引
 
-`update()` 只把 `(text, label)` 写入 `self.memory`，并标记索引失效。第一次 `predict()` 时才构建索引，避免每次新增样本后重复计算。索引构建使用线程锁保护，因此评测脚本并发调用 `predict()` 时不会重复建索引或读到半初始化状态。
+`update()` 只负责把 `(text, label)` 写入 `self.memory`，并标记索引失效。第一次 `predict()` 时才真正构建索引，避免训练流中每加入一个样本都重复计算。
 
-### 2. 稀疏 TF-IDF 检索
+索引构建由线程锁保护，因此在 `run.py` 或 `eval_all_benches.py` 并发调用 `predict()` 时，不会出现重复建索引或读取半初始化状态的问题。
 
-索引同时维护两套特征：
+### 2. 双通道稀疏检索
 
-- word 特征：用正则抽取英文、数字 token；
-- char 特征：抽取 3-5 gram 字符 n-gram，并在文本两侧加入空格边界。
+Harness 同时使用两类稀疏特征：
 
-每个训练样本被编码为归一化稀疏 TF-IDF 向量。检索时，对 query 也构造同类向量，用 word/char 混合余弦相似度排序训练样本。字符 n-gram 能覆盖拼写变化、短文本和标签词变体；word 特征则保留更清晰的语义关键词。
+| 特征 | 作用 |
+| --- | --- |
+| Word TF-IDF | 捕捉清晰关键词、实体词和任务术语 |
+| Character 3-5 gram TF-IDF | 覆盖短文本、拼写变化、词形变化和标签词碎片 |
+
+每条训练样本被编码为归一化稀疏向量。预测时，query 也被编码成同类向量，并通过 word/char 混合余弦相似度检索近邻样本。
 
 ### 3. 标签原型与标签名特征
 
-除逐样本相似度外，算法还为每个 label 汇总训练样本向量，得到 label prototype。对于普通文本分类任务，还会把 label 字符串本身拆成词与字符 n-gram，计算 query 与 label name 的重合度。最终检索分数可由三部分组成：
+除逐样本相似度外，算法还为每个 label 聚合训练样本向量，形成 label prototype。普通文本分类任务还会把 label 名称拆成词与字符 n-gram，计算 query 与 label name 的词面重合度。
 
-- query 与单个训练样本的相似度；
-- query 与该样本所属 label prototype 的相似度；
-- query 与 label name 的词面相似度。
+最终检索信号由三部分共同构成：
 
-这些权重不是固定拍脑袋设定，而是在训练集上做轻量 leave-one-out 自调参。
+| 信号 | 说明 |
+| --- | --- |
+| Document similarity | query 与单个训练样本的相似度 |
+| Prototype similarity | query 与候选 label 原型的相似度 |
+| Label-name similarity | query 与 label 名称的词面相似度 |
 
-### 4. 任务类型检测与 MCQ 模式
+这些权重会在训练集上通过轻量 leave-one-out 自调参选择，而不是固定手写。
 
-如果全部标签都是较短的字母数字串，且类别数不多，Harness 会自动进入 MCQ 模式。例如 `A/B/C/D` 或 `0/1/2/3` 这类选择题标签。MCQ 模式下：
+### 4. MCQ 模式
 
-- 不使用 label name 特征，因为 `A`、`B` 这类标签本身没有语义；
-- 保留全部候选答案；
-- few-shot 每类最多保留更多样例；
-- prompt 强调只输出一个选项 token；
-- 输出解析采用更严格的短标签解析逻辑。
+如果所有 label 都是较短的字母数字串，且类别数较少，Harness 会自动进入 MCQ 模式。例如 `A/B/C/D`、`0/1/2/3` 或 `yes/no`。
+
+MCQ 模式下的策略更保守：
+
+- 不使用 label-name 特征，因为短选项本身通常没有语义；
+- 始终保留全部候选答案；
+- few-shot 每个类别允许更多示例；
+- prompt 明确要求只输出一个选项 token；
+- 输出解析器优先匹配短答案，减少解释文本带来的误判。
 
 ### 5. 训练集自调参
 
-构建索引时，`_auto_tune_retrieval()` 会在训练集上做小型网格搜索，比较不同 `word_weight`、`proto_mix`、`label_name_mix` 的 leave-one-out 效果。评分综合考虑：
+`_auto_tune_retrieval()` 会在训练集上做小型网格搜索，比较不同 `word_weight`、`proto_mix`、`label_name_mix` 的效果。调参目标综合考虑：
 
 - 最近邻 top-1 是否同类；
 - top-5 是否包含正确类别；
-- 被选入 few-shot 的样例中是否覆盖正确类别；
-- 纯检索 fallback 是否能预测正确。
+- 被选入 few-shot 的样例是否覆盖正确类别；
+- 检索 fallback 是否预测正确。
 
-随后还会选择 fallback 聚合时使用的 top-N 范围，让检索失败兜底更稳。
+这一步让 Harness 能根据不同任务自动偏向词级匹配、字符级匹配、标签原型或标签名称信息。
 
-### 6. 多样化 few-shot 选择与 token 预算
+### 6. Few-shot 选择与 prompt 预算
 
-对每条 query，Harness 先按检索分数得到候选训练样本，再进行类别多样化选择：
+每条 query 先检索候选训练样本，再经过类别多样化选择：
 
-- 普通任务默认最多选 24 条；
-- 每个类别默认最多 2 条，避免一个高频近邻类别挤占全部上下文；
-- MCQ 模式每类上限提高到 6 条。
+| 模式 | 默认示例上限 | 单类别示例上限 |
+| --- | ---: | ---: |
+| 普通分类 | 24 | 2 |
+| MCQ 分类 | 24 | 6 |
 
-随后 `_fit_to_budget()` 用 `count_messages_tokens()` 检查 prompt 长度。如果超过 `max_prompt_tokens - SAFETY_MARGIN`，就逐步减少示例数量，直到满足预算。单条 query 与示例文本也有字符级截断，降低长文本把 prompt 撑爆的风险。
+随后 `_fit_to_budget()` 使用 `count_messages_tokens()` 检查 prompt 长度。如果超过 `max_prompt_tokens - SAFETY_MARGIN`，就逐步减少 few-shot 示例数量。query 和示例文本也会进行长度限制，防止长文本挤占上下文。
 
-### 7. Prompt 与安全约束
+### 7. Prompt 约束与输出解析
 
-普通分类 prompt 会列出 allowed labels，并明确要求只输出一个完全一致的类别字符串。示例采用 user/assistant 对话块提供，输入文本和示例内容都被声明为 data，而不是 instructions，以降低 prompt injection 样本影响。
+普通分类 prompt 会列出 allowed labels，并要求模型只输出一个完全一致的标签字符串。输入文本和示例内容都被声明为 data，而不是 instructions，以降低 prompt injection 样本对输出格式的影响。
 
-MCQ prompt 则更短更硬：只允许输出候选答案 token，不允许解释、Markdown、前缀或标点。
+输出解析按如下顺序处理：
+
+1. 精确匹配合法 label；
+2. 大小写、空格、连字符归一化后匹配；
+3. 在输出文本中查找合法 label；
+4. 失败时回退到检索聚合预测。
+
+如果 LLM 调用失败，Harness 会重试；最终仍失败时，使用确定性的 retrieval fallback，保证 `predict()` 始终能返回一个合法标签。
 
 ### 8. 易混标签提示
 
-对于普通分类任务，索引构建时会扫描训练集中的 near-miss：如果某样本最近的异类邻居分数接近同类邻居，就把两个 label 记为易混对。预测时，只有当前 query 的 top-2 候选 label 正好构成易混对且分差很小时，才额外注入一条区分性关键词提示。这样只在高歧义样本上增加信息，不干扰大多数简单样本。
+构建索引时，Harness 会在训练集内寻找 near-miss：如果某样本最近的异类邻居接近同类邻居，就把这两个 label 记录为易混对。
 
-### 9. 输出解析与 fallback
-
-LLM 输出会先去除 `<think>...</think>`、引号、Markdown 包裹和 `Answer:` / `Label:` 等前缀。普通任务按以下顺序解析：
-
-1. 完全匹配合法 label；
-2. 大小写、空格、连字符归一化后匹配；
-3. 在输出文本中查找合法 label；
-4. 若仍失败，回退到检索聚合预测。
-
-MCQ 模式使用专门的短 token 解析器，尽量避免把解释文本中的无关字母误判为选项。LLM 调用失败时会重试，最终仍失败则使用确定性检索 fallback。
+预测时，只有当前 query 的 top-2 候选 label 正好构成易混对且分差很小时，才注入一条简短的区分性关键词提示。这让额外提示只作用在高歧义样本上，不干扰大多数简单样本。
 
 ## 运行方式
 
@@ -112,13 +193,13 @@ MCQ 模式使用专门的短 token 解析器，尽量避免把解释文本中的
 pip install -r requirements.txt
 ```
 
-单任务官方评测：
+运行官方单任务评测：
 
 ```powershell
 py -3.11 run.py --workers 25 --runs 2
 ```
 
-全量评测：
+运行全量评测：
 
 ```powershell
 py -3.11 eval_all_benches.py
@@ -130,26 +211,51 @@ py -3.11 eval_all_benches.py
 py -3.11 eval_all_benches.py --list-only
 ```
 
-## 评测设置
+全量评测会输出：
 
-以下结果来自 `results/eval_all_20260509_003512.*`：
+| 文件 | 内容 |
+| --- | --- |
+| `eval_all_<timestamp>.json` | 完整任务、每轮、每个 label、逐样本预测明细 |
+| `eval_all_<timestamp>.summary.csv` | 每个任务的汇总结果 |
+| `eval_all_<timestamp>.labels.csv` | 每个任务、每轮、每个 label 的结果 |
+| `eval_all_<timestamp>.predictions.csv` | 每条测试样本的 gold、prediction、correct |
 
-- 评测时间：2026-05-09 00:11:01 至 00:35:12，Asia/Shanghai；
-- `workers=25`；
-- `runs=2`；
-- `max_prompt_tokens=2048`；
-- 模型配置来自 `llm_client.py`，使用 OpenAI-compatible 接口调用 `qwen3-8b`，并关闭 thinking；
-- 指标为 accuracy，任务表中的平均值是 2 次 run 的算术平均。
+## 评测结果
+
+以下结果来自 `results/eval_all_20260509_003512.*`。
+
+| 设置项 | 数值 |
+| --- | --- |
+| 评测时间 | 2026-05-09 00:11:01 到 00:35:12, Asia/Shanghai |
+| workers | 25 |
+| runs | 2 |
+| max prompt tokens | 2048 |
+| 模型接口 | OpenAI-compatible |
+| 模型名称 | `qwen3-8b` |
+| thinking | disabled |
+
+### 总览
+
+| 分组 | 任务数 | Correct / Total | Micro Accuracy | Macro Task Accuracy |
+| --- | ---: | ---: | ---: | ---: |
+| `data` | 1 | 919 / 1078 | 85.25% | 85.25% |
+| `bench1` | 5 | 3070 / 3730 | 82.31% | 85.25% |
+| `bench2` | 3 | 368 / 424 | 86.79% | 88.29% |
+| `bench3` | 3 | 2544 / 3046 | 83.52% | 83.23% |
+| `bench4` | 5 | 2930 / 3000 | 97.67% | 97.67% |
+| **Overall** | **17** | **9831 / 11278** | **87.17%** | **89.08%** |
 
 ### data
+
+官方 DEV 数据集，作为本地基准任务。
 
 | 任务 | Train | Test | Run 1 | Run 2 | 平均 |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | `data/dev` | 231 | 539 | 85.34% | 85.16% | 85.25% |
 
-组内结果：micro 85.25%，macro 85.25%。
-
 ### bench1
+
+`bench1` 覆盖多类意图分类与领域化任务，任务间难度差异较大。
 
 | 任务 | Train | Test | Run 1 | Run 2 | 平均 |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -159,9 +265,11 @@ py -3.11 eval_all_benches.py --list-only
 | `bench1/task2_techsupport` | 140 | 299 | 81.61% | 81.61% | 81.61% |
 | `bench1/task3` | 287 | 383 | 71.80% | 72.06% | 71.93% |
 
-组内结果：micro 82.31%，macro 85.25%。
+**bench1 平均**：micro 82.31%，macro 85.25%。
 
 ### bench2
+
+`bench2` 包含支持意图、校园路由和选择题推理，其中选择题推理明显更具挑战性。
 
 | 任务 | Train | Test | Run 1 | Run 2 | 平均 |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -169,9 +277,11 @@ py -3.11 eval_all_benches.py --list-only
 | `bench2/task2_campus_routing` | 30 | 60 | 100.00% | 100.00% | 100.00% |
 | `bench2/task3_choice_reasoning` | 80 | 80 | 66.25% | 66.25% | 66.25% |
 
-组内结果：micro 86.79%，macro 88.29%。
+**bench2 平均**：micro 86.79%，macro 88.29%。
 
 ### bench3
+
+`bench3` 用于补充 DEV、MCQ 与 OOD 场景，考察 Harness 的泛化稳定性。
 
 | 任务 | Train | Test | Run 1 | Run 2 | 平均 |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -179,9 +289,11 @@ py -3.11 eval_all_benches.py --list-only
 | `bench3/train_mcq` | 96 | 384 | 80.73% | 80.47% | 80.60% |
 | `bench3/train_ood` | 186 | 600 | 83.67% | 83.67% | 83.67% |
 
-组内结果：micro 83.52%，macro 83.23%。
+**bench3 平均**：micro 83.52%，macro 83.23%。
 
 ### bench4
+
+`bench4` 覆盖电商、金融、医疗分诊、新闻主题和技术支持等领域，整体表现最稳定。
 
 | 任务 | Train | Test | Run 1 | Run 2 | 平均 |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -191,13 +303,29 @@ py -3.11 eval_all_benches.py --list-only
 | `bench4/news_topic` | 150 | 300 | 95.33% | 95.33% | 95.33% |
 | `bench4/tech_support` | 150 | 300 | 98.33% | 98.33% | 98.33% |
 
-组内结果：micro 97.67%，macro 97.67%。
+**bench4 平均**：micro 97.67%，macro 97.67%。
 
 ### 总体结果
 
 | 范围 | 任务数 | Correct / Total | Micro Accuracy | Macro Task Accuracy |
 | --- | ---: | ---: | ---: | ---: |
-| `data` + `bench1`-`bench4` | 17 | 9831 / 11278 | 87.17% | 89.08% |
+| `data` + `bench1` 到 `bench4` | 17 | 9831 / 11278 | 87.17% | 89.08% |
 
-其中 micro accuracy 按所有样本汇总计算，macro task accuracy 先计算每个任务的 2-run 平均 accuracy，再对 17 个任务取平均。
+## 指标说明
+
+**Micro Accuracy** 按所有样本汇总计算：
+
+```text
+micro = 所有任务正确样本数之和 / 所有任务测试样本数之和
+```
+
+它更受大测试集影响，适合衡量整体样本级表现。
+
+**Macro Task Accuracy** 先计算每个任务的平均 accuracy，再对任务取平均：
+
+```text
+macro = 每个任务 accuracy 的平均值
+```
+
+它让每个任务拥有相同权重，适合衡量跨任务的平均能力。
 
