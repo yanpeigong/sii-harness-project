@@ -6,6 +6,7 @@
 [![Prompt Budget](https://img.shields.io/badge/Prompt%20Budget-2048%20tokens-a8874a)](#算法设计)
 [![Overall Micro](https://img.shields.io/badge/Micro%20Accuracy-87.17%25-52796f)](#总体结果)
 [![Overall Macro](https://img.shields.io/badge/Macro%20Accuracy-89.08%25-52796f)](#总体结果)
+[![Report](https://img.shields.io/badge/Report-PDF-a8874a)](report/report.pdf)
 
 ## 项目概览
 
@@ -45,6 +46,7 @@
 | `data/` | 官方 DEV 数据集 |
 | `bench1/` 到 `bench4/` | 开源或补充 benchmark 数据集 |
 | `results/` | 全量评测输出，包含 JSON 与 CSV 明细 |
+| `report/` | 探索报告的 LaTeX 源文件与 PDF |
 
 ## 数据集来源
 
@@ -55,6 +57,15 @@
 | `bench2/` | 开源数据集：[open-harness-synthetic-benchmark](https://github.com/leoguohr/open-harness-synthetic-benchmark/tree/main/open-harness-synthetic-benchmark) |
 | `bench3/` | 开源数据集，由创智交流群群友提供 |
 | `bench4/` | 开源数据集：[Harness_Dataset_SII2026Summer-Camp](https://github.com/CoisiniStar/Harness_Dataset_SII2026Summer-Camp) |
+
+## 探索报告
+
+完整的探索过程、方案分析与结果讨论记录在报告中：
+
+| 文件 | 说明 |
+| --- | --- |
+| [`report/report.pdf`](report/report.pdf) | 可直接阅读的 PDF 报告 |
+| [`report/report.tex`](report/report.tex) | LaTeX 源文件 |
 
 ## 算法设计
 

@@ -1,2 +1,8 @@
 __pycache__/
 AGENTS.md
+report/*.aux
+report/*.fdb_latexmk
+report/*.fls
+report/*.log
+report/*.out
+report/*.synctex.gz

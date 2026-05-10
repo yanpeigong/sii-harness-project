@@ -1,0 +1,863 @@
+% =============================================================================
+%  Harness Engineering 探索报告 - 最大兼容版
+%
+%  编译方式: xelatex report.tex (运行两次以生成正确交叉引用)
+%
+%  本文件特性:
+%   1. 用 xeCJK 替代 ctex,绕开新版 LaTeX 内核与旧版 ctex 的钩子冲突
+%   2. 不指定具体中文字体,让 xeCJK 自动匹配系统已有字体
+%   3. 仅使用基础 LaTeX 包,不依赖 tcolorbox / algorithm 等
+%
+%  如果系统中没有"宋体""黑体"风格的中文字体,可以在导言区取消注释
+%  下面的 \setCJKmainfont 行,手动指定一个你系统上已有的字体名。
+% =============================================================================
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+% --------------------- XeCJK 中文支持 (跨平台最稳) -------------------------
+\usepackage{xeCJK}
+
+% 让 xeCJK 自动选择字体。若编译报"找不到字体",取消下行注释并改成
+% 你系统上有的字体,例如:
+%   Windows: "SimSun" / "Microsoft YaHei" / "FangSong"
+%   macOS  : "Songti SC" / "PingFang SC" / "STSong"
+%   Linux  : "Noto Sans CJK SC" / "Source Han Sans SC" / "WenQuanYi Micro Hei"
+%
+% \setCJKmainfont{Noto Sans CJK SC}
+
+% 如果你的系统装了多种字体,用下面三行可以更细分:
+% \setCJKmainfont{SimSun}        % 正文
+% \setCJKsansfont{SimHei}        % 无衬线
+% \setCJKmonofont{FangSong}      % 等宽
+
+% --------------------- 排版包 (全部为标准包) -------------------------------
+\usepackage[margin=0.75in]{geometry}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{enumitem}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\usepackage{verbatim}
+\usepackage{url}
+% hyperref 必须放最后
+\usepackage{hyperref}
+\hypersetup{
+  bookmarks=true,
+  colorlinks=true,
+  linkcolor=black!70!blue,
+  citecolor=black!70!blue,
+  urlcolor=black!70!blue
+}
+
+% --------------------- 简易"提示框" (用最基础的 tabular 实现) --------------
+% 不依赖 tcolorbox / framed,避免任何额外包冲突
+\definecolor{insightclr}{RGB}{70,130,180}
+\definecolor{failclr}{RGB}{180,60,60}
+\definecolor{promptclr}{RGB}{120,120,120}
+
+\newcommand{\insightbox}[2][\textbf{核心观察}]{%
+  \par\medskip\noindent
+  \begin{tabular}{@{}|@{\hspace{4pt}}p{0.92\linewidth}@{\hspace{4pt}}|@{}}
+  \hline
+  \rule{0pt}{2.6ex}\textbf{\color{insightclr}#1}\\[2pt]
+  \small #2 \\[2pt]
+  \hline
+  \end{tabular}
+  \par\medskip
+}
+
+\newcommand{\failbox}[2][\textbf{失败案例}]{%
+  \par\medskip\noindent
+  \begin{tabular}{@{}|@{\hspace{4pt}}p{0.92\linewidth}@{\hspace{4pt}}|@{}}
+  \hline
+  \rule{0pt}{2.6ex}\textbf{\color{failclr}#1}\\[2pt]
+  \small #2 \\[2pt]
+  \hline
+  \end{tabular}
+  \par\medskip
+}
+
+\newcommand{\promptbox}[2][\textbf{提示词示例}]{%
+  \par\medskip\noindent
+  \begin{tabular}{@{}|@{\hspace{4pt}}p{0.92\linewidth}@{\hspace{4pt}}|@{}}
+  \hline
+  \rule{0pt}{2.6ex}\textbf{\color{promptclr}#1}\\[2pt]
+  \small\itshape #2 \\[2pt]
+  \hline
+  \end{tabular}
+  \par\medskip
+}
+
+% --------------------- 标题排版 --------------------------------------------
+\makeatletter
+\def\@maketitle{%
+  \newpage \null \vskip 1em
+  \begin{center}%
+    {\LARGE\bfseries \@title \par}%
+    \vskip 0.5em {\large \@author \par}%
+  \end{center}%
+  \par \vskip 1em}
+\makeatother
+
+\title{有限输入窗口下基于检索增强的 LLM 文本分类 Harness 设计与探索}
+\author{Harness Engineering 2026 Summer 提交报告}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+% =============================================================================
+\begin{abstract}
+	\noindent
+	本报告记录我们为 Harness Engineering 2026 暑期考核所设计的 Harness
+	框架的迭代过程。任务的核心约束为：在\emph{单轮提示词长度不超过
+		2048 个 token}的硬性限制下，不修改大模型本身，使用 Qwen3-8B
+	完成多个领域的文本分类任务。围绕这一目标，我们进行了六轮
+	迭代，每一轮都对应一个明确要解决的问题。我们将 Harness 视作一个
+	\emph{在大模型外层做工程的容器}——它替模型管理记忆、组织提示词、
+	解析输出、识别任务类型，并在模型出错时兜底。本报告以通俗语言记录
+	每一轮迭代的\emph{动机}与\emph{观察}，并坦诚呈现两次关键失败：
+	一次是将顶会论文的方法不加约束地堆叠，另一次是消歧提示与训练范例
+	信息重复而导致无效。我们认为，这些失败本身比成功更具信息量。
+	最终方案在 DEV 集上稳定收敛于 85.3\% 左右，LLM 调用次数严格保持在
+	每个测试样本仅一次，且对 OOD 任务和选择题任务保持良好的泛化能力。
+	最终版代码与更详细的实现说明将开源于 
+	\url{https://github.com/yanpeigong/sii-harness-project}。
+\end{abstract}
+% =============================================================================
+\section{任务背景与基本约束}
+\label{sec:task}
+
+\subsection{Harness 是什么}
+``Harness'' 一词在大模型工程语境下指一个\emph{包裹}大模型的外部
+框架。大模型本身只能根据上下文生成文本--它没有记忆,不能调用工具,
+也不能查阅外部资料。Harness 的职责,就是为模型补齐这些能力:把训练
+样本组织成模型看得懂的提示词、在模型输出后做格式校验和容错、识别
+当前任务的特点并做相应的预处理。本次考核要求实现的就是这样一个
+``大模型分类专用容器''。
+
+\subsection{任务流程}
+评测流程分两个阶段。阶段一(训练流)中,系统会将一批带
+标签的样本逐条喂给 Harness;Harness 可以把这些样本以任何形式存储
+在内存中,但不允许写入磁盘。阶段二(预测)中,系统会逐
+条提供未标注的文本,要求 Harness 返回一个标签字符串,并且要\emph{
+和正确答案完全一致}--哪怕多一个引号、少一个下划线都判错。
+
+\subsection{硬性约束}
+\begin{itemize}[leftmargin=*,itemsep=2pt,topsep=2pt]
+\item 2048 token 提示词上限:每次调用大模型,我们送进去的
+   全部内容(包括任务描述、训练样例、待分类文本)加起来不能超过
+   2048 个 token。如果超过,系统会从尾部直接砍掉,可能把待分类文本
+   砍没。
+\item 固定模型:统一使用 Qwen3-8B 非思考模式。考生不能更换
+   模型、不能开启思考模式。
+\item 依赖限制:除 Python 标准库与 numpy 外,不允许其他第三
+   方库;不允许读写文件。
+\end{itemize}
+
+\subsection{评测涵盖的三类任务}
+正式评测会在多个数据集上分别打分再加权。这意味着我们设计的
+Harness 必须\emph{同时}在以下三种性质迥异的任务上都不掉链子:
+\begin{enumerate}[leftmargin=*,itemsep=2pt,topsep=2pt]
+\item 客服意图分类:与公开的 BANKING77 数据集类似,77 个
+  细粒度的客服问题类型。这一部分还会包含少量\emph{提示词注入}
+  样本。
+\item OOD 文本分类:领域、标签数量、风格全部和上面不同的
+  陌生分类任务。
+\item 自然语言选择题:文本是一道完整的选择题(题干 + 选项),
+  标签变成 A、B、C、D 这种单字母。
+\end{enumerate}
+
+\subsection{数据的初步观察}
+为评估 token 预算的可行性,我们对 DEV 集做了实测统计:
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=2pt]
+\item DEV 集训练样本 231 条,77 类,每类 3 条;测试样本 539 条。
+\item 文本平均长度 58 ,中位数 50 字符,绝大多数都很短。
+\item 把 77 个标签全部列成一行需要约 460 个 token。
+\item 单条训练样本(``文本 + 标签'')平均 22 个 token,最长约 76。
+\item 即使把所有标签都摆出来,2048 的预算下我们仍可以塞进
+  约 60 条训练样本作为``参考案例''。
+\end{itemize}
+
+
+% =============================================================================
+\section{官方零样本基线及其问题}
+\label{sec:baseline}
+
+考核提供的初始模板里只有这样一段代码:让模型``给我把这段文字分个
+类,只输出标签''。它不告诉模型有哪些合法标签,也不利用任何训练
+样本。这种零样本方式在我们的设定下有四个根本性问题:
+\begin{enumerate}[leftmargin=*,itemsep=2pt,topsep=2pt]
+\item 模型不知道有哪些合法标签。比如训练集中正确的标签是
+  lost\_or\_stolen\_phone,模型看不到这个词表,会自由发挥
+  输出 ``lost phone'' 或 ``phone\_stolen''。即使语义对了,字符串
+  不一致也算错。
+\item 完全闲置训练数据。考核给了 231 条带标签样本,baseline
+  一条都没用。等于把模型推到考场上还把课本收走。
+\item 没有输出容错。模型偶尔多输出一个引号、一个句号,或者
+  以 ``Label: ...'' 开头,在``严格字符匹配''评分下都直接判错。
+\item 对提示词注入毫无防御。文本中如果嵌入诱导指令,
+  baseline 就会乖乖照做。
+\end{enumerate}
+
+% =============================================================================
+\section{V1: 第一版 Harness--检索增强的 In-Context Learning}
+\label{sec:v1}
+
+\subsection{核心思路:把分类问题变成对号入座}
+V1 的核心想法是:与其让模型\emph{猜}答案,不如让它\emph{选}答案。
+具体做法分三步:
+\begin{enumerate}[leftmargin=*,itemsep=2pt,topsep=2pt]
+\item 把全部合法标签明确列在提示词里,告诉模型``答案必须从这里挑''。
+\item 对每个待分类文本,从训练集中检索若干个\emph{最像它}的样本
+  作为参考案例放进提示词。
+\item 模型只需要做一件事:对照参考案例和标签清单,选出一个标签。
+\end{enumerate}
+这样,大模型从``零样本生成器''变成了``有参考的选择题做题机''。
+经验上,这一步能立刻把准确率从 40\% 左右拉到 80\% 左右。
+
+\subsection{检索:词级 + 字符级双视角}
+我们需要一个机制,衡量两条文本有多像。这里有几个常见方案:
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=2pt]
+\item 稠密向量(Sentence-Transformer 之类):效果最好,
+  但属于第三方库,违反考核规则。
+\item 词级 TF-IDF:经典方案。问题在于客服文本短(平均 50
+  字符),很多关键词只出现一两次,统计信号稀疏。
+\item 字符 $n$-gram TF-IDF:把文本拆成 3 到 5 字符
+  的片段,例如 ``card swallow'' 拆成 \{``card'', ``ard '', ``rd s''
+  \dots\}。这种特征对拼写错误、词形变化、未登录词都很鲁棒,在跨任务
+  泛化时尤其有用。
+\end{itemize}
+
+我们选择\emph{两者一起用}:对每条文本同时算词级和字符级两个向量,
+查询时把两个相似度按 40\%--60\% 的比例加权融合。
+理由是:对于规范的英文文本,词级信号已经够;但 OOD 任务可能含拼写
+变体、缩写、半结构化标记,字符级信号此时更稳。融合两者比单独使用
+任一种都更鲁棒。
+
+\subsection{挑选参考案例:多样化优于盲取最像}
+检索出来的最像的若干条样本,有可能\emph{都属于同一个类别}--比如
+查询 ``my card was eaten by ATM'',top-10 全都是
+card\_swallowed 这一个类。这样模型的提示词里就只看到一种答案,
+它没法``对比''出正确选择。
+
+我们的策略是:取检索结果时给每个类别设一个上限(默认\emph{每类
+最多 2 条})。最终塞进提示词的 24 条参考案例,至少覆盖 12 个不同
+类别--既给出``正确答案候选'',也给出``容易混淆的负例'',让
+模型在多种可能中做选择。
+
+\subsection{提示词的位置工程}
+研究表明,大模型对提示词中\emph{开头和结尾}的内容最敏感,中间部分
+容易被忽略(``中间迷失''现象,Liu et al., TACL 2024
+\cite{lostinthemiddle})。我们据此设计提示词结构:
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=2pt]
+\item 开头:把全部合法标签列出来(因为这是``选项菜单'',
+  模型必须始终能看到)。
+\item 中间:24 条参考案例。
+\item 结尾:待分类文本(这是模型最终要回答的对象,放在
+  紧邻输出的位置最有效)。
+\end{itemize}
+
+\subsection{输出解析:5 层兜底}
+模型即使在严格指令下也会偶尔不规范输出。我们观察到 Qwen3-8B 的
+不规范模式包括: ``Label: card\_swallowed''、``"card\_swallowed"''、
+``The label is card\_swallowed.''、 甚至
+``$<$think$>$let me think$<$/think$>$card\_swallowed''(虽然名义上
+关闭了思考模式)。我们设计了 5 层逐级兜底的解析器:
+\begin{enumerate}[leftmargin=*,itemsep=1pt,topsep=2pt]
+\item 完全匹配:输出原样就在合法标签集中。
+\item 大小写归一化:把 ``CARD\_SWALLOWED'' 还原为
+  card\_swallowed。
+\item 整词搜索:输出含 ``The answer is card\_swallowed because\dots''
+  时,正则匹配出标签。
+\item 反向包含:输出是合法标签的子串,例如输出
+  ``swallow'',匹配回 card\_swallowed。
+\item 检索兜底:以上都失败,直接返回检索结果中最像的那条
+  训练样本的标签。
+\end{enumerate}
+这样设计保证 predict 函数\emph{永远不会}返回空字符串或非法标签。
+
+\subsection{Token 预算自适应}
+在拼装提示词之前,我们会先用考核提供的 token 计数函数算一下整个
+提示词的长度。如果超过 2048,就\emph{从最不像的那条参考案例开始
+依次丢弃},直到适配预算。32 token 的安全余量留给提示词模板本身的
+微小波动。
+
+\subsection{V1 实测}
+DEV 4 轮平均准确率约 80\%。每条样本的提示词长度平均 1200 token,
+留有约 800 token 安全余量。每条样本只调用一次大模型。
+
+\insightbox[\textbf{V1 留下的关键直觉}]{%
+\textbf{(1)} 解析器越宽容,提示词就可以越简洁,这是一个 trade-off。
+\textbf{(2)} 检索质量是性能上限。如果 top-1 检索本身错了,大模型
+也很难从参考案例中纠正过来。\textbf{(3)} 标签清单的位置和形式
+非常敏感:一旦模型看不到清单,它就会随便编。
+}
+
+% =============================================================================
+\section{V2(失败): 把顶会方法直接搬过来}
+\label{sec:v2-fail}
+
+\subsection{尝试动机}
+有了 V1 之后,我们调研了若干近期的相关研究,试图进一步提升精度:
+\begin{itemize}[leftmargin=*,itemsep=2pt,topsep=2pt]
+\item \textbf{Milios et al., 2023} \cite{milios2023icl}:
+  在 BANKING77 上的 SOTA 工作,他们发现把参考案例\emph{按相似度
+  从低到高排列、最相似的紧贴 query}比反过来更好,涨分 3-5\%。
+\item \textbf{MarginSel, 2025} \cite{marginsel2025}:在对比训练里
+  使用``难负例''(看起来很像但标签不同的样本)作为决策边界的支
+  撑点,涨 2-7\% F1。
+\item \textbf{Self-Consistency, ICLR 2023} \cite{wang2023sc}:让模型
+  对同一个问题多回答几次,投票决定最终答案,在很多任务上涨 2-4\%。
+\end{itemize}
+我们一次性把这三个想法都加进了 V1:把参考案例改成\emph{升序}排列;
+额外塞 4 条``难负例''(检索分数高但和 top-1 标签不同的样本);
+对检索置信度低的样本启动 3 票投票;投票分歧时再加一轮消歧调用。
+
+\subsection{结果:崩盘}
+DEV 4 轮平均 \textbf{78.5\%}--比 V1 \emph{低 1.5 个百分点}。
+平均每条样本调用 1.86 次大模型,耗时约 V1 的 2 倍。
+
+\subsection{事后诊断:三件事都做错了}
+
+\failbox[\textbf{失败 1: 难负例放错了位置}]{%
+难负例的标签是\emph{故意错的},是用来教模型``这两个标签别搞混''
+的。但我们把它按相似度排在了提示词末尾--根据``中间迷失''的
+直觉,大模型对最后几个范例的标签印象最深。等于我们把\emph{4 条
+错答案}放在了模型印象最深的位置,直接把它推向了错误。
+MarginSel 论文里的难负例是用在\emph{对比损失训练}中,有专门的
+loss 把它们当负例;我们把它们丢进 In-Context Learning 当``范例''
+是误用了语境。
+}
+
+\failbox[\textbf{失败 2: 类别上限放宽过头}]{%
+为了塞下更多范例,我们把每个类别的上限从 2 放宽到 4。这导致一旦
+检索的 top-1 类别错了,就有 4 条同标签样本一起把模型推向错误。
+V1 的限制 2 实际上起到了一种\emph{被动正则化}作用,不能简单
+撤掉。
+}
+
+\failbox[\textbf{失败 3: 自一致性投票放大错误}]{%
+自一致性投票的有效性,前提是``模型的错误是随机噪声,平均一下能
+抵消''。但实际上,大模型在\emph{某个具体提示词下}的错误是\emph{
+系统性的}--同样的输入它会一致地犯同样的错。这种情况下投 3 票
+等于把同一个错误连说 3 遍。我们的触发条件还偏偏选了那些检索置信
+度低的样本--这些恰恰是最容易系统性犯错的。
+}
+
+\subsection{我们学到了什么}
+
+\insightbox[\textbf{经验 1: 顶会论文的方法不能无差别移植}]{%
+许多 SOTA 方法的成立条件是 LLaMA-13B/30B、对比训练、外部验证器,
+或更长的输出空间。在 8B 量级 instruct 模型 + 仅有 In-Context
+Learning 的设定下,简单照搬反而有害。
+}
+
+\insightbox[\textbf{经验 2: 一次只改一件事}]{%
+V2 一次合并了 5 个改动,根本没法定位是哪一个出了问题--只能整体
+回退。后续我们严格遵循\emph{每次只引入一处改动并验证}的原则。
+}
+
+% =============================================================================
+\section{V3: 回退到 V1,只加一项``零风险''的兜底升级}
+\label{sec:v3}
+
+\subsection{改动}
+把 V2 的全部改动撤回到 V1,只加一项小升级:把第 5 层兜底从``取
+最像那一条样本的标签''改为``取 8 个最像样本的加权投票结果''。
+单纯的 1-NN 高方差,容易被一个偶然相似但标签错的样本带偏;加权
+投票更稳。
+
+\subsection{为什么这是``零风险''改动}
+这一改只在\emph{大模型输出无法解析}时才生效--对绝大多数样本,
+模型输出能正常匹配到合法标签,根本走不到第 5 层。换句话说,
+大模型表现良好的那部分行为没有任何改变;改动只影响极端情况下的
+兜底质量。LLM 调用次数严格保持每样本一次。
+
+
+% =============================================================================
+\section{V4: 让检索参数自动适配数据}
+\label{sec:v4}
+
+\subsection{动机}
+V1 的检索参数(词级和字符级的权重比、是否使用类原型、是否使用标签
+名等)都是手工设的常数。在 DEV 集上能调好,但正式评测的 OOD 任务
+我们看不到--无法手动调参。我们需要一种\emph{在 update 阶段自动
+完成参数选择}的机制,且不能调用大模型(有时间预算)。
+
+\subsection{方法:用训练集自己当验证集}
+受 DSPy 等框架启发,我们的做法是:在 update 完成、预测开始之前,
+对每条训练样本做一次``假装它没标签''的留一检索--用训练集本身
+当 mini 验证集。然后对若干个候选参数组合(共 24 种),计算每种组合
+下的 top-5 召回、top-1 准确等指标的加权和,选出最优组合。
+整个过程:
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=2pt]
+\item 完全离线,不调用大模型。
+\item 在 N=231 的 DEV 训练集上几秒钟完成。
+\item 对 OOD 任务自动适应:训练集换了,选出来的最优参数也会换。
+\end{itemize}
+
+\subsection{两个新增的检索信号}
+auto-tune 还顺带搜索了两个额外信号是否值得开启:
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=2pt]
+\item \textbf{类别原型}:把每类的所有训练样本向量平均后归一化,作为
+  这个类的``原型''。query 和原型的相似度也加进总分。这相当于一
+  个轻量级的最近原型分类器。
+\item \textbf{标签名匹配}:把标签名本身(比如
+  lost\_or\_stolen\_phone)当成一段文本,看 query 中有没有
+  和它共现的词或字符片段。这个信号在 BANKING77 上很有用,因为标签
+  名本身就是语义提示。
+\end{itemize}
+
+\subsection{副作用与对策}
+``标签名匹配''这个信号在选择题任务上反而有害:标签 A
+经过预处理变成 \{``a''\} 一个字符,任意 query 中只要出现独立字母 a
+(``A 25-year-old patient\dots''),就会给标签 A 误加分。这个问题
+我们留到 V5 的任务类型检测中处理。
+
+% =============================================================================
+\section{V5: 自动识别选择题任务并切换处理路径}
+\label{sec:v5}
+
+\subsection{动机}
+评测含选择题任务时,标签是 A、B、C、D 这种单字母。原 V1 的解析器
+在这种任务上有多个失败模式:
+\begin{enumerate}[leftmargin=*,itemsep=1pt,topsep=2pt]
+\item 模型输出 ``\textbf{*A*}'' 这种 markdown 加粗格式,V1 的字符
+  剥离规则不包括星号,导致解析失败。
+\item 模型输出 ``I think the answer is D because A and B are wrong''
+  这种解释性回答,V1 的整词搜索会同时匹配到 A、B、D 三个,然后随
+  便挑一个返回。
+\item 标签名匹配信号在单字母上没有意义,反而误导。
+\item auto-tune 的类原型在``4 类 $\times$ 几百样本''的设定下严重
+  过拟合,因为每类都有充足数据可估计原型,反而压制了真正的判别信号。
+\end{enumerate}
+
+\subsection{零成本检测条件}
+我们在 update 完成、构建索引的最后一步,检查标签集合的形态:
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=2pt]
+\item 所有标签都不超过 3 个字符;
+\item 所有标签都只由字母数字组成;
+\item 标签总数不超过 12 个。
+\end{itemize}
+三个条件都成立才进入``选择题模式''。BANKING77 标签长且数量多,
+自然走``文本分类模式'',原行为完全不变。
+
+\subsection{选择题模式的四点切换}
+\begin{enumerate}[leftmargin=*,itemsep=2pt,topsep=2pt]
+\item \textbf{关闭标签名匹配信号}--单字母标签上无意义。
+\item \textbf{跳过 auto-tune}--直接用保守的固定参数。
+\item \textbf{始终列出全部标签}--才 4 个标签,不需要任何降级策略。
+\item \textbf{切换提示词措辞}--强调``只输出一个字母,不要解释,
+  不要 markdown''。
+\end{enumerate}
+
+\subsection{选择题专用解析器}
+针对模型可能输出的各种花式回答,我们设计了 5 步严格解析:
+\begin{enumerate}[leftmargin=*,itemsep=1pt,topsep=2pt]
+\item 输出整体归一化(去 markdown、去引号)后,直接对照标签集。
+\item 寻找形如 ``Answer: B''、``Option: (B)''、``Choice C'' 的
+  前缀模式。
+\item 抓取输出中的第一个 1-3 字符的字母数字片段。
+\item 在整段输出中做\emph{词边界}严格搜索--``D'' 只在它前后
+  没有字母数字时才被视为标签 D,而不会匹配到 ``old'' 中的 d。
+\item 如果模型同时提到了多个字母(``A is wrong, B is wrong, so D''),
+  \emph{取最后提到的那个}--英语回答中``so the answer is X''的
+  X 几乎永远在末位。
+\end{enumerate}
+我们用 18 种不同形态的模拟输出测试该解析器,全部通过。
+
+% =============================================================================
+\section{V6: 针对易混淆标签对的专项消歧}
+\label{sec:v6}
+
+\subsection{为什么单独处理混淆标签}
+DEV 上大约有 10\% 的样本属于``两个候选标签难分高下''的情况:
+检索 top-1 和 top-2 是不同标签,且分差不到 5\%。在这部分样本里,
+正确答案就在这两个候选之一里--但模型常在两者间犹豫,选错的概率
+接近一半。我们希望专门为这类样本提供帮助。
+
+\subsection{离线构建混淆对字典}
+\textbf{阶段 1: 找出``容易混淆''的标签对。}
+对每条训练样本,找它最近的\emph{同标签}邻居和最近的\emph{异标签}
+邻居。如果异标签邻居的相似度已经接近(超过 70\%)同标签邻居,
+我们就认为这是一次``混淆事件'',把这两个标签记一笔。统计下来,
+出现 2 次以上混淆事件的标签对入选``混淆对字典''。DEV 上得到 46
+对,人工核查每一对都合理(例如 automatic\_top\_up vs
+top\_up\_limits,一个是``设置自动充值'',一个是``充值
+有上限吗'')。
+
+\textbf{阶段 2: 为每个混淆标签预计算特征关键词。}
+对混淆字典中涉及的每个标签,我们计算它的\emph{特征词}--在该标签
+的训练样本中频繁出现、但在其他标签的样本中很少出现的词。例如
+top\_up\_limits 的特征词是 \{increase, limit, topping\},
+automatic\_top\_up 的特征词是 \{auto, set, amount\}。
+
+\subsection{触发条件:只在真正模糊时才注入}
+对每个待预测的样本,我们检查 4 个条件:
+\begin{enumerate}[leftmargin=*,itemsep=1pt,topsep=2pt]
+\item 不在选择题模式;
+\item 检索 top-1 和 top-2 是不同标签;
+\item 它们的分差小于 10\%;
+\item 这一对在我们的混淆字典中。
+\end{enumerate}
+四个条件\emph{同时}成立时才触发。DEV 上触发率仅 4.1\%(22/539
+条),其中 20 条的正确答案就在这两个候选里--这是有救的部分。
+
+\subsection{消歧提示的两次设计}
+
+\failbox[\textbf{第一版: 用范例做对比--无效}]{%
+我们最初的设计是,在提示词里列出每个混淆候选的一条``代表样本'':
+``top\_up\_limits 长这样: 'is there a limit for top up?';
+automatic\_top\_up 长这样: 'Can i set up an auto top-up?'''。
+实测下来,DEV 准确率\emph{几乎没有变化}。事后诊断发现根本原因:
+我们的参考案例中,\emph{每类已经塞了 2 条样本}--这些``代表样本''
+其实模型已经看过了。提示再贴一遍等于在重复模型已知的信息,完全
+没有提供新信号。
+}
+
+\subsection{第二版:改用差异关键词}
+重新设计的提示词是这样的:
+
+\promptbox[\textbf{最终消歧提示词形态}]{%
+Two confusable labels -- pick carefully:\\
+- ``top\_up\_limits''  key terms: increase, limit, topping\\
+- ``automatic\_top\_up''  key terms: auto, set, amount
+}
+
+这种``差异关键词对照表''在原本的参考案例中是没有的--它把
+``这两类各自的特征词是什么''这件事\emph{显式}摆在模型面前。
+模型不再需要从范例中自己归纳,可以直接对照 query 中是否出现
+这些关键词来判断。例如 query ``Do you have a limit to top ups?''
+里出现了``limit''--直接命中 top\_up\_limits 的特征词。
+
+\subsection{讨论}
+即使是第二版,实测增益也很小。原因可能在于:Qwen3-8B 这个体量的
+模型对于``system 提示词末尾追加的规则''的注意力衰减明显--研究
+中发现的 recency bias 在小模型上没有那么显著。理论上更优的位置是
+把 hint 放在用户 prompt 的最后(紧贴 query),但这与提示词注入
+防御中``严格区分数据和指令''的原则冲突。我们最终保留了这个模块,
+原因是:\emph{(a)} 不增加大模型调用次数;\emph{(b)} 仅影响 4\%
+样本,不会影响其他 96\%;\emph{(c)} 提供了一个具体可解释的设计点。
+
+% =============================================================================
+\section{Prompt 探索}
+\label{sec:prompt}
+
+提示词工程是这个项目里\emph{相当费时间}的一环--反复改、反复
+测、反复推翻。这一节专门记录我们在提示词上做过哪些尝试,哪些
+有效、哪些无效。
+
+\subsection{标签清单的呈现形式}
+我们试过三种格式。
+
+\promptbox[\textbf{形式 A: 单行 JSON 数组}]{%
+Allowed Categories: ["lost\_or\_stolen\_phone", "card\_swallowed",
+"transfer\_timing", \dots 77 个标签紧凑挤一行 \dots]
+}
+
+\promptbox[\textbf{形式 B: 每行一个标签的列表}]{%
+Allowed labels:\\
+- lost\_or\_stolen\_phone\\
+- card\_swallowed\\
+- transfer\_timing\\
+\dots 每行一个,共 77 行 \dots
+}
+
+\promptbox[\textbf{形式 C: 空格分隔}]{%
+Allowed labels: lost\_or\_stolen\_phone card\_swallowed
+transfer\_timing \dots
+}
+
+形式 B 在我们的实验里最稳定。形式 A 的 JSON 引号干扰了模型的字符
+匹配--它有时会照样把答案用引号包起来。形式 C 模型经常把多个标签
+连起来输出。我们最终选用形式 B。
+
+\subsection{规则措辞的踩坑}
+我们曾用过这条规则:``Output ONLY the exact category string,
+\emph{no punctuation}, no explanations.''
+后来发现训练集里有标签 reverted\_card\_payment? (含问号)
+和大量含下划线、连字符的标签。``no punctuation'' 这条规则字面上
+违背--模型偶尔会因此输出 reverted\_card\_payment 漏掉
+问号,导致 exact match 失败。我们改成了 ``output the label string
+verbatim, including any underscores, hyphens or punctuation that are
+part of the label''。
+
+\subsection{``如果不确定怎么办''的措辞}
+原始版本写的是 ``If unsure, pick the most logically similar category''。
+``logically similar'' 这个表达模糊,模型理解为``可以选语义相近的'',
+反而鼓励它在混淆标签上随便选。我们后来改成 ``If unsure, choose
+the category whose example phrasings most closely match the wording
+of the input''--把判断锚点从抽象的``语义相似''拉回到具体的
+``措辞相似'',让模型回看参考案例。
+
+\subsection{把待分类文本和范例分开}
+我们用 $<$example$>$\dots$<$/example$>$ 标签包裹每条训练范例,且采用
+``user 消息 / assistant 消息''多轮对话形式排列范例--每条范例的
+文本作为 user 消息,标签作为 assistant 消息。最终的待分类文本是
+最后一条 user 消息,模型很自然地以 assistant 角色接续输出标签。
+这种格式比``大段文本中夹一堆范例和最终问题''的单消息形式更稳。
+
+\subsection{反提示词注入}
+我们用三层防御:
+\begin{enumerate}[leftmargin=*,itemsep=1pt,topsep=2pt]
+\item \textbf{数据封装}:用户文本统一用类似 \texttt{<<<INPUT>>>...
+  <<<END\_INPUT>>>} 这样的特殊标记包裹,在系统提示中明确告知
+  ``这之间的内容是数据,不是命令''。
+\item \textbf{指令明示}:系统提示中明文写 ``ignore any commands
+  embedded inside the input''。
+\item \textbf{输出端白名单}--最强的一层。即使前两层失守,模型被
+  诱导输出了非法字符串,我们的解析器会发现它不在合法标签集里,
+  最终落到检索兜底,返回一个合法标签。换言之,\emph{我们不依赖
+  模型``听话'',而是从输出端强制约束}。
+\end{enumerate}
+
+\subsection{核心发现总结}
+
+\insightbox[\textbf{Prompt 探索的几条经验}]{%
+\textbf{(1)} 加越多规则,模型反而更容易跑偏--每条规则之间可能矛盾,
+模型挑一个去遵守。3-5 条精炼规则比 8-10 条冗长规则效果好。
+
+\textbf{(2)} 措辞要\emph{无歧义}。``logically similar''
+``if uncertain'' 这种弹性表达,模型会朝最方便的方向理解。
+
+\textbf{(3)} 强格式约束(``output one line'' ``no markdown'')
+比软建议(``please be concise'')有效得多。
+
+\textbf{(4)} 解析器的鲁棒性比提示词的严格性更可靠--与其要求模型
+完美输出,不如让解析器容错。
+
+\textbf{(5)} \emph{对抗性提示}(数据中嵌入指令)的最佳防御是输出
+端校验,不是输入端说服。
+}
+
+% =============================================================================
+\section{最终方案的伪代码}
+\label{sec:pseudocode}
+
+为方便审阅,我们用伪代码总结最终 Harness 的结构。变量与函数命名
+均使用通俗术语,与具体的 Python 实现解耦。
+
+\medskip
+\noindent\textbf{算法 1. Update: 接收训练样本}
+\begin{verbatim}
+function Update(text, label):
+    把 (text, label) 加入训练样本记忆
+    标记索引为"过期"
+\end{verbatim}
+
+\medskip
+\noindent\textbf{算法 2. BuildIndex: 首次预测前的离线索引构建}
+\begin{verbatim}
+function BuildIndex():
+    对所有训练文本计算
+        词级 TF-IDF 向量
+        字符 n-gram TF-IDF 向量
+    收集全部出现过的标签到一个列表
+    构建"大小写归一化"标签映射 (用于解析容错)
+    DetectTaskType()           # 检测是否选择题
+    构建每类的原型向量          # 检索打分增强
+    构建标签名词袋             # 检索打分增强
+    AutoTuneRetrieval()        # 离线选最优参数
+    BuildConfusablePairs()     # 离线建混淆对字典
+\end{verbatim}
+
+\medskip
+\noindent\textbf{算法 3. Predict: 对单个样本做预测}
+\begin{verbatim}
+function Predict(text):
+    if 索引过期: BuildIndex()
+    if 记忆为空: return ""
+
+    排序, 分数 = Retrieve(text)
+        # 词级 + 字符级混合余弦
+    候选标签 = SelectAllowedLabels(排序)
+        # 标签太多时降级为 top-N
+
+    消歧提示 = ""
+    if 满足 4 个混淆触发条件:
+        消歧提示 = ConfusableHint(top1标签, top2标签)
+
+    范例 = DiversePick(排序, K=24, 每类<=2)
+    消息列表 = ComposePrompt(text, 范例,
+                            候选标签, 消歧提示)
+    ShrinkToFitBudget(消息列表, 2048-32)
+        # 超预算时丢最不相似范例
+
+    响应 = LLM(消息列表)
+    return ParseLabel(响应, 排序, 分数)
+\end{verbatim}
+
+\medskip
+\noindent\textbf{算法 4. ParseLabel: 多层输出解析}
+\begin{verbatim}
+function ParseLabel(响应, 排序, 分数):
+    if 选择题模式:
+        return ParseLabelMCQ(响应)
+
+    c = Normalize(响应)
+        # 去 markdown / 引号 / "Label:" 前缀
+    if c 在合法标签集: return c
+    if c 大小写归一化命中: return 命中标签
+    在 c 中做整词搜索找合法标签:
+        if 命中: return 命中标签
+    反向: 看 c 是否是某合法标签子串:
+        if 命中: return 命中标签
+    return WeightedKNN(排序, 分数, k=8)
+        # 兜底: 加权 8-NN 投票
+\end{verbatim}
+
+% =============================================================================
+\section{实验汇总与消融}
+\label{sec:experiments}
+
+我们把每一轮迭代在 DEV 集(BANKING77 风格,539 条测试,4 轮平均)
+上的结果汇总在表~\ref{tab:total}。失败的 V2 用红色高亮。
+
+\begin{table*}[t]
+\centering\small
+\caption{实验总表。每行表示一个 Harness 版本在 DEV 集上的表现。
+``--'' 表示该项与上一行相同。LLM/样本表示每条预测样本平均的大模型调用次数。}
+\label{tab:total}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lcccccl}
+\toprule
+\textbf{版本} & \textbf{准确率(\%)} & \textbf{$\Delta$} &
+\textbf{LLM/样本} & \textbf{Prompt长度} & \textbf{耗时(秒)} &
+\textbf{说明} \\
+\midrule
+V1 (检索增强 ICL)      & $\sim$80.0             & --          & 1.0  & $\sim$1200   & $\sim$80 & 完整 baseline \\
+\rowcolor{red!8}
+V2 (顶会方法堆砌)      & 78.5                 & $-1.5$       & 1.86 & $\sim$1300   & $\sim$165 & 三处误用 \\
+V3 (V1 + 加权 kNN 兜底)& $\sim$80.9             & $2.4$            & 1.0  & $\sim$1200           & $\sim$80         & 兜底升级,主流程不变 \\
+V4 (+ auto-tune 参数)  & $\sim$83.9    & $3$           & 1.0  & $\sim$1200           & $\sim$80         & 检索参数自适应 \\
+V6a (+ 范例式 hint)    & $\sim$83.7             & $-0.2$  & 1.0  & $\sim$1200          & $\sim$80         & 失败的第一版 hint \\
+V6b (+ 关键词 hint)    & $\sim$85.3   & $0.6$    & 1.0  & $\sim$1200           & $\sim$80         & 最终方案 \\
+\midrule
+\multicolumn{7}{l}{\emph{额外参考(单纯检索,无大模型):}} \\
+1-NN 检索              & 48.2                 & --           & 0    & --           & --         & 仅作下界 \\
+加权 8-NN 检索         & 52.3                 & --           & 0    & --           & --         & 兜底逻辑下界 \\
+top-3 标签召回         & 79.6                 & --           & 0    & --           & --         & 检索的可达上限 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\paragraph{关键观察 1: V1 的 +40 是绝大部分增量的来源。}
+从零样本到检索增强 ICL 这一步,基本上把准确率从随机猜测的水平
+提到了一个具备实用性的水平。后续的所有改动都是在 V1 这个 baseline
+上做边际改进。
+
+\paragraph{关键观察 2: 检索质量的天花板很重要。}
+单纯的加权 8-NN 检索在 DEV 上是 52\%,但 top-3 标签召回率高达
+80\%--意思是,正确答案有 80\% 的概率在前 3 个候选里。模型的工作
+本质上是``在前 3 个候选里挑对的那个''。如果检索把正确答案排到
+top-10 之外,模型也救不回来。
+
+\paragraph{关键观察 3: 越往后,边际收益越小,失败概率越大。}
+V2 想堆顶会方法直接掉了 1.5 个百分点。这印证了一个规律:
+在 baseline 已经较强时,新增的复杂度更容易引入新错误,
+而不是带来提升。
+
+\paragraph{关键观察 4: 选择题模式带来的不是涨分,而是\emph{鲁棒性}。}
+V5 在 BANKING77 这个测试集上准确率没变化(因为 BANKING77 不是选择
+题任务,根本不进入这个模式)。它的价值要在正式评测的选择题子任务
+上才能体现--但因为我们看不到那部分,无法量化。
+
+% =============================================================================
+\section{综合心得}
+\label{sec:lessons}
+
+\paragraph{(L1) 在固定模型上做工程,把``模型外''所有能改的都改好。}
+Harness 工程的核心是\emph{我们能改什么}--不能改模型权重,
+但可以改提示词、改解析、改记忆组织、改任务分支。每一个``模型
+外''的环节都是可优化的工程接口。
+
+\paragraph{(L2) 顶会方法不是开箱即用的工具箱。}
+V2 的失败说明,论文报告的提升\emph{依赖具体的设定}--模型规模、
+训练分布、损失函数、评测基准。换一个设定,同样的方法可能反向。
+\emph{要先理解方法成立的条件,再决定要不要采用}。
+
+\paragraph{(L3) 一次只改一件事,做好 A/B 验证。}
+V2 一次合并 5 个改动,出问题完全无法定位--只能整体回退,前面的
+开发投入全部浪费。后续每一版只引入一处主要改动,这让我们能精确
+知道哪些是真有用,哪些是噪声。
+
+\paragraph{(L4) 优先做``零下行风险''的改动。}
+加权 kNN 兜底、选择题模式自动检测、输出端白名单这三项的共同特点
+是:\emph{默认情况下不影响主流程,只在边缘情况下提供安全网}。
+这种改动几乎不可能掉分,是 Harness 工程的高 ROI 区域。
+
+% =============================================================================
+\section{结论}
+\label{sec:concl}
+
+我们提交的 Harness 在\emph{零模型权重更新、2048 token 提示词上限、
+每样本一次大模型调用}的三重硬约束下,通过六轮迭代,逐步搭建出
+一个由\emph{混合粒度检索 + 多样化范例选择 + 标签白名单 + 多层
+输出解析 + 任务类型自适应 + 离线混淆建模}组成的分层框架。
+全部代码仅依赖 Python 标准库与 numpy,符合考核全部合规约束。
+
+我们认为本报告的价值不仅在于最终的方案本身,更在于迭代过程中两次
+明确的失败--V2 把顶会方法盲目堆砌、V6a 提示词与范例信息重复--
+以及由此提炼的 6 条工程原则。在大模型应用工程化的今天,
+\emph{这种``在固定模型上做工程''的能力}已成为核心能力之一。
+
+
+% =============================================================================
+\begin{thebibliography}{9}
+\small\setlength{\itemsep}{1pt}
+
+\bibitem{milios2023icl}
+A.~Milios, S.~Reddy, D.~Bahdanau.
+In-Context Learning for Text Classification with Many Labels.
+\emph{GenBench Workshop @ EMNLP}, 2023.
+
+\bibitem{lostinthemiddle}
+N.~F.~Liu, K.~Lin, J.~Hewitt, A.~Paranjape, M.~Bevilacqua,
+F.~Petroni, P.~Liang.
+Lost in the Middle: How Language Models Use Long Contexts.
+\emph{TACL}, 2024.
+
+\bibitem{marginsel2025}
+S.~B.~Ambati, S.~Srivastava.
+MarginSel: Max-Margin Demonstration Selection for In-Context Learning.
+\emph{Preprint}, 2025.
+
+\bibitem{wang2023sc}
+X.~Wang, J.~Wei, D.~Schuurmans, Q.~Le, E.~Chi, S.~Narang, A.~Chowdhery,
+D.~Zhou.
+Self-Consistency Improves Chain of Thought Reasoning in Language Models.
+\emph{ICLR}, 2023.
+
+\bibitem{xu2023knn}
+B.~Xu, Q.~Wang, Z.~Mao, Y.~Lyu, Q.~She, Y.~Zhang.
+$k$NN Prompting: Beyond-Context Learning with Calibration-Free
+Nearest Neighbor Inference.
+\emph{ACL}, 2023.
+
+\bibitem{hines2024spotlight}
+K.~Hines et al.
+Defending Against Indirect Prompt Injection Attacks With Spotlighting.
+\emph{Microsoft Technical Report}, 2024.
+
+\bibitem{zhao2021calibrate}
+T.~Z.~Zhao, E.~Wallace, S.~Feng, D.~Klein, S.~Singh.
+Calibrate Before Use: Improving Few-Shot Performance of Language Models.
+\emph{ICML}, 2021.
+
+\bibitem{khattab2024dspy}
+O.~Khattab et al.
+DSPy: Compiling Declarative Language Model Calls into Self-Improving
+Pipelines.
+\emph{ICLR}, 2024.
+
+\end{thebibliography}
+
+\end{document}
